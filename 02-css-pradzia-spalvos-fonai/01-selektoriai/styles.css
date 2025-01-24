@@ -1,6 +1,8 @@
 body{background: rgb(218, 255, 237);}
 
-h1{text-transform: uppercase;}
+h1{text-transform: uppercase;
+   text-decoration: underline;
+}
 
 h2{
     text-decoration: underline;
@@ -13,3 +15,7 @@ input{width: 200px;}
 textarea{width: 200px;}
 
 ul{list-style-type: square;}
+
+#licenciju-tipai{color: rgb(181, 34, 34);}
+
+#privatus-pilotas{font-weight: bold;}
