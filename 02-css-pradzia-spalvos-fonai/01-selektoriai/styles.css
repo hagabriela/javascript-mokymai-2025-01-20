@@ -8,7 +8,10 @@ h2{
     text-decoration: underline;
 }
 
-form{background: rgba(0, 0, 0, 0.271);}
+form{
+    background: rgba(0, 0, 0, 0.271);
+width: 250px;
+}
 
 input{width: 200px;}
 
@@ -19,3 +22,19 @@ ul{list-style-type: square;}
 #licenciju-tipai{color: rgb(181, 34, 34);}
 
 #privatus-pilotas{font-weight: bold;}
+
+.tarpas{
+    margin-bottom: 10px;
+}
+
+.pabraukimas{
+    text-decoration: underline;
+}
+
+.raudonas{
+    color: red;
+}
+
+.zalias{
+    color: green;
+}
