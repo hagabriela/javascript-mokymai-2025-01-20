@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS spalvos ir fonai</title>
+    <style>
+        /* =====================================
+        NAVIGACIJOS JUOSTA
+        ===================================== */
+
+        .navigacija {
+            background-color: #222;
+        }
+
+        /* rasom cia nes narsykle kitaip baltos spalvos ant nuorodu nepagauna; spalva backgroundo idejom, kad suveiktu transition */
+        .navigacija a {
+            color: white;
+            text-decoration: none;
+            transition: 0.2s all;
+            background-color: transparent;
+        }
+
+        .navigacija a:hover {
+            background-color: orangered;
+        }
+
+        /* =====================================
+        HEADER BLOKAS (eiles tvarka kaip HTML faile)
+        ===================================== */
+
+        .headeris {
+            background-color: cadetblue;
+        }
+
+        .headeris h1 {
+            background-color: rgb(255, 255, 255, 0.2);
+            color: beige;
+        }
+
+        .headeris p {
+            color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.navigacija>a*5[href="#"]{Nuoroda} cia tiktu ir ID-->
+    <div class="navigacija">
+        <a href="#">Langų montavimas</a>
+        <a href="#">Paslaugos</a>
+        <a href="#">Atlikti darbai</a>
+        <a href="#">Apie mus</a>
+        <a href="#">Kontaktai</a>
+    </div>
+
+    <!-- .headeris>h1{Spalvos ir fonai}+p>lorem20 -->
+    <div class="headeris">
+        <h1>Spalvos ir fonai</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nesciunt. Voluptatem doloremque, vitae culpa officiis facilis officia possimus ducimus non.
+        </p>
+    </div>
+</body>
+</html>
