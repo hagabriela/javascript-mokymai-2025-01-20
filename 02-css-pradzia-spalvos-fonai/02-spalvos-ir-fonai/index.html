@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS spalvos ir fonai</title>
     <style>
+          /* =====================================
+        BODY STILIAI
+        ===================================== */
+
+        body {
+            background-image: url('fonas.png');
+            /* galima: repeat, no-repeat, repeat-x, repeat-y */
+            background-repeat: repeat;
+
+            /* galima: cover, contain, procentus, pikselius */
+            background-size: contain;
+
+            /* galima: scroll, fixed */
+            background-attachment: fixed;
+
+            /* background-position: center; */
+
+            /* background: url('fonas.png') repeat center fixed; tik ne size*/
+        }
+
         /* =====================================
         NAVIGACIJOS JUOSTA
         ===================================== */
@@ -41,6 +61,32 @@
         .headeris p {
             color: cornsilk;
         }
+
+         /* =====================================
+        BLOKAS KURIAME FONO NUOTRAUKA
+        ===================================== */
+
+        .blokas {
+            border: 5px solid black;
+            width: 200px;
+            height: 200px;
+
+            background-image: url("svyturys.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blokas2 {
+            border: 5px solid black;
+            width: 200px;
+            height: 200px;
+
+            background-image: url("svyturys.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           
+        }
     </style>
 </head>
 <body>
@@ -58,6 +104,28 @@
         <h1>Spalvos ir fonai</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nesciunt. Voluptatem doloremque, vitae culpa officiis facilis officia possimus ducimus non.
+        </p>
+    </div>
+
+    <!-- .blokas>h2{mano tekstas}+p>lorem10 -->
+    <div class="blokas">
+        <h2>mano tekstas</h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, qui?
+        </p>
+    </div>
+
+    <div class="blokas2">
+        <h2>mano tekstas</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ratione?
+        </p>
+    </div>
+
+    <!-- .turinys>p>lorem500 -->
+    <div class="turinys">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sint laudantium porro repellat saepe dolores, eos accusantium commodi, eveniet tempore quas! Quibusdam, maiores optio corporis minus, illo, voluptatum nesciunt veritatis pariatur delectus modi laudantium praesentium exercitationem facilis itaque quo odio in rem! Facilis atque tempore quis voluptatem illum commodi incidunt neque, et voluptas voluptatibus quos reprehenderit, voluptates veniam magnam? Similique maiores, doloremque ipsum aspernatur maxime delectus quibusdam nostrum voluptate quis quidem rem nemo, aliquid magni dolor deleniti quae error. Nostrum hic recusandae rerum quibusdam fugiat facere laborum, temporibus libero, dolorum nobis culpa voluptate, doloribus voluptates voluptatem quo vitae corporis neque eveniet laudantium distinctio unde. Mollitia provident libero at, dolor fuga voluptas incidunt a ea ipsum illo eveniet repellendus? Maxime sit quis autem nostrum dolorum eligendi eaque aspernatur vero fugit! Nobis doloremque eos sed nihil ratione, ab, unde, voluptates sequi iusto illum magni. Veritatis quod odio quidem minus quasi. Voluptas labore reprehenderit incidunt accusamus doloremque, commodi soluta dolores deleniti nostrum reiciendis non dolorum natus nesciunt praesentium fugiat consectetur rem repellendus sit cum, molestias cupiditate quod nobis modi? Sequi labore vero asperiores iste quasi illum laudantium nam excepturi dolore consectetur repudiandae impedit, qui tempora temporibus dolor odit esse placeat. Atque quos maxime laborum placeat ducimus repellat reiciendis cum natus doloribus recusandae magni voluptatem, quaerat aliquid hic. Ipsum itaque necessitatibus voluptatibus labore accusamus ea aperiam consequatur qui modi nam. Distinctio quia sequi repudiandae ipsum voluptatem minima ab repellat consequuntur, atque ad inventore. Ullam distinctio numquam, eligendi alias minus earum quis magnam illo quia tenetur debitis cum harum ea neque voluptas repellendus repellat corporis ab veniam ut cupiditate et eos iste modi. Rerum aliquid non porro deserunt. Nam temporibus aliquid asperiores sunt qui optio unde consequatur magnam architecto aliquam quaerat reprehenderit commodi, alias, molestias delectus aut magni porro natus sequi ullam itaque quis. Laborum cupiditate voluptas perferendis ad, tempore optio at quos facere repellendus explicabo animi consequuntur aut necessitatibus earum nostrum asperiores debitis unde tempora eligendi totam distinctio! Deserunt dicta aliquam dolorum quibusdam doloremque illo minus consequatur natus, aperiam earum soluta velit explicabo debitis quae nemo ipsam similique beatae autem voluptates nulla error maxime sint nam odit. Fugiat voluptatibus perspiciatis laudantium enim incidunt, commodi ipsa! Nam natus blanditiis aliquid accusantium laboriosam non recusandae inventore incidunt? Unde vel dignissimos repudiandae quibusdam officiis ullam aliquid dolorum possimus asperiores hic cum omnis alias aliquam nobis blanditiis, velit vero. Excepturi distinctio facere molestias soluta quo, aliquid tempora nesciunt velit nostrum temporibus libero? Exercitationem fugit natus magnam aperiam voluptate culpa! Culpa, dignissimos maxime. Animi commodi debitis, dolor nam, quos minus ullam a doloremque illo voluptatem error totam dolorem distinctio, nihil corrupti sunt. Amet architecto est numquam eveniet, rerum harum deleniti commodi ipsum molestias nulla. Nesciunt impedit consequatur porro distinctio expedita voluptas inventore sit fugit, mollitia dolore quibusdam consectetur repudiandae. Explicabo tempora distinctio temporibus ratione. Labore eligendi fugiat iste? Voluptate vitae, tempora eum odio repellat quidem modi animi eaque exercitationem numquam velit tenetur esse laborum molestias quis qui laudantium! Cupiditate rerum sapiente vel totam aut fugit ratione architecto voluptatibus placeat!
         </p>
     </div>
 </body>
