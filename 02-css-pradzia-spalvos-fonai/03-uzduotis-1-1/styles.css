@@ -1,0 +1,29 @@
+body {
+    background-color: gainsboro;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    background-color: rgb(120, 178, 236);
+    color: white;
+}
+
+.paslaugos {
+    background-color: white;
+}
+
+.paslaugos a {
+    color: red;
+}
+
+.apie-mus {
+    background-color: rgba(255, 255, 255, 0.721);
+}
+
+.apie-mus a {
+    color: red;
+}
