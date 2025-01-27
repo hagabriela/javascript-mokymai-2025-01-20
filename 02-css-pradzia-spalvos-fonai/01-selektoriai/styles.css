@@ -39,6 +39,14 @@ input, textarea {
 
 ul{list-style-type: square;}
 
+ul li {
+    text-transform: uppercase;
+}
+
+ol li {
+    font-style: italic;
+}
+
 #licenciju-tipai{color: rgb(181, 34, 34);}
 
 #privatus-pilotas{font-weight: bold;}
@@ -59,3 +67,24 @@ ul{list-style-type: square;}
     color: green;
 }
 
+.blokelis {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.blokelis p {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.artimiausias h3 {
+    text-transform: uppercase;
+}
+
+.artimiausias p {
+    font-size: 16px;
+}
+
+/* .kiti.blokelis p galima ir taip rašyti net didesnis prioritetas užsideda, svarbu po . nėra tarpo*/
+.kiti p {
+    font-style: italic;
+}
