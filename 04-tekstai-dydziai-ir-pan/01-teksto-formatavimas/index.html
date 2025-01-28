@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teksto formatavimas</title>
+    <style>
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 36px;
+        }
+
+        .pirmas {
+            font-family: 'Tahoma', sans-serif;
+            font-size: 20px;
+        }
+
+        .antras {
+            font-family: 'Garamond', serif;
+            font-size: 18px;
+        }
+
+        .antras span {
+            background: black;
+            color: red;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .blokas {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+        }
+
+        .relatyvus-dydziai {
+            font-size: 16px; /* bazinis bloko dydis */
+        }
+
+        .relatyvus-dydziai .paragrafas2 {
+            font-size: 2em; /* 16px * 2em = 32px */
+        }
+
+        .relatyvus-dydziai .paragrafas3 {
+            font-size: 150%; /* 16px * 1.5em = 24px */
+        }
+    </style>
+</head>
+<body>
+    <h1>Antraštė</h1>
+
+    <!-- p.pirmas>lorem -->
+    <p class="pirmas">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, accusantium totam? Blanditiis saepe quod earum? Cumque non molestias est ipsa quos, et error nemo id dignissimos magni. Dolore, recusandae veniam!
+    </p>
+
+    <!-- p.antras>lorem -->
+    <p class="antras">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed numquam eius et suscipit obcaecati tempore ullam non impedit <span>exercitationem expedita</span> fugiat, vitae quisquam aspernatur dolore assumenda, animi similique doloribus ipsum!
+    </p>
+
+    <!-- .blokas>(p>lorem)+ul>li*5>lorem10 -->
+    <div class="blokas">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae alias veniam! Ipsam placeat hic qui quaerat nesciunt blanditiis debitis vitae beatae laboriosam id, labore illo perferendis cum saepe quia.
+        </p>
+        <ul>
+            <li>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, temporibus?
+            </li>
+            <li>
+                Ut libero soluta, perspiciatis est nesciunt dolor impedit pariatur quae!
+            </li>
+            <li>
+                Eligendi, vitae. Ut architecto non perferendis? Totam dolor laborum unde?
+            </li>
+            <li>
+                At laboriosam, mollitia fuga cumque praesentium inventore deleniti quod eius.
+            </li>
+            <li>
+                Recusandae fugit eaque libero voluptates explicabo itaque nisi tempora ab!
+            </li>
+        </ul>
+    </div>
+
+    <!-- .relatyvus-dydziai>p*3>lorem20 -->
+    <div class="relatyvus-dydziai">
+        <p class="paragrafas1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi voluptates, doloribus voluptatem dicta nobis laborum at adipisci asperiores vero!
+        </p>
+        <p class="paragrafas2">
+            Iure dolore blanditiis necessitatibus totam, officiis voluptatem nulla ipsam tenetur voluptates inventore quas mollitia nam asperiores aspernatur perferendis facere impedit?
+        </p>
+        <p class="paragrafas3">
+            Nostrum quae quis veniam recusandae odit eligendi laboriosam ducimus, dolorum libero? Alias non qui natus explicabo soluta tenetur, eaque sit.
+        </p>
+    </div>
+</body>
+</html>
