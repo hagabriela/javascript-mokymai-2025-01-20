@@ -1,0 +1,38 @@
+body {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+h1 {
+    background-color: rgba(128, 128, 128, 0.626);
+    color: white;
+}
+
+.dalis1 {
+    background-image: url(kalnai2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.dalis1 p {
+    background-color: rgba(13, 58, 136, 0.532);
+}
+
+.dalis2 {
+    background-color: rgba(102, 180, 154, 0.648);
+}
+
+.dalis2 p {
+    background-image: url("kalnai2.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+.dalis3 {
+    background-image: url(kalnai2.jpg);
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.dalis3 p {
+    background-color: rgba(180, 180, 181, 0.532);
+}
