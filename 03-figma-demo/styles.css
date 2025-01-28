@@ -1,0 +1,37 @@
+/* 
+    font-family: "Gloria Hallelujah", serif;
+    font-weight: 400;
+    
+    font-family: "Inter", serif;
+    font-weight: 400;
+*/
+
+body {
+    background-image: url("fonas.jpg");
+    background-size: cover;
+    background-position: top 30% center;
+}
+
+.turinys {
+    background: rgba(255, 255, 255, 0.5);
+    /* width: 651px; siuo atveju ir sis tinkamas*/
+    width: 50%;
+    /* 50% nuo tevinio elemento, tai yra body, tai yra ekrano */
+}
+
+.turinys h1 {
+    font-family: 'Gloria Hallelujah', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 110%;
+    /* or 79px */
+}
+
+.turinys p {
+font-family: 'Inter', serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+}
