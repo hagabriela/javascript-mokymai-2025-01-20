@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS dydžiai</title>
+    <style>
+        .pirmas {
+            background: orange;
+            width: 200px;
+        }
+
+        /* NEREIKIA KEISTI VAIKINIO NES JIS IMA NUO TĖVINIO */
+        /* .pirmas p {
+            width: 300px;
+        } */
+
+        .antras {
+            background: lightseagreen;
+            width: 250px;
+        }
+
+        .antras p {
+            width: 75%; /* 75 proc is tevinio 250px */
+        }
+
+        .trecias {
+            background: lightgreen;
+            width: 200px;
+        }
+
+        .trecias p {
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+
+        /* negerai */
+        .trecias .tekstas {
+            height: 70px;
+        }
+
+        .ketvirtas {
+            background: lightsalmon;
+            /* sitas 50 proc nuo body (narsykles lango), nes jis ir yra tevinis siam ketvirtam blokeliui */
+            width: 50%; 
+        }
+
+        .penktas {
+            background: orangered;
+            height: 200px;
+        }
+
+        .penktas p {
+            background: rgb(255, 255, 255, 0.2);
+            /* 50 procentų nuo tėvinio 200px */
+            /* neveiktų jei tėvinis būtų be FIKSUOTO aukščio */
+            height: 50%;
+        }
+
+        .sestas {
+            background: dodgerblue;
+            width: 100px;
+            height: 100px;
+        }
+
+        .septintas {
+            /* background-color: khaki; */
+            width: 40%;
+            height: 200px;
+        }
+
+        .septintas img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .astuntas {
+            background: wheat;
+            border: 1px solid black;
+            width: 300px;
+        }
+
+        /* img nelandzioja uz ribu, kur nereikia - overflow */
+        .astuntas .nuotrauka {
+            height: 200px;
+            overflow: hidden;
+        }
+
+       /* .astuntas img arba .nuotrauka img irgi galima buvo rasyti, bet geriau pilna kelia nuo virsaus, mazesne tikimybe suklysti */
+        .astuntas .nuotrauka img {
+            width: 100%;
+            height: 100%;
+            transition: 0.2s all;
+        }
+
+        .astuntas:hover .nuotrauka img {
+            transform: scale(1.1);
+        }
+
+        /* vw - view width
+           vh - view height 
+           matomo lango % israiska*/
+
+        .devintas {
+            background-color: lightgreen;
+            width: 80vw; /* nuo lango plocio  */
+            height: 50vh; /* nuo lango aukscio  */
+        }
+
+        .desimtas {
+            background-color: lightpink;
+            max-width: 600px;
+        }
+
+        /* tik taip rasyti nes mygtukas neauga su teviniu elementu, netinka .vienuoliktas */
+        .vienuoliktas button {
+            min-width: 200px;
+        }
+
+        .dvyliktas p{
+            background-color: orchid;
+            min-height: 80px;
+            /* jei teksto nepakanka vis tiek 80px bet jei teksto daugiau tai jau pagal ji prisitaiko ir issididina */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- .pirmas>p>lorem -->
+    <div class="pirmas">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quo voluptate sunt facere illo praesentium iste quisquam adipisci deleniti doloribus. Recusandae a eaque perferendis eos tempore magni! Neque, odio temporibus.
+        </p>
+    </div>
+
+    <!-- .antras>p>lorem -->
+    <div class="antras">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos quibusdam commodi dolorum assumenda cum aspernatur ipsa tempore iure, fugit necessitatibus labore laboriosam, omnis at. Vitae aspernatur culpa ad exercitationem eveniet.
+        </p>
+    </div>
+
+    <!-- .trecias>(p.tekstas>lorem)+p>lorem -->
+    <div class="trecias">
+        <p class="tekstas">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam maiores inventore culpa rem voluptatem laboriosam quam tempora alias, similique veniam tempore reprehenderit natus exercitationem, necessitatibus eaque mollitia asperiores enim odio.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, unde fuga ea, sed nisi, deleniti ut delectus aut animi officiis quaerat facilis natus similique magni illum laudantium totam molestiae. Enim?
+        </p>
+    </div>
+
+    <!-- .ketvirtas>p>lorem -->
+    <div class="ketvirtas">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam quasi, sequi possimus dolor voluptatibus quae nobis corporis, molestias veniam, hic consequatur ut libero at labore obcaecati numquam modi iste.
+        </p>
+    </div>
+
+    <!-- .penktas>p>lorem -->
+    <div class="penktas">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, totam. Tempore temporibus repellat exercitationem, dolor iusto quas veniam quidem quae maxime sit magnam, animi perspiciatis. Aut et repudiandae pariatur provident!
+        </p>
+    </div>
+
+    <!-- .sestas -->
+    <div class="sestas"></div>
+
+    <!-- .septintas>img[src="https://placehold.co/600x400"] -->
+    <div class="septintas">
+        <img src="https://placehold.co/600x400" alt="">
+    </div>
+
+    <!-- .astuntas>(.nuotrauka>img[src="https://placehold.co/600x400"])+p>lorem -->
+    <div class="astuntas">
+        <div class="nuotrauka">
+            <img src="https://placehold.co/600x400" alt="">
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dignissimos voluptatem commodi qui nemo soluta atque, recusandae eum beatae nisi quam quasi sunt porro odio quisquam vel doloremque voluptas placeat?
+        </p>
+    </div>
+
+    <!-- .devintas>h2{Tekstas} -->
+    <div class="devintas">
+        <h2>Tekstas</h2>
+    </div>
+
+    <!-- .desimtas>p>lorem -->
+    <div class="desimtas">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis praesentium nulla dolor quos fugit impedit? Beatae cupiditate fugiat perspiciatis itaque dolorum vel aperiam pariatur, mollitia voluptatum ut enim deleniti!
+        </p>
+    </div>
+
+    <!-- .vienuoliktas>button{Spausk} -->
+    <div class="vienuoliktas">
+        <button>Spausk</button>
+        <button>Čia parašysiu savo kokį nors norimą tekstą</button>
+    </div>
+
+    <!-- .dvyliktas>p*3>lorem -->
+    <div class="dvyliktas">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum voluptate vel tenetur dolorem saepe eaque, nostrum vero fugit inventore facilis ad consectetur cum expedita doloremque veniam! Ad repudiandae doloremque quas!
+        </p>
+        <p>
+             Enim, doloribus repellendus. Assumenda, minus illum hic earum perferendis debitis maiores doloribus, ad, odit fugit ab.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque error aperiam excepturi, laboriosam quis fugiat recusandae deserunt blanditiis rem accusamus atque reiciendis laborum. Consequuntur reprehenderit recusandae vero tenetur eum. Accusantium placeat nostrum quis molestias totam tempora necessitatibus ratione commodi, iure iusto blanditiis amet consectetur dolorum veniam non aperiam perferendis quod sequi veritatis possimus doloribus! Pariatur, dicta consectetur. Culpa, officia.
+        </p>
+    </div>
+</body>
+</html>
