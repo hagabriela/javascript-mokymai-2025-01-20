@@ -1,0 +1,106 @@
+/* body {
+    background-color: orange;
+} */
+
+.iprastas {
+    background-color: aquamarine;
+    text-align: justify;
+}
+
+.padding-pirmas {
+    background-color: burlywood;
+    text-align: justify;
+    padding: 32px;
+}
+
+.padding-antras {
+    background-color: deepskyblue;
+    /* 50px viršuje ir apačioje,
+       20px šonuose */
+    padding: 50px 20px;
+}
+
+.padding-trecias {
+    background-color: gold;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.padding-ketvirtas {
+    background-color: lightseagreen;
+     /* nuo viršaus pagal laikrodžio kryptį:
+    -  20px viršuje
+    -  50px dešinėj
+    -  80px apačioje
+    -  10px kairėje */
+    padding: 20px 50px 80px 10px;
+}
+
+.padding-penktas {
+    background-color: lightsteelblue;
+    width: 200px;
+    padding: 20px;
+     /* jeigu box-sizing nebūtų uždėtas tai šito elemento
+    plotis būtų: padding kairys + turinys + padding dešinys,
+    arba: 20px + 200px + 20px,
+    o dabar width 200px ir yra su viskuo (įskaitant padding
+    ir content) */
+    box-sizing: border-box;
+}
+
+.margin-pirmas {
+    background-color: lightcoral;
+    padding: 16px 32px;
+}
+
+.margin-pirmas p {
+    background-color: rgb(255, 255, 255, 0.2);
+    /* 50px viršus apačia, 0 šonai */
+    /* pagal didesni, siuo atveju vienodai */
+    margin: 50px 0;
+}
+
+.margin-antras {
+    background-color: mediumaquamarine;
+    display: flex;
+}
+
+.margin-antras p {
+    background-color: rgb(255, 255, 255, 0.2);
+    width: 100px;
+    margin: 0 20px;
+    /* abieju suma, t. y. 40px */
+}
+
+.kortele1 {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    width: 300px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.kortele1 h3 {
+    margin: 0;
+}
+
+.kortele1 p {
+    margin-bottom: 0;
+}
+
+.kortele2 {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.kortele2 h3 {
+    margin: 30px 30px 0;
+}
+
+.kortele2 p {
+    margin: 16px 30px 30px;
+}
