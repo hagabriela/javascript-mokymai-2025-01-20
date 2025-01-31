@@ -1,0 +1,77 @@
+/* font-family: "Poppins", serif;
+  font-weight: 700; */
+
+  /* font-family: "Inter", serif;
+  font-weight: 400; */
+
+body {
+    background: linear-gradient(180deg, rgba(88, 246, 236, 1), rgba(251, 237, 221, 1));
+}
+
+#pirma {
+    background: rgba(255, 255, 255, 1);
+    width: 488px;
+    box-sizing: border-box;
+    margin: 64px auto 30px;
+    padding: 50px 40px 30px;
+    box-shadow: 5px 4px 16px 0px rgba(51, 28, 0, 0.15);
+    text-align: center;
+    /* text align cia kad gautusi mygtukas per viduri */
+}
+
+#pirma h1, #antra h1, #trecia h1, #ketvirta h1, #penkta h1 {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    /* text-align: center; */
+    color: rgba(0, 0, 0, 1);
+}
+
+#pirma p, #antra p, #trecia p, #ketvirta p, #penkta p {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 121%;
+    /* text-align: center; */
+    color: rgba(0, 0, 0, 1);
+}
+
+#pirma a, #antra a, #trecia a, #ketvirta a, #penkta a {
+    background: rgba(252, 203, 146, 1);
+    
+    padding: 8px 16px;
+    display: inline-block;
+    
+    color: rgba(0, 0, 0, 1);
+
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 121%;
+    text-decoration: none;
+}
+
+#antra, #trecia, #ketvirta {
+    background: rgba(255, 255, 255, 1);
+    width: 488px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 50px 40px 30px;
+    box-shadow: 5px 4px 16px 0px rgba(51, 28, 0, 0.15);
+    text-align: center;
+    /* text align cia kad gautusi mygtukas per viduri */
+}
+
+#penkta {
+    background: rgba(255, 255, 255, 1);
+    width: 488px;
+    box-sizing: border-box;
+    margin: 30px auto 72px;
+    padding: 50px 40px 30px;
+    box-shadow: 5px 4px 16px 0px rgba(51, 28, 0, 0.15);
+    text-align: center;
+    /* text align cia kad gautusi mygtukas per viduri */
+}
+
+
