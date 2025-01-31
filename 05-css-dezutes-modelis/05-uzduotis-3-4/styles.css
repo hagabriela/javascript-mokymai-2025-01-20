@@ -1,0 +1,246 @@
+/* font-family: "Inter", serif;
+font-style: normal; */
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("pasvaiste.jpg");
+
+    background-size: cover;
+}
+
+#nuotrauka1 img {
+    width: 602px;
+    height: 430px;
+
+    /* top: 90px;
+    left: 135px;  */
+
+    border-radius: 95px 51px 179px 60px; 
+
+    margin-top: 90px;
+    margin-left: 135px;
+    margin-bottom: 26px;
+    margin-right: auto;
+}
+
+#science {
+    color: rgba(0, 0, 0, 1);
+    margin-left: 135px;
+}
+
+#science p {
+    font-family: "Inter", serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.94px;
+    text-align: left;
+}
+
+#science span {
+    font-family: "Inter", serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: left;
+}
+
+#linija1, #linija2 {
+    border: 1px solid rgba(0, 0, 0, 1);
+    max-width: 80%;
+    margin-left: 135px;
+}
+
+h1 {
+    font-family: "Inter", serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.41px;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 1);
+
+    max-width: 764px;
+    box-sizing: border-box;
+    
+    margin-left: 137px;
+}
+
+#paragrafas {
+    background: rgba(255, 255, 255, 0.45);
+
+    color: rgba(0, 0, 0, 1);
+
+    font-family: "Inter", serif;
+    font-style: normal;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24.2px;
+    text-align: left;
+
+    margin-left: 129px;
+    
+    max-width: 834px;
+    box-sizing: border-box;
+
+    padding: 16px 32px;
+
+    border-radius: 17px;
+}
+
+#autorius {
+    font-family: "Inter", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.2px;
+    text-align: left;
+
+    color: rgba(15, 67, 128, 1);
+
+    margin-left: 137px;
+}
+
+#linija3 {
+    border: 7px solid rgba(84, 15, 128, 1);
+    margin-left: 135px;
+    max-width: 80%;
+}
+
+#violetinis {
+    background: rgba(84, 15, 128, 1);
+    
+    padding: 60px 123.56px;
+
+    margin-top: 20px;
+    margin-left: 135px;
+    margin-right: auto;
+
+    max-width: 723px;
+    box-sizing: border-box;
+    
+    border-radius: 25px;
+
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+h2 {
+    font-family: "Inter", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+
+    color: rgba(1, 252, 182, 1);
+
+    margin-left: 137px;
+    margin-top: 57.62px;
+}
+
+#paragrafiukas1, #paragrafiukas3 {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 1);
+
+    margin-left: 137px;
+
+    max-width: 712px;
+    box-sizing: border-box;
+}
+
+#paragrafiukas1 span, #paragrafiukas3 span a {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+
+    background: rgba(1, 252, 182, 1);
+
+    color: rgba(0, 0, 0, 1);
+}
+
+#paragrafiukas2 {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 1);
+
+    margin-left: 137px;
+
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+#paragrafiukas2 span {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+
+    background: rgba(1, 252, 182, 1);
+}
+
+#nuoroda1 a {
+    background: rgba(1, 252, 182, 1);
+
+    color: rgba(0, 0, 0, 1);
+
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    max-width: 495px;
+
+    margin-left: 135px;
+}
+
+#nuotrauka2 img {
+    width: 645px;
+    height: 432px;
+
+    border-radius: 0px 69px 0px 199px;
+
+    margin-top: 23px;
+    margin-left: 137px;
+    margin-bottom: 292px;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
