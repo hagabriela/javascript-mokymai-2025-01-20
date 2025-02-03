@@ -1,0 +1,106 @@
+/* font-family: "Niramit", serif;
+  font-weight: 400;
+
+  font-family: "Niramit", serif;
+  font-weight: 700;
+
+  font-family: "Alata", serif;
+  font-weight: 400; */
+
+body {
+    background-image: url("fonas.png");
+}
+
+#turinys {
+    background: rgba(255, 255, 255, 1);
+
+    box-shadow: 0px 4px 22px 9px rgba(0, 0, 0, 0.16);
+
+    margin: 120px auto;
+
+    /* width: 1089px; */
+    
+    padding: 88px 260px;
+
+    text-align: center;
+}
+
+#ivadas {
+    font-family: "Niramit", serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+
+    color: rgba(0, 0, 0, 1);
+}
+
+#login {
+    font-family: "Niramit", serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+
+    color: rgba(0, 0, 0, 1);
+}
+
+.forma {
+    max-width: 324px;
+
+    text-align: justify;
+
+    margin: 35px auto;
+}
+
+.email-slaptikas {
+    font-family: "Niramit", serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+
+    color: rgba(0, 0, 0, 1);
+}
+
+#emailas, #passwordas {
+    font-family: "Alata", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.32px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    
+    color: rgba(148, 148, 148, 1);
+
+    width: 100%;
+    height: 56px;
+
+    margin-bottom: 16px;
+}
+
+#mygtukas {
+    background: rgba(2, 180, 226, 1);
+
+    /* width: 137px; */
+    
+    padding: 16px 48px;
+    
+    border-radius: 30px ;
+
+    font-family: "Niramit", serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+#pabaiga {
+    font-family: "Niramit", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
