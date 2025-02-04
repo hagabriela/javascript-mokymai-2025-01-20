@@ -1,0 +1,227 @@
+/* font-family: "Roboto", serif; */
+
+.virsaus-nuotrauka {
+    background-image: url(virsus.jpg);
+    background-size: cover;
+
+    width: 100%;
+    box-sizing: border-box;
+    height: 513px;
+
+    padding-top: 140px;
+    padding-left: 100px;
+}
+
+.virsaus-nuotrauka h1 {
+    font-family: "Roboto", serif;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 234.38px;
+    
+    text-align: left;
+
+    color: rgba(255, 255, 255, 1);
+
+    text-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.37) inset;
+
+    margin: 0;
+}
+
+.info {
+    width: 81%;
+    /* height:2,047px; */
+    
+    margin-top: 122px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 177px;
+    
+    /* margin: 112px auto 177px; */
+}
+
+.virsutine h2 {
+    font-family: "Roboto", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 75px;
+    text-align: left;
+
+    color: rgba(7, 53, 144, 1);
+
+    margin: 0;
+}
+
+.virsutine p {
+    font-family: "Roboto", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: left;
+
+    color: rgba(128, 125, 125, 1);
+
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.remelyje {
+    font-family: "Roboto", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 0.85);
+
+    background: rgba(230, 247, 255, 1);
+
+    /* width: 1564px; */
+    
+    padding: 16px;
+
+    border: 1px solid rgba(145, 213, 255, 1);
+    border-radius: 2px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+}
+
+.korteles {
+    /* width: 1564px; */
+
+    border-radius: 10px;
+
+    background: rgba(245, 245, 245, 1);
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.kortele1 {
+    max-width: 644px;
+    box-sizing: border-box;
+    
+    padding: 24px 24px 36px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+
+    background: rgba(224, 240, 252, 1);
+
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+
+    border-radius: 24px;
+}
+
+.kortele1 img, .kortele2 img, .kortele3 img {
+    width: 100%;
+    box-sizing: border-box;
+
+    object-fit: cover;
+    
+    height: 226px;
+
+    border-radius: 15px;
+}
+
+.kortele1 .tekstas1, .kortele2 .tekstas2, .kortele3 .tekstas3 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.kortele1 .tekstas1 h1, .kortele2 .tekstas2 h1, .kortele3 .tekstas3 h1 {
+    font-family: "Roboto", serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56.25px;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 1);
+
+    margin-bottom: 8px;
+}
+
+.kortele1 .tekstas1 h2, .kortele2 .tekstas2 h2, .kortele3 .tekstas3 h2 {
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 1);
+
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.kortele1 .tekstas1 p, .kortele2 .tekstas2 p, .kortele3 .tekstas3 p {
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    text-align: left;
+
+    color: rgba(128, 125, 125, 1);
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.kortele1 button, .kortele2 button, .kortele3 button {
+    /* width: 234px; */
+
+    padding: 16px 32px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: linear-gradient(90deg, rgba(7, 53, 144), rgba(61, 123, 245));
+}
+
+.kortele1 button a, .kortele2 button a, .kortele3 button a {
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+.kortele2 {
+    max-width: 644px;
+    box-sizing: border-box;
+    
+    padding: 24px 24px 36px 24px;
+    margin: 32px auto;
+
+    background: rgba(244, 231, 253, 1);
+
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+
+    border-radius: 24px;
+}
+
+.kortele3 {
+    max-width: 644px;
+    box-sizing: border-box;
+    
+    padding: 24px 24px 36px 24px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background: rgba(228, 252, 224, 1);
+
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+
+    border-radius: 24px;
+}
+
+
+
+
