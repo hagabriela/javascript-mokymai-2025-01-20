@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+/* ====================================
+NAVIGACIJA
+==================================== */
+
+.navigacija {
+    background-color: #333;
+    padding: 25px 50px;
+}
+
+/* pasiims visas a zymas, sarase ir ne */
+.navigacija a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.navigacija a:hover {
+    color: orange;
+}
+
+/* jei eisim ne per navigacija ir yra kiti sarase HTML, tai ir jiems prisitaikytu */
+.navigacija ul,
+.navigacija ul li {
+    display: inline;
+}
