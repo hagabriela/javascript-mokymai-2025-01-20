@@ -1,0 +1,26 @@
+/* ===================================
+NAVIGACIJA
+=================================== */
+
+.navigacija {
+    background-color: lightskyblue;
+    padding: 25px 50px;
+    
+    display: flex; /* įjungiam stulpelius */
+    justify-content: space-between; /* stulpelius horizontaliai išmėtom į šonus */
+    align-items: center; /* stulpelius vertikaliai centruojam */
+}
+
+.navigacija a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigacija a:hover {
+    color: white;
+}
+
+.navigacija ul {
+    display: flex;
+    list-style-type: none;
+}
