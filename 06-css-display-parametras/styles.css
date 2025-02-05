@@ -84,3 +84,32 @@ PASLAUGOS BLOKELIS
     background-color: white;
     color: red;
 }
+
+/* ====================================
+DROPDOWN MENIU
+==================================== */
+
+.paskutinis {
+    padding: 100px 50px;
+    background-color: lightgreen;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    /* slepiam kol nereikia */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: bisque;
+}
+
+.dropdown:hover .dropdown-content {
+    /* atidengiam kai reikia */
+    display: block;
+}
+
