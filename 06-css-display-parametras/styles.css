@@ -27,3 +27,26 @@ NAVIGACIJA
 .navigacija ul li {
     display: inline;
 }
+
+/* ====================================
+PRISIJUNGIMO FORMA
+==================================== */
+
+.forma {
+    padding: 25px 50px;
+    background-color: darkturquoise;
+}
+
+.forma label,
+.forma input {
+    display: block;
+}
+
+.forma label {
+    margin-bottom: 5px;
+}
+
+/* galima ir pagal id */
+.forma .input-tarpui {
+    margin-bottom: 10px;
+}
