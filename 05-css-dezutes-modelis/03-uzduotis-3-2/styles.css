@@ -5,73 +5,81 @@
   font-weight: 400; */
 
 body {
-    background: linear-gradient(180deg, rgba(88, 246, 236, 1), rgba(251, 237, 221, 1));
+    background: linear-gradient(180deg, #58f6ec 0%, #fbeddd 64.58%);
+    padding: 42px 0;
+    /* 72-30=42px kad visas korteles per viena klase, nes margin 30px uzdetas. 72px nuo balto korteles, o ne 64px kaip raso Figma ir eina nuo apvalinimo ten */
+    margin: 0;
+    /* nuimam nes narsykle pati uzdeda */
 }
+/* Nebuvau cia idejus % */
 
-#pirma {
+.naujiena {
     background: rgba(255, 255, 255, 1);
     width: 488px;
-    box-sizing: border-box;
-    margin: 64px auto 30px;
+    /* kadangi yra tekstas ir nera nuotrauku imama tik ploti be aukscio. buvau idejus */
+
+    margin: 30px auto ;
     padding: 50px 40px 30px;
+
+    box-sizing: border-box;
+    /* reikia sito nes yra width ir padding arba butu borderis, buvau idejus */
+
     box-shadow: 5px 4px 16px 0px rgba(51, 28, 0, 0.15);
     text-align: center;
-    /* text align cia kad gautusi mygtukas per viduri */
+    /* text align cia kad gautusi mygtukas per viduri, nes mygtukas neuzima viso plocio. Kitas variatas deti a i p ir tada centruoti */
 }
 
-#pirma h1, #antra h1, #trecia h1, #ketvirta h1, #penkta h1 {
+.naujiena h2 {
     font-family: "Poppins", serif;
     font-weight: 700;
     font-size: 24px;
-    line-height: 150%;
+    line-height: 36px;
     /* text-align: center; */
-    color: rgba(0, 0, 0, 1);
+    /* plociu ir auksciu zodziams NEREIKIA nes konkreciai tam zodziui ir tekstui yra. Nedejau ir taip. */
+    /* color: rgba(0, 0, 0, 1); */
+    /* nedejo spalvos nes defaultine */
+    margin: 0;
+    /* Nebuvau sito padarius, o narsykle is savo puses buvo uzdejus kitus skaicius nei figmoj */
 }
 
-#pirma p, #antra p, #trecia p, #ketvirta p, #penkta p {
+/* netinka rasyti .naujiena p, a nes iesko visu a ne sioje klaseje */
+.naujiena p,
+.naujiena a {
     font-family: "Inter", serif;
     font-weight: 400;
     font-size: 12px;
-    line-height: 121%;
+    line-height: 14.52px;
     /* text-align: center; */
-    color: rgba(0, 0, 0, 1);
+    /* color: rgba(0, 0, 0, 1); */
+    /* nedejo spalvos nes defaultine */
 }
 
-#pirma a, #antra a, #trecia a, #ketvirta a, #penkta a {
+.naujiena p {
+    margin: 16px 0;
+    /* Nebuvau sito padarius, o narsykle is savo puses buvo uzdejus kitus skaicius nei figmoj */
+}
+
+.naujiena a {
     background: rgba(252, 203, 146, 1);
+
+    /* Mygtukui kaip ir tekstui nededame plocio ir aukscio. Nedejau */
     
     padding: 8px 16px;
+    /* Visada ant mygtuko dedam padding, vietoj aukscio ir plocio. Taip ir dariau. */
     display: inline-block;
+    /* Ant mygtuko prie padding VISADA reikia uzdeti sita. Taip ir dariau */
     
     color: rgba(0, 0, 0, 1);
+    /* galima tiesiog rasyti black */
 
-    font-family: "Inter", serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 121%;
     text-decoration: none;
+
+    transition: 0.2s all;
 }
 
-#antra, #trecia, #ketvirta {
-    background: rgba(255, 255, 255, 1);
-    width: 488px;
-    box-sizing: border-box;
-    margin: 30px auto;
-    padding: 50px 40px 30px;
-    box-shadow: 5px 4px 16px 0px rgba(51, 28, 0, 0.15);
-    text-align: center;
-    /* text align cia kad gautusi mygtukas per viduri */
+.naujiena a:hover {
+    background: rgba(232, 186, 133); 
 }
-
-#penkta {
-    background: rgba(255, 255, 255, 1);
-    width: 488px;
-    box-sizing: border-box;
-    margin: 30px auto 72px;
-    padding: 50px 40px 30px;
-    box-shadow: 5px 4px 16px 0px rgba(51, 28, 0, 0.15);
-    text-align: center;
-    /* text align cia kad gautusi mygtukas per viduri */
-}
+/* Nebuvo sito, tiesiog kiek tamsesne spalva uzdedam */
 
 
