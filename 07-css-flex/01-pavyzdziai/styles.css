@@ -24,3 +24,24 @@ NAVIGACIJA
     display: flex;
     list-style-type: none;
 }
+
+/* ===================================
+HEADER BLOKAS
+=================================== */
+
+.header {
+    background-color: aquamarine;
+    padding: 50px;
+    height: 70vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header .turinys {
+    max-width: 300px;
+    background-color: white;
+}
