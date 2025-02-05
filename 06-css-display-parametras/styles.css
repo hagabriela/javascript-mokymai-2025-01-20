@@ -50,3 +50,37 @@ PRISIJUNGIMO FORMA
 .forma .input-tarpui {
     margin-bottom: 10px;
 }
+
+/* ====================================
+PASLAUGOS BLOKELIS
+==================================== */
+
+.paslauga {
+    padding: 25px 50px;
+    background-color: rgb(255, 215, 128);
+}
+
+/*
+- block - užima visą eilutę, ir niekas šalia neatsiduria
+- inline - užima eilutėje tik tiek pločio kiek reikia, o eilutės
+           aukštis yra pagal teksto aukštį
+- inline-block - užima eilutėje tik tiek pločio kiek reikia, o eilutės
+           aukštis pagal bendrai kiek elementui yra skiriama (pagal
+           height, ar padding, ar pan)
+*/
+
+.paslauga .mygtukas {
+    padding: 20px 40px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.paslauga .pirminis {
+    background-color: orange;
+    color: black;
+}
+
+.paslauga .antrinis {
+    background-color: white;
+    color: red;
+}
