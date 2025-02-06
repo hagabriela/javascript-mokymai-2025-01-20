@@ -101,3 +101,44 @@ PASLAUGŲ BLOKAS
     padding: 16px;
     flex: 1;
 }
+
+/* ===================================
+ATLIKTŲ DARBŲ BLOKAS
+=================================== */
+
+.atliktu-darbu-blokas {
+    background-color: lightgreen;
+    padding: 25px 50px;
+}
+
+.atliktu-darbu-blokas h2 {
+    text-align: center;
+}
+
+.atliktu-darbu-blokas .atlikti-darbai {
+    display: flex;
+    flex-wrap: wrap; /* kad persoktu i kita eilute, bet gaunasi pradinis vaizdas, todel uzdejom width */
+    gap: 25px;
+}
+
+.atliktu-darbu-blokas .darbas {
+    width: calc((100% - 2 * 25px) / 3);
+    background: rgb(255, 255, 255, 0.3);
+    padding: 16px;
+    box-sizing: border-box; /* nes yra width ir padding */  
+}
+
+.atliktu-darbu-blokas .visi-darbai {
+    text-align: center;
+}
+
+/* galima rasyti .visi darbai a bet galima suklysti taip, geriau imti nuo blokelio pavadinimo pradinio */
+.atliktu-darbu-blokas .visi-darbai a {
+    background: green;
+    color: white;
+    text-decoration: none;
+    padding:12px 32px;
+    display: inline-block; /* kad mygtukas neliptu ant kitu elementu */
+}
+
+
