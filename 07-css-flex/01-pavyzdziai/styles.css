@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 /* ===================================
 NAVIGACIJA
 =================================== */
@@ -44,4 +48,18 @@ HEADER BLOKAS
 .header .turinys {
     max-width: 300px;
     background-color: white;
+}
+
+/* ===================================
+NAUDŲ BLOKAS
+=================================== */
+
+.naudos {
+    padding: 25px 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.naudos .nauda {
+    flex: 1; /* kad visi stulpeliai būtų visiškai vienodo pločio */
 }
