@@ -63,3 +63,21 @@ NAUDŲ BLOKAS
 .naudos .nauda {
     flex: 1; /* kad visi stulpeliai būtų visiškai vienodo pločio */
 }
+
+/* ===================================
+SUSISIEKIMŲ BLOKAS
+=================================== */
+
+.susisiekimas {
+    background: orange;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.susisiekimas .forma {
+    width: 220px;
+    background: rgb(255, 255, 255, 0.5);
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
