@@ -1,140 +1,115 @@
 /* font-family: "Poppins", serif;
-  font-weight: 700;
-  font-style: normal; */
+  font-weight: 700; */
 
   /* font-family: "Nokora", serif;
-  font-weight: 400;
-  font-style: normal; */
+  font-weight: 400; */
 
   /* font-family: "Inter", serif;
-  font-weight: 700;
-  font-style: normal; */
+  font-weight: 700; */
 
 body {
     background: rgba(228, 228, 231, 1);
+
+    margin: 0;
+    /* Nes uzsideda auto nuo narsykles. Nebuvau padarius */
+    padding: 98px 0 97px;
+    /* 130px(129px)-32px =98px(97px). Dariau kitaip, lektore cia pamirso */
 }
 
-.nuotrauka img {
+.kortele {
+    background: rgba(255, 255, 255, 1);
+    /* galima deti tik ant apatines dalies (turinio) arba visos korteles, bet geriau ant visos, nes gali atsirasti koks tarpas */
+
     width: 329px;
+    /* box-sizing: border-box; nereikalingas, nes nera nei padding, nei borderio. Buvau idejus */
+
+    margin: 32px auto;
+    /* as dariau kiekvienai kortelei atskirai, todel ir virsu dejau */
+
+    border-radius: 30px;
+    overflow: hidden; /* kad ir nuotrauka apvalintusi, kad tilptu nuotrauka i korteles ribas */
+
+    box-shadow: 0px 4px 13px 0px rgba(24, 24, 27, 0.2);
+
+    transition: 0.2s all;
+}
+
+/* Nebuvau padarius hover */
+.kortele:hover {
+    box-shadow: 0 0 0 4px rgba(130, 196, 253, 1), 
+    9px 5px 19px 0px rgba(80, 164, 240, 0.74), 
+    -4px -9px 24px 0px rgba(80, 164, 240, 0.74);
+    /* i box shadow prieki idejom borderio info ir 0, kad nesokinetu */
+}
+
+.kortele .foto {
     height: 214px;
-    object-fit: cover;
+     /* cia uzdedam auksti (vienetinis atvejis), nes kitaip kai naturaliai skirtingos nuotraukos, tai ir korteles issitampo skirtingai, o pagal dizaina yra vienodas aukstis. Buvau uzdejus, bet kitokiu budu, o sis taisiklingesnis */
 }
 
-.turinys {
+.kortele .foto img {
+    width: 100%; /* pagal tevini div, foto blokeli */
+    /* as buvau uzdejus px */
+    height: 100%;
+    object-fit: cover; /* kad nuotrauka neisitampytu */
+    /* object-position: center; */  /* galima deti jei norim, kad imtu nuotrauka nuo centro bet siuo atveju nieko nekeicia */
+}
+
+.kortele .turinys {
     padding: 48px 32px 36px;
-    text-align: left;
+    /* text-align: left; */ /* nedejo, nes default */
 }
 
-h1 {
+.kortele .turinys h2 {
+    margin: 0;
+    /* Tam, kad nuimti tai, ka narsykle uzdejo ir teisingai suveiktu kitas padding. Nebuvau uzdejus */
+    
     font-family: "Poppins", serif;
     font-weight: 700;
-    font-style: normal;
     font-size: 24px;
     line-height: 36px;
     
-    color: rgba(0, 0, 0, 1);
+    /* color: rgba(0, 0, 0, 1); */
+    /* Nebutina jos deti, nes juoda default spalva, nebent kazkas ja permustu */
 }
 
-p {
+.kortele .turinys  p {
+    margin: 16px 0;
+    /* Reikia, nes narsykle savo kitokius nei dizainas ideda. Net jei tiek pat px uzdejo, geriau savo uzdet, nes kitoj narsyklej gali buti kitaip. Nebuvau idejus */
+    
     font-family: "Nokora", serif;
     font-weight: 400;
-    font-style: normal;
     font-size: 12px;
     line-height: 15.86px;
 
-    color: rgba(0, 0, 0, 1);
+    /* color: rgba(0, 0, 0, 1); */
 }
 
-.nuoroda {
-    padding: 8px 16px;
-    display: inline-block;
-
-    border: 2px solid rgba(14, 56, 92, 1);
-
+.kortele .turinys a {
     font-family: "Inter", serif;
     font-weight: 700;
-    font-style: normal;
     font-size: 12px;
-    font-weight: 700;
     line-height: 14.52px;
     text-decoration: none;
 
     color: rgba(14, 56, 92, 1);
-}
-
-#nuoroda2 {
-    padding: 8px 16px;
-    display: inline-block;
 
     border: 2px solid rgba(14, 56, 92, 1);
 
+    padding: 8px 16px;
+    display: inline-block; /* kad nelystu i kita paragrafa */
+    /* su mygtuku butent taip (abu), jokiu auksciu ir plociu. Taip ir dariau */
+
+    transition: 0.2s all;
+}
+
+/* .kortele:hover .turinys a 
+cia kad mygtukas pasispalvintu uzvedus pele ant korteles. pasirenkam varianta, nes nenurodyta */
+/* Uzvedus ant mygtuko pasikeistu. Nebuvau padarius */
+.kortele .turinys a:hover {
     background: rgba(14, 56, 92, 1);
-
-    font-family: "Inter", serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.52px;
-    text-decoration: none;
-
     color:rgba(255, 255, 255, 1);
 }
 
-.kortele1 {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 13px 0px rgba(24, 24, 27, 0.2);
 
-    width: 329px;
-    box-sizing: border-box;
-    /* height: 477px; */
 
-    margin: 129px auto 32px;
-
-    border-radius: 30px;
-    overflow: hidden;
-}
-
-.kortele2 {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 9px 5px 19px 0px rgba(80, 164, 240, 0.74), -4px -9px 24px 0px rgba(80, 164, 240, 0.74);
-
-    border: 4px solid rgba(130, 196, 253, 1);
-    
-    width: 329px;
-    box-sizing: border-box;
-    /* height: 477px; */
-
-    margin: 32px auto ;
-
-    border-radius: 30px;
-    overflow: hidden;
-}
-
-.kortele3, .kortele4, .kortele5 {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 13px 0px rgba(24, 24, 27, 0.2);
-    
-    width: 329px;
-    box-sizing: border-box;
-    /* height: 477px; */
-
-    margin: 32px auto ;
-
-    border-radius: 30px;
-    overflow: hidden;
-}
-
-.kortele6 {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 13px 0px rgba(24, 24, 27, 0.2);
-
-    width: 329px;
-    box-sizing: border-box;
-    /* height: 477px; */
-
-    margin: 32px auto 130px;
-
-    border-radius: 30px;
-    overflow: hidden;
-}
