@@ -1,0 +1,46 @@
+.pirma-eilute {
+    background: orange;
+    display: flex;
+    padding: 25px 15px;
+}
+
+.antra-eilute {
+    background-color: orangered;
+    display: flex;
+    padding: 20px;
+}
+
+.antra-eilute p {
+    background-color: white;
+    margin: 10px;
+}
+
+.trecia-eilute {
+    background-color: orange;
+    display: flex;
+    padding: 10px 60px;
+    justify-content: center;
+}
+
+.trecia-eilute p {
+    background-color: white;
+    padding: 20px 40px;
+    margin: 0;
+    width: 50%;
+    box-sizing: border-box;   
+}
+
+.ketvirta-eilute {
+    background: orangered;
+    display: flex;
+    padding: 10px 60px;
+    justify-content: space-between;
+}
+
+.ketvirta-eilute p {
+    background-color: orange;
+    padding: 35px 20px;
+    margin: 10px 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
