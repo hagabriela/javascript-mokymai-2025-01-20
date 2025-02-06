@@ -81,3 +81,23 @@ SUSISIEKIMŲ BLOKAS
     padding: 8px 16px;
     box-sizing: border-box;
 }
+
+/* ===================================
+PASLAUGŲ BLOKAS
+=================================== */
+
+.paslaugos {
+    padding: 25px 50px;
+    background-color: bisque;
+}
+
+.paslaugos .paslaugu-sarasas {
+    display: flex;
+    gap: 24px;
+}
+
+.paslaugos .paslauga {
+    border: 1px solid black;
+    padding: 16px;
+    flex: 1;
+}
