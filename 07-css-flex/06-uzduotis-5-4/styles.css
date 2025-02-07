@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+}
+
+/* ===================================
+NAVIGACIJA
+=================================== */
+
+.navigacija {
+    background-color: black;
+    color: white;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigacija h2 {
+    margin: 0;
+}
+
+.navigacija a{
+    text-decoration: none;
+    color: white;
+}
+
+.navigacija ul {
+    display: flex;
+    gap: 10px;
+
+    list-style-type: none;
+
+    margin: 0;
+}
+
+/* ===================================
+HEADER
+=================================== */
+
+.header {
+    background-color: rgb(110, 227, 100);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 50px;
+    height: 70vh;
+    box-sizing: border-box;
+}
+
+.header .turinys .pirmas {
+    background-color: rgba(0, 0, 0, 0.781);
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 20px;
+    display: inline-block;
+
+    border: 2px solid black;
+}
+
+.header .turinys .antras {
+    color: black;
+    text-decoration: none;
+
+    padding: 10px 20px;
+    display: inline-block;
+
+    border: 2px solid black;
+}
+
+/* ===================================
+PARAGRAFAS
+=================================== */
+
+.paragrafas {
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+/* ===================================
+STRAIPSNIAI
+=================================== */
+
+.straipsniai {
+    background-color: bisque;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.straipsniai .straipsnis {
+    background: rgb(255, 255, 255, 0.3);
+    
+    width: calc((100% - 2 * 20px) / 3);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* ===================================
+JUOSTA
+=================================== */
+
+.juosta {
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: stretch;
+    gap: 50px;
+}
+
+.juosta p {
+    flex: 1;
+}
+
+.juosta .informacija {
+    flex: 1;
+}
+
+.juosta .informacija h2 {
+    color: white;
+}
+
+.juosta .informacija a {
+    color: rgb(0, 128, 126);
+    text-decoration: none;
+}
