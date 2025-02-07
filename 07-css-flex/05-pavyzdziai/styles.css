@@ -1,0 +1,141 @@
+/* ====================================
+BENDRI STILIAI
+==================================== */
+
+.eile {
+    display: flex;
+}
+
+.stulp {
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box; /* jei kazkur bus uzdetas width. kai kur visada del atsargos uzdedamos */
+    /* bendrai */
+}
+
+/* ====================================
+PIRMOS EILĖS STILIAI
+==================================== */
+
+.pirmas {
+    background-color: lightblue;
+}
+
+/* ====================================
+ANTROS EILĖS STILIAI
+==================================== */
+
+.antras {
+    background-color: lightgreen;
+    padding: 20px;
+    gap: 20px;
+}
+
+.antras p {
+    margin: 0;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+/* ====================================
+TREČIOS EILĖS STILIAI
+==================================== */
+
+.trecias {
+    background-color: lightcyan;
+    padding: 20px;
+    gap: 20px;
+}
+
+.trecias .stulpelis {
+    flex: 1;
+    background-color: rgb(111, 167, 247);
+}
+
+/* ====================================
+KETVIRTOS EILĖS STILIAI
+==================================== */
+
+.ketvirtas {
+    background-color: lightcoral;
+    padding: 30px 50px;
+    gap: 15px;
+}
+
+/* ====================================
+PENKTOS EILĖS STILIAI
+==================================== */
+
+.penktas {
+    background-color: rgb(255, 211, 66);
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.penktas .stulp {
+    width: 20%;
+    /* konkreciai sitam */
+}
+
+/* ====================================
+ŠEŠTOS EILĖS STILIAI
+==================================== */
+
+.sestas {
+    background-color: cornflowerblue;
+    height: 500px;
+    padding: 15px;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+/* ====================================
+SEPTINTOS EILĖS STILIAI
+==================================== */
+
+.septintas {
+    background-color: darkturquoise;
+    padding: 10px;
+    gap: 10px;
+    height: 400px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.septintas .stulp {
+    width: 30%;
+}
+
+/* ====================================
+AŠTUNTOS EILĖS STILIAI
+==================================== */
+
+.astuntas {
+    background-color: rgb(190, 248, 74);
+    padding: 20px;
+    gap: 20px;
+
+     /* jeigu pakeičiam stulpelių kryptį, tai lygiavimo kryptis irgi pasikeičia */
+    flex-direction: column;
+    
+    /* o ne justify-content. kadangi pakeista kryptis, tai align-items lygiuoja nebe vertikaliai, o horizontaliai */
+    align-items: flex-end;
+
+    /* cia galima butu ir su margin left auto */
+
+
+    height: 500px;
+}
+
+.astuntas .stulp {
+    width: 30%;
+}
+
+.astuntas .augantis {
+    /*  flex-grow: 1 - gali augti
+        flex-grow: 0 - draudžiama augti
+        flex-shrink: 1 - gali mažėti
+        flex-shrink: 0 - draudžiama mažėti */
+    flex-grow: 1;
+    /* cia jau su margin nelabai gautusi */
+}
