@@ -1,0 +1,193 @@
+/* font-family: "Montserrat", serif; */
+
+body {
+    background: linear-gradient(rgb(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url("nuotraukos/fonas.png");
+    margin: 0;
+}
+
+/* ===================================
+NAVIGACIJA
+=================================== */
+
+.navigacija {
+    background: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.navigacija ul {
+    list-style-type: none;
+
+    font-family: "Montserrat", serif;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 23.16px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 84px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navigacija ul li {
+    flex: 1;
+}
+
+.navigacija a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* ===================================
+TEKSTO BLOKAS
+=================================== */
+
+.tekstas {
+    background: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+
+    text-align: center;
+    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    width: 90%;
+    /* width: 1120px; */
+    /* height: 728px; */
+
+    margin: 81px auto;
+
+    padding-top: 56px;
+    padding-bottom: 66px;
+    
+    box-sizing: border-box;
+}
+
+.tekstas h1 {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78.02px;
+    letter-spacing: 8%;
+
+    margin: 0;
+}
+
+.tekstas h2 {
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.38px;
+    letter-spacing: 3%;
+
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.ledai {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+}
+
+.tekstas .ledu-kortele {
+    width: 29%;
+    /* kitaip negalejau justify content daryti nes netilpo */
+    /* height: 440px; */
+
+    border: 3px solid rgba(255, 255, 255, 1);
+
+    padding-top: 46px;
+    padding-bottom: 32px;
+    padding-left: 23px;
+    padding-right: 24px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* kad graziai tekstas pasiskirstytu */
+}
+
+.tekstas .ledu-kortele img {
+    width: 127px;
+    height: 127px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tekstas .ledu-kortele h3 {
+    font-family: "Montserrat", serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 4%;
+    text-transform: uppercase;
+
+    margin-top: 35px;
+    margin-bottom: 16px;
+}
+
+.tekstas .pabraukimas {
+    border: 3px solid rgba(255, 255, 255, 1);
+    width: 23px;
+    display: inline-block;
+}
+
+.tekstas .ledu-kortele p {
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 3%;
+
+    margin-top: 17px;
+    margin-bottom: 16px;
+
+    flex-grow: 1;
+}
+
+.tekstas .ledu-kortele a {
+    padding: 16px 20px;
+    display: inline-block;
+    
+    font-family: "Montserrat", serif;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 23.16px;
+    letter-spacing: 8%;
+
+    text-decoration: none;
+
+    color: rgba(150, 97, 232, 1);
+}
+
+/* ===================================
+APATINĖ JUOSTELĖ
+=================================== */
+
+.apatine-juostele {
+    background: rgba(0, 0, 0, 1);
+
+    padding: 16px 8px;
+}
+
+.apatine-juostele p {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14.63px;
+    letter-spacing: 10%;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+
