@@ -1,0 +1,202 @@
+/* font-family: "Montserrat", serif;
+
+font-family: "Roboto", serif;
+font-weight: 400; */
+
+body {
+    margin: 0;
+}
+
+/* ===================================
+VIRŠUS
+=================================== */
+
+.virselio-nuotrauka {
+    background-image: url("nuotraukos/virsus.jpg");
+    background-size: cover;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    /* padding-top: 24px;
+    padding-bottom: 58px;
+    padding-left: 80px;
+    padding-right: 80px; */
+}
+
+.virselio-nuotrauka .navigacija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 80px;
+}
+
+.virselio-nuotrauka .navigacija img {
+    width: 79px;
+    height: 79px;
+}
+
+.virselio-nuotrauka .navigacija .nuorodos {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.virselio-nuotrauka .navigacija .nuorodos a {
+    font-family: "Montserrat", serif;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 23.16px;
+    letter-spacing: 10%;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 1);
+
+    text-decoration: none;
+}
+
+.virselio-nuotrauka .navigacija .nuorodos .mygtukas {
+    padding: 16px 32px;
+    display: inline-block;
+    
+    border-radius: 8px;
+    
+    background: rgba(225, 46, 96, 1);
+}
+
+.virselio-nuotrauka .antraste {
+    padding-top: 65px;
+    padding-bottom: 58px;
+    padding-left: 80px;
+    padding-right: 0;
+
+    width: 60%;
+}
+
+.virselio-nuotrauka .antraste h1 {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60.95px;
+    
+    color: rgba(255, 255, 255, 1);
+
+    margin: 0;
+}
+
+/* ===================================
+PIRMAS TEKSTO BLOKAS
+=================================== */
+
+.blokas1 {
+    background: rgba(239, 93, 105, 1);
+
+    padding: 78px 60px;
+}
+
+.blokas1 .vidus {
+    background: rgba(255, 255, 255, 0.8);
+
+    display: flex;
+
+    gap: 60px;
+
+    padding: 60px 40px;
+
+    border-radius: 8px;
+}
+
+
+.blokas1 .vidus .paragrafas1 p {
+    font-family:  "Roboto", serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22.27px;
+
+    margin: 0;
+}
+
+/* ===================================
+ANTRAS TEKSTO BLOKAS
+=================================== */
+
+.blokas2 {
+    background: rgba(252, 223, 225, 1);
+
+    padding: 127px 59px 128px 98px;
+
+    display: flex;
+    gap: 40px;
+}
+
+.blokas2 .paragrafas2 {
+    width: 35%;
+    /* height: 614px; */
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 1);
+
+    padding: 65px 50px;
+    box-sizing: border-box;
+}
+
+.blokas2 .paragrafas2 p {
+    font-family:  "Roboto", serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22.27px;
+    letter-spacing: 0%;
+
+    margin: 0;
+}
+
+.blokas2 img {
+    width: 58.6%;
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    flex-grow: 1;
+}
+
+/* ===================================
+APATINĖ JUOSTA
+=================================== */
+
+.juosta {
+    background: rgba(0, 0, 0, 1);
+
+    /* justify-content: space-between; */
+    padding: 16px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.juosta .zenkliukas img {
+    width: 79px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.juosta .zenkliukas p {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14.63px;
+    letter-spacing: 10%;
+    text-align: left;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.juosta .linkai {
+    display: flex;
+    gap: 6.5px;
+}
