@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS konteineriai, 2 variantas</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        /* Bendrine klase, todel rasoma CSS virsuje */
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .pirmas {
+            background: orange;
+            padding: 40px 10px;
+        }
+
+        .antras {
+            background: orangered;
+            padding: 40px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- .pirmas>.container>h1{Puslapis}+p>lorem -->
+    <div class="pirmas">
+        <div class="container">
+            <h1>Puslapis</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aut obcaecati exercitationem sapiente cumque consectetur odit distinctio vitae facilis, enim placeat cum repellat illo libero corporis odio at sunt eius.
+            </p>
+        </div>
+    </div>
+
+    <!-- .antras>.container>h2{Skyrelis}+p*3>lorem -->
+    <div class="antras">
+        <div class="container">
+            <h2>Skyrelis</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque eaque officia maiores reiciendis fugit! Numquam aliquid in quod accusantium? Sunt praesentium soluta laborum libero quasi numquam adipisci provident iure corrupti.
+            </p>
+            <p>
+                Assumenda earum ad repellendus architecto. Perferendis officiis error possimus quis nemo voluptatibus quod, voluptas veniam, hic sed commodi doloremque! Ratione minus ad magni quisquam nisi eaque dolorum ipsum quae non.
+            </p>
+            <p>
+                Voluptate facilis eos a deleniti. Impedit odio atque, nemo rem incidunt quaerat expedita sequi maiores! Harum voluptates suscipit, porro ullam iusto quas modi? Expedita quibusdam, nemo at error iusto obcaecati?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
