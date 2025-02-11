@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+/* space between be paddingu atstumia iki krastu. gap nelabai ka daro */
+.pirmas {
+    background: lightpink;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nera paddingu ir space around padaro panasiai kaip su padding. gap dar labiau padidina tarpa */
+.antras {
+    background: lightcyan;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 40px; */
+}
+
+
+/* kadangi yra padding tai space between, kuris eina iki krastu iki ju neina. gap nieko neduda */
+.trecias {
+    background: lightgoldenrodyellow;
+
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Gap didina tarpa */
+.ketvirtas {
+    background: lightsalmon;
+
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+/* Su padding, space-around ir space-between skirasi tik tarpai tarp ju */
