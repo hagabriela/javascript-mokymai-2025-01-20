@@ -1,0 +1,107 @@
+    /* font-family: "Montserrat", serif;
+    font-weight: 800;
+
+    font-family: "Inter", serif; */
+
+body {
+    background: rgba(212, 241, 230, 1);
+    margin: 0;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===================================
+ANTRAŠTĖ
+=================================== */
+
+.antraste h1 {
+    font-family: "Montserrat", serif;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 86.4px;
+
+    text-align: center;
+
+    margin-top: 121px;
+    margin-bottom: 65px;
+}
+
+/* ===================================
+NUOTRAUKOS
+=================================== */
+
+.nuotraukos {
+    margin-bottom: 59px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 40px 43.24px;
+}
+
+.nuotraukos img {
+    border-radius: 62.9px;
+
+    object-fit: cover;
+
+    width: calc((100% - 2* 43.24px) / 2);
+
+    height: 456px;
+}
+
+.nuotraukos .auganti {
+    flex-grow: 1;
+}
+
+.nuotraukos .mazesne {
+    width: 40%;
+}
+
+/* ===================================
+INFORMACIJA
+=================================== */
+
+.info {
+    background: rgba(255, 255, 255, 1);
+    
+    border-radius: 24px;
+    
+    padding: 56px 60px;
+    box-sizing: border-box;
+
+    margin-bottom: 156px;
+
+    display: flex;
+    gap: 73px;
+}
+
+.info .tekstas h2 {
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.info .tekstas p {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    margin: 0;
+}
+
+.info .nuotrauka img {
+    max-width: 342px;
+    height: 532px;
+    object-fit: cover;
+
+    border-radius: 24px;
+}
