@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konteineriai, 1 variantas</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+        }
+        
+        
+        body {
+            background: silver;
+        }
+
+        .container {
+            background: white;
+            
+            max-width: 800px; 
+            /* max o ne visai fiksuotas, kad tiktu ir telefonui ir kita */
+            width: 100%; /* del tam tikru narsykliu, kad butu pilnas. bet ne visada reikalinga */
+            margin: 0 auto;
+            /* pagrinidiniai 3 komponentai */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- .container>h1{Puslapis}+(p>lorem)+(h2{Skyrelis $}+p>lorem)*3 -->
+    <div class="container">
+        <h1>Puslapis</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum magnam sapiente error culpa dolores, est beatae asperiores voluptatem ex ipsa nesciunt architecto quaerat at quo iusto? Exercitationem tenetur facilis error.
+        </p>
+        <h2>Skyrelis 1</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, perspiciatis ad. Id totam dolores minima rerum facilis commodi enim eaque maiores placeat, quam quibusdam magnam perferendis aperiam quisquam itaque illo?
+        </p>
+        <h2>Skyrelis 2</h2>
+        <p>
+            Aperiam, nulla! Accusamus nemo explicabo nulla minus, sunt voluptatibus libero doloremque voluptatum quos recusandae. Obcaecati nam, repudiandae nulla quidem ratione at odit repellat asperiores exercitationem beatae similique ad alias adipisci.
+        </p>
+        <h2>Skyrelis 3</h2>
+        <p>
+            Distinctio pariatur soluta fugiat consequatur, ullam sequi, quod fuga deleniti unde veritatis obcaecati quo perspiciatis molestiae ipsam numquam modi. Sed deleniti ab maiores culpa magni, neque ipsum sapiente voluptatibus vero.
+        </p>
+    </div>
+    
+</body>
+</html>
