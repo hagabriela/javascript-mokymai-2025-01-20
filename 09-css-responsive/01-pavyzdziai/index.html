@@ -114,6 +114,53 @@
                 font-size: 36px;
             }   
         }
+
+        .paslaugos {
+            background: lightgreen;
+            padding: 10px;
+
+            display: flex;
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .paslaugos .paslauga {
+            background-color: rgb(255, 255, 255, 0.3);
+            width: calc((100% - 2 * 20px) / 3);
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .paslaugos .paslauga {
+                width: calc((100% - 20px) / 2);
+            }
+        }
+
+        /* kad butu po viena stulpeli eiluteje */
+        @media only screen and (max-width: 400px) {
+            .paslaugos .paslauga {
+                width: 100%;
+            }
+        }
+
+        .paslaugos .paslauga .foto {
+            height: 200px;
+        }
+
+        .paslaugos .paslauga .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* JEI BE DIV (bet lengviau jei yra kokia animacija su div)
+        .paslaugos .paslauga img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }*/
     </style>
 </head>
 <body>
@@ -138,6 +185,70 @@
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi impedit odit ad itaque, aut laudantium. Voluptatibus, facere. Nemo consequatur fugit aliquid, recusandae deserunt dicta officia, sunt quis autem, at similique.
         </p>
+    </div>
+
+    <!-- .paslaugos>.paslauga*9>h3{Paslauga $}+p>lorem10 -->
+    <div class="paslaugos">
+        <div class="paslauga">
+            <div class="foto">
+                <img src="https://placehold.co/400x250" alt="">
+            </div>
+            <h3>Paslauga 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, neque.
+            </p>
+        </div>
+        <div class="paslauga">
+            <div class="foto">
+                <img src="https://placehold.co/500x400" alt="">
+            </div>
+            <h3>Paslauga 2</h3>
+            <p>
+                Id necessitatibus quaerat sit expedita voluptatem natus, et illo sapiente.
+            </p>
+        </div>
+        <div class="paslauga">
+            <h3>Paslauga 3</h3>
+            <p>
+                Quisquam ut quo quae laudantium corrupti perferendis maiores ullam recusandae?
+            </p>
+        </div>
+        <div class="paslauga">
+            <h3>Paslauga 4</h3>
+            <p>
+                Excepturi repudiandae qui quisquam optio enim sapiente, minus velit aspernatur.
+            </p>
+        </div>
+        <div class="paslauga">
+            <h3>Paslauga 5</h3>
+            <p>
+                Ratione consequatur cumque veniam fuga, esse laborum provident adipisci ad?
+            </p>
+        </div>
+        <div class="paslauga">
+            <h3>Paslauga 6</h3>
+            <p>
+                Harum suscipit eaque vel voluptas. Quibusdam nam autem quae soluta.
+            </p>
+        </div>
+        <div class="paslauga">
+            <h3>Paslauga 7</h3>
+            <p>
+                Quibusdam voluptatum excepturi ut dicta deleniti officiis maxime dolorem dolores.
+            </p>
+        </div>
+        <div class="paslauga">
+            <h3>Paslauga 8</h3>
+            <p>
+                Asperiores sequi perspiciatis earum distinctio doloremque provident nisi dolorem molestias.
+            </p>
+        </div>
+        <div class="paslauga">
+            <h3>Paslauga 9</h3>
+            <p>
+                Eveniet recusandae voluptas rem ut iste quidem, dolore reprehenderit quasi!
+            </p>
+        </div>
     </div>
 </body>
 </html>
