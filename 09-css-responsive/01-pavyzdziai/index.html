@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .pirmas {
+            background-color: orange;
+            padding: 10px;
+        }
+
+        @media only screen and (max-width: 700px) { 
+            .pirmas {
+                background-color: orangered;
+            } 
+        }
+
+         /* .pirmas fono spalva oranžinė
+        o nuo 700px ir mažiau fono spalva tamsesnė */
+        
+        /* .pirmas {
+            background-color: orangered;
+        }
+        @media only screen and (min-width: 701px) {
+            .pirmas {
+                background-color: orange;
+            }
+        } */
+        /* .pirmas fono spalva tamsesnė
+        o nuo 700px ar daugiau fono spalva oranžinė */
+
+        .antras {
+            background: lightskyblue;
+            padding: 10px;
+        }
+
+        .antras h2 {
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+
+        .antras p {
+            font-style: italic;
+        }
+
+        @media only screen and (max-width:800px) {
+            .antras {
+                background: lightseagreen;
+            }
+
+            .antras h2 {
+                text-transform: none;
+            }
+        }
+
+        /*
+         1 media querie 1 rezoliucijai su visais stiliai
+            .blokas {}
+            .blokas h2 {}
+            
+            @media ... {
+                .blokas {}
+                .blokas h2 {}
+            }
+                
+            ARBA:
+         Atskiros media queries 1 rezoliucijai su skirtingais stiliais
+
+            @media ... {
+                .blokas {}
+            }
+            @media... {
+                .blokas h2 {}
+            }
+        */
+    </style>
+</head>
+<body>
+    <!-- .pirmas>p>lorem -->
+    <div class="pirmas">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. In deleniti quam quo dolorem quia nulla nam, ipsum eveniet expedita qui ab animi esse recusandae at accusantium soluta modi. Repellat, placeat!
+        </p>
+    </div>
+
+    <!-- .antras>h2{Tekstas}+p>lorem  -->
+    <div class="antras">
+        <h2>Tekstas</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, minima? Dignissimos beatae atque nesciunt consectetur nobis eos, hic eveniet excepturi dolorem laboriosam provident accusantium. Dolor accusantium error rem eius dignissimos?
+        </p>
+    </div>              
+</body>
+</html>
