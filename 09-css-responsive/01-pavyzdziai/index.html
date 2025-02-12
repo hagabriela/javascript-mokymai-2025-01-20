@@ -78,6 +78,42 @@
                 .blokas h2 {}
             }
         */
+
+        .trecias {
+            background-color: aquamarine;
+            padding: 80px 50px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .trecias {
+                padding: 40px 50px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .trecias {
+                padding: 10px;
+            }
+        }
+
+        /* veiks nuo 801px ir aukštyn */
+        .trecias h2 {
+            font-size: 80px;
+        }
+
+        /* veiks nuo 501px iki 800px */
+        @media only screen and (max-width: 800px) {
+            .trecias h2 {
+                font-size: 60px;
+            }
+        }
+
+        /* veiks nuo 0px iki 500px */
+        @media only screen and (max-width: 500px) {
+            .trecias h2 {
+                font-size: 36px;
+            }   
+        }
     </style>
 </head>
 <body>
@@ -94,6 +130,14 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, minima? Dignissimos beatae atque nesciunt consectetur nobis eos, hic eveniet excepturi dolorem laboriosam provident accusantium. Dolor accusantium error rem eius dignissimos?
         </p>
-    </div>              
+    </div>  
+    
+    <!-- .trecias>h2{Kitas tekstas}+p>lorem -->
+    <div class="trecias">
+        <h2>Kitas tekstas</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi impedit odit ad itaque, aut laudantium. Voluptatibus, facere. Nemo consequatur fugit aliquid, recusandae deserunt dicta officia, sunt quis autem, at similique.
+        </p>
+    </div>
 </body>
 </html>
