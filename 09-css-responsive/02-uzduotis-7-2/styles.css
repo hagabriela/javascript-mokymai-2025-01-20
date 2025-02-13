@@ -1,0 +1,209 @@
+/* font-family: "Poppins", serif;
+  font-weight: 700;
+
+  font-family: "Inter", serif; */
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 82px auto 207px;
+}
+
+@media only screen and (min-width:639px) and (max-width:820px) {
+    .container {
+        margin: 93px auto 114px;
+    }
+}
+
+
+@media only screen and (max-width:638px) {
+    .container {
+        margin: 44px auto 45px;
+    }
+}
+
+.turinys h1 {
+    margin-top: 0;
+    margin-bottom: 64px;
+
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 108px;
+}
+
+@media only screen and (min-width:639px) and (max-width:820px) {
+    .turinys h1 {
+        margin-bottom: 32px;
+
+        font-size: 62px;
+        line-height: 93px;
+    }
+}
+
+
+@media only screen and (max-width:638px) {
+    .turinys h1 {
+        margin-bottom: 24px;
+
+        font-size: 32px;
+        line-height: 48px;
+    }
+}
+
+.turinys .korteles {
+    display: flex;
+    
+    gap: 32px;
+}
+
+@media only screen and (min-width:639px) and (max-width:820px) {
+    .turinys .korteles {
+        gap: 24px;
+
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width:638px) {
+    .turinys .korteles {
+        gap: 24px;
+
+        flex-wrap: wrap;
+    }
+}
+
+.turinys .kortele {
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+
+    flex: 1;
+
+    transition: 0.2s all;
+}
+
+@media only screen and (min-width:821px) and (max-width:820px) {
+    .turinys .kortele {
+        width: calc((100% - 24px) / 2);
+
+        flex: none;
+        /* nes flex=1 nedave persimest i skirtingas eilutes stulpeliams */
+    }
+}
+
+@media only screen and (min-width:639px) and (max-width:820px) {
+    .turinys .kortele {
+        width: calc((100% - 24px) / 2);
+
+        flex: none;
+        /* nes flex=1 nedave persimest i skirtingas eilutes stulpeliams */
+    }
+}
+
+@media only screen and (max-width:638px) {
+    .turinys .kortele {
+        width: 100%;
+
+        flex: none;
+    }
+}
+
+.turinys .kortele:hover {
+    box-shadow: 0 0 0 1px rgba(132, 173, 64, 1),
+    0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.turinys .kortele .foto {
+    height: 431px;
+}
+
+.turinys .kortele .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.turinys .kortele .tekstas {
+    padding: 16px 24px;
+    
+}
+
+.turinys .kortele .tekstas h2 {
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.turinys .kortele .tekstas p {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba(119, 119, 119, 1);
+
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.turinys .kortele .apacia {
+    display: flex;
+    justify-content: space-between;
+}
+
+.turinys .kortele .apacia .apacios-stulpelis p {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.94px;
+
+    color: rgba(125, 148, 88, 1);
+
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.turinys .kortele .apacia a {
+    padding: 12px 32px;
+    border: 2px solid rgba(132, 173, 64, 1);
+
+    display: inline-block;
+
+    font-family: "Inter", serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.94px;
+    text-decoration: none;
+
+    color: rgba(132, 173, 64, 1);
+
+    transition: 0.2s all;
+}
+
+@media only screen and (min-width:821px) and (max-width:1024px) {
+    .turinys .kortele .apacia a {
+        padding: 3px 8px;
+    }
+}
+
+.turinys .kortele .apacia a:hover {
+    background: rgba(132, 173, 64, 1);
+    color:rgba(255, 255, 255, 1);
+}
+
+/* Dariau pagal vaizdo grozi 
+mb 375-767px
+plansete 768-apie 1000*/
+
+
+
