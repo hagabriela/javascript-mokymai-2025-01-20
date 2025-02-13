@@ -1,0 +1,146 @@
+/* ==============================
+PIRMAS PAVYZDYS
+============================== */
+.pirmas {
+    background: lightgreen;
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.pirmas .blokas {
+    background: rgb(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.pirmas .blokas2 {
+    position: relative;
+    top: 15px;
+}
+
+.pirmas .blokas3 {
+    position: relative;
+    top: 30px;
+}
+
+/* ==============================
+ANTRAS PAVYZDYS
+============================== */
+
+.antras {
+    padding: 50px;
+    background: yellowgreen;
+}
+
+.antras .blokas {
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 20px;
+    width:200px;
+    box-sizing: border-box;
+    margin: 20px auto;
+
+    position: relative;
+}
+
+.antras .blokas1 {
+    right: 15px;
+}
+
+.antras .blokas2 {
+    left: 15px;
+}
+
+.antras .blokas3 {
+    right: 15px;
+}
+
+/* ==============================
+TREČIAS PAVYZDYS
+============================== */
+
+.trecias {
+    border: 1px solid black;
+    background-color: antiquewhite;
+    padding: 50px;
+}
+
+.trecias a {
+    background-color: aquamarine;
+    display: inline-block;
+    padding: 20px 40px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+
+    position: relative;
+    bottom: 0;
+    /* pradinis stilius, kad suprasti transitionui */
+
+    transition: 0.2s all;
+}
+
+.trecias a:hover {
+    bottom: 5px;
+}
+
+/* ==============================
+KETVIRTAS PAVYZDYS
+============================== */
+
+.ketvirtas {
+    background-color: lightskyblue;
+    padding: 50px;
+}
+
+.ketvirtas .straipsnis {
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 20px;
+
+    position: relative;
+    left: 0;
+
+    transition: 0.2s all;
+}
+
+.ketvirtas .straipsnis:hover {
+    left: 15px;
+}
+
+/* ==============================
+PENKTAS PAVYZDYS
+============================== */
+
+.penktas {
+    background: lightblue;
+    padding: 50px 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.penktas .paslauga {
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 10px;
+    flex: 1;
+    position: relative;
+
+    transition: 0.2s all;
+}
+
+.penktas .paslauga:nth-child(odd) {
+    bottom: 0;
+}
+
+.penktas .paslauga:nth-child(even) {
+    top: 0;
+}
+/* default, kad gerai suveiktu transition butent tokiu budu */
+
+
+.penktas:hover .paslauga:nth-child(odd) {
+    bottom: 15px;
+}
+
+.penktas:hover .paslauga:nth-child(even) {
+    top: 15px;
+}
