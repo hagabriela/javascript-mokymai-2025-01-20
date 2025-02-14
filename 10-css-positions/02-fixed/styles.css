@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+}
+
+/* ===================================
+NAVIGACIJA
+=================================== */
+
+.navigacija {
+    padding: 20px 40px;
+    background: #222;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.navigacija a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+/* geriausia deti tiesiai ant <a> */
+
+.navigacija ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* ===================================
+TURINYS
+=================================== */
+
+.turinys {
+    padding: 20px 40px;
+    margin-top: 58px;
+}
+
+/* ===================================
+MYGTUKAS Į VIRŠŲ
+=================================== */
+
+.i-virsu {
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+}
+
+.i-virsu a:hover {
+    background: darkred;
+}
+
+.i-virsu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 50px;
+    height: 50px;
+    /* Apskritimas o ne ovalas, todel vienodi sk. ir border-radius. Isimtine vieta  */
+
+    background: red;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    /* daugiau nei 50% suapvalins */
+}
+
+/* ===================================
+COOKIE JUOSTA
+=================================== */
+
+.cookie-juosta {
+    background: white;
+    /* be fono susiblendina su tekstu */
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
