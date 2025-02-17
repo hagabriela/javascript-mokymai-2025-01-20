@@ -1,0 +1,264 @@
+/* =================
+PIRMAS
+================= */
+
+.pirmas {
+    background: orange;
+    padding: 20px;
+}
+
+.pirmas .tevinis {
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.3);
+    height: 200px;
+}
+
+.pirmas .vaikinis {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* nuo tevinio */
+    background-color: lightgreen;
+}
+
+/* =================
+ANTRAS
+================= */
+
+.antras {
+    background: lightseagreen;
+    padding: 50px;
+}
+
+.antras .blokas {
+    background-color: rgb(255, 255, 255, 0.3);
+    height: 300px;
+    position: relative;
+}
+
+.antras .tekstas {
+    width: 200px;
+    background: lightcyan;
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+}
+
+/* =================
+PREKĖS
+================= */
+
+.prekes {
+    background: navy;
+    padding: 20px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.prekes .preke {
+    background: white;
+    flex: 1;
+
+    position: relative;
+}
+
+.prekes .preke img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.prekes .preke a {
+    display: block;
+    /* pilna erdve pagal ploti uzima, kai inline-block tik tiek kiek reikia */
+    padding: 10px;
+    background: lightblue;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.prekes .preke .nuolaida {
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+/* =================
+SENELIS -> TĖVAS -> VAIKAS
+================= */
+
+.senelis {
+    background-color: orangered;
+    height: 400px;
+    
+    position: relative;
+}
+
+.senelis .tevas {
+    background: rgb(255, 255, 255, 0.3);
+    width: 200px;
+    height: 200px;
+    
+    position: absolute;
+    right: 50px;
+    top: 25px;
+}
+
+.senelis .tevas .vaikas {
+    background: rgb(255, 255, 255, 0.3);
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+/* =================
+PENKTAS
+================= */
+
+.penktas {
+    background: orange;
+    padding: 50px 80px;
+
+    position: relative;
+}
+
+.penktas .skraido1 {
+    border: 2px solid black;
+    background: orangered;
+    padding: 20px;
+
+   position: absolute; 
+   right: 5px;
+   top: 5px;
+}
+
+.penktas .skraido2 {
+    border: 2px solid black;
+    background: red;
+    color: white;
+    padding: 10px;
+
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+}
+
+/* =================
+ŠEŠTAS
+================= */
+
+.sestas {
+    background-color: lightskyblue;
+    padding: 50px;
+}
+
+.sestas .kortele {
+    max-width: 400px;
+    background: white;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.sestas .prikabintas {
+    background: navy;
+    color: white;
+    padding: 5px 10px;
+
+    position: absolute;
+    top: 0;
+    right: 5px;
+    /* pagal tevini krasta skaiciuojasi */
+    transform: translateY(-50%);
+    /* glaudzias nebe krastas su krastu, o skaiciuojasi pagal save. Lyg uzdetas relative, bet negalime dvieju uzdeti */
+}
+
+.sestas .prikabintas p {
+    margin: 0;
+}
+
+/* =================
+SEPTINTAS
+================= */
+
+.septintas {
+    background: rgb(81, 150, 240);
+    height: 400px;
+
+    position: relative;
+}
+
+.septintas .turinys {
+    background: rgb(255, 255, 255, 0.3);
+    max-width: 200px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* skaiciuojasi pagal save, pagal X ir Y asi */
+}
+
+.septintas p {
+    margin: 0;
+}
+
+/* =================
+AŠTUNTAS
+================= */
+
+.astuntas {
+    background: rgb(116, 199, 116);
+    padding: 150px 30px;
+}
+
+.astuntas .dropdown-wrapper {
+    position: relative;
+    width: fit-content;  /* tėvinis div užima tik tiek pločio kiek yra turinio, t.y. šiuo atveju kokio pločio yra mygtukas, tai su juo susilygiuoja. Nors default div užima visą plotį kiek tik išeina. ir mūsų hover suveikdavo ir nebūtinai užvedus pele ant mygtuko, o dešiniau jo */
+}
+
+.astuntas .dropdown-wrapper button {
+    background-color: rgb(238, 238, 238);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer; /* kad rankyte atsirastu vietoj rodyklytes uzvedus */
+    
+}
+
+.astuntas .dropdown-wrapper .dropdown {
+    background-color: white;
+    border: 1px solid grey;
+    width: 250px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: none; /* default dropdown nematome. Bet su animacijom sis metodas netinka */
+}
+
+.astuntas .dropdown-wrapper:hover .dropdown {
+    display: block;
+}
+
+
+
+
+
+
