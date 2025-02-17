@@ -15,6 +15,18 @@ body {
     margin: 0 auto;
 }
 
+@media only screen and (min-width:639px) and (max-width:820px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (max-width:628px) {
+    .container {
+        max-width:574.6px;
+    }
+}
+
 /* ===================================
 NAVIGACIJA
 =================================== */
@@ -27,13 +39,26 @@ NAVIGACIJA
     box-shadow: 0px 4px 4px 0px rgba(231, 133, 43, 0.13);
 
     background: rgba(255, 255, 255, 1);
+}
 
+@media only screen and (max-width:628px) {
+    .navigacija {
+        padding: 30px 0 27px;
+    }
 }
 
 .navigacija .navigacijos-eile {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media only screen and (max-width:628px) {
+    .navigacija .navigacijos-eile {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
 }
 
 .navigacija .navigacijos-eile p {
@@ -64,6 +89,13 @@ NAVIGACIJA
     padding: 0;
 }
 
+@media only screen and (max-width:628px) {
+    .navigacija .nuorodos1 ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .navigacija .nuorodos1 a {
     font-family: "Inter", serif;
     font-weight: 700;
@@ -72,6 +104,13 @@ NAVIGACIJA
     text-decoration: none;
 
     color: rgba(0, 0, 0, 1);
+}
+
+@media only screen and (max-width:628px) {
+    .navigacija .nuorodos1 a {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .navigacija .nuorodos1 .primary {
@@ -90,19 +129,38 @@ NAVIGACIJA
     display: inline-block;
 }
 
+@media only screen and (max-width:628px) {
+    .navigacija .nuorodos1 .primary {
+        padding: 8px 16px;
+        
+    }
+}
+
 /* ===================================
 HEADERIS
 =================================== */
 
-.header {
+/* .header {
     background: linear-gradient(to right, white 44%, transparent 44%),
       url("nuotraukos/virselis.jpg");
       background-position: center, 780px;
       background-size: auto, 64%;
       min-height: 687px;
+  } */
+
+  .header {
+    background: linear-gradient(to right, white 44%, transparent 44%),
+      url("nuotraukos/virselis.jpg");
+      background-position: center, 780px;
+      background-size: auto, 64%;
+      min-height: 687px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
 
-  @media only screen and (min-width:639px) and (max-width:820px) {
+  /* @media only screen and (min-width:639px) and (max-width:820px) {
     .header {
     background: linear-gradient(to top, white 44%, transparent 44%),
     url("nuotraukos/virselis.jpg");
@@ -110,32 +168,90 @@ HEADERIS
     background-size: auto, 64%;
     min-height: 371px;
     }
+} */
+
+@media only screen and (min-width:639px) and (max-width:820px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: none;
+        min-height: auto;
+    }
 }
 
-.header .virsaus-eile {
+@media only screen and (max-width:628px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: none;
+        min-height: auto;
+    }
+}
+
+/* .header .virsaus-eile {
     display: flex;
-}
+} */
 
-.header .kaire {
+/* .header .kaire {
     /* background: rgba(254, 254, 254, 1); */
     /* kitaip lipa i nuotrauka */
 
-    padding: 181px 27px 181px 0;
-}
+    /* padding: 181px 27px 181px 0;
+} */ */
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+/* @media only screen and (min-width:639px) and (max-width:820px) {
     .header .kaire {
         padding: 150px 0;
     }
+  } */
+
+  .header .image {
+    display: none;
+  }
+
+  @media only screen and (min-width:639px) and (max-width:820px) {
+    .header .image {
+        display: block;
+        width: 100%;
+        min-height: 371px;
+        background: url("nuotraukos/virselis.jpg") center/cover no-repeat;
+    }
+}
+
+@media only screen and (max-width:628px) {
+    .header .image {
+        display: block;
+        width: 100%;
+        min-height: 371px;
+        background: url("nuotraukos/virselis.jpg") center/cover no-repeat;
+    }
+}
+
+.header .kaire-turinys {
+    margin: 181px auto;
   }
 
   @media only screen and (min-width:639px) and (max-width:820px) {
     .header .kaire-turinys {
-        padding: 0 24px;
+        margin: 150px auto;
+        width: 86%;
+        padding: 24px 0;
+        box-sizing: border-box;
     }
   }
 
-.header .kaire-turinys h1 {
+  @media only screen and (max-width:628px) {
+    .header .kaire-turinys {
+        margin: 45px auto 91px;
+        width: 91%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+  .header .kaire-turinys h1 {
     font-family: "Poppins", serif;
     font-weight: 600;
     font-size: 82px;
@@ -151,6 +267,13 @@ HEADERIS
     line-height: 79.2px;
     }
   }
+
+  @media only screen and (max-width:628px) {
+    .header .kaire-turinys h1 {
+        font-size: 45px;
+        line-height: 49.5px;
+        }
+}
 
 .header .kaire-turinys h1 span {
     /* font-family: "Poppins", serif;
@@ -182,6 +305,13 @@ HEADERIS
     margin-bottom: 32px;
 }
 
+@media only screen and (max-width:628px) {
+    .header .kaire-turinys h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
 .header .nuorodos2 a {
     font-family: "Inter", serif;
     font-weight: 600;
@@ -207,6 +337,16 @@ HEADERIS
     }
   }
 
+@media only screen and (max-width:628px) {
+    .header .nuorodos2 a {
+        display: block;
+        font-size: 18px;
+        line-height: 21.78px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
 .header .nuorodos2 .primary2 {
     /* font-family: "Inter", serif;
     font-weight: 600;
@@ -224,6 +364,12 @@ HEADERIS
     background: rgba(231, 133, 43, 1);
 
     margin: 0;
+}
+
+@media only screen and (max-width:628px) {
+    .header .nuorodos2 .primary2 {
+        margin-bottom: 16px;
+    }
 }
 
 /* ===================================
@@ -445,7 +591,7 @@ APATINĖ JUOSTELĖ
 
 @media only screen and (min-width:639px) and (max-width:820px) {
     .apatine-juosta .juostos-eile p {
-        width: 100%;
+        width: 71%;
     }
   }
 
