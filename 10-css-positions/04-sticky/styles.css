@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+
+/* ===================================
+NAVIGACIJA
+=================================== */
+
+.navigacija {
+    background: #222;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.navigacija a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigacija ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+/* ===================================
+HEADER
+=================================== */
+
+.header {
+    padding: 80px 40px;
+    background: lightgreen;
+}
+
+/* ===================================
+ŠONAS IR TURINYS
+=================================== */
+
+.turinio-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.sonas {
+    background: lightskyblue;
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* negali mazeti */
+
+    position: sticky; /* prilimpa nuo kazkurios ribos */
+    top: 120px; /* fiksuota minimali riba. O su fixed visalaik butu tiek px */
+}
+
+.turinys {
+    padding: 30px;
+}
+
