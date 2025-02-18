@@ -13,17 +13,19 @@ body {
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
+    /* margin auto suveikia jei yra kur trauktis */
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .container {
-        max-width: 768px;
+        max-width: 1146px;
     }
+    /* apskaiciuota procentaliai pagal figmos px */
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .container {
-        max-width:574.6px;
+        max-width:583.5px;
     }
 }
 
@@ -41,7 +43,7 @@ NAVIGACIJA
     background: rgba(255, 255, 255, 1);
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .navigacija {
         padding: 30px 0 27px;
     }
@@ -53,7 +55,7 @@ NAVIGACIJA
     align-items: center;
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .navigacija .navigacijos-eile {
         flex-direction: column;
         gap: 32px;
@@ -89,10 +91,9 @@ NAVIGACIJA
     padding: 0;
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .navigacija .nuorodos1 ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -106,7 +107,7 @@ NAVIGACIJA
     color: rgba(0, 0, 0, 1);
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .navigacija .nuorodos1 a {
         font-size: 16px;
         line-height: 24px;
@@ -129,10 +130,9 @@ NAVIGACIJA
     display: inline-block;
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .navigacija .nuorodos1 .primary {
         padding: 8px 16px;
-        
     }
 }
 
@@ -141,24 +141,48 @@ HEADERIS
 =================================== */
 
 /* .header {
-    background: linear-gradient(to right, white 44%, transparent 44%),
-      url("nuotraukos/virselis.jpg");
-      background-position: center, 780px;
-      background-size: auto, 64%;
-      min-height: 687px;
-  } */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background: url("nuotraukos/virselis.jpg");
+    background-position: center; /
+    background-size: cover; 
+    min-height: 687px;
+}
+
+.kaire-turinys {
+    width: 50%; /
+    padding-left: 20px; 
+}
+
+@media only screen and (max-width: 1240px) {
+    .header {
+        flex-direction: column; 
+        background-position: center center; 
+        background-size: cover; 
+    }
+
+    .kaire-turinys {
+        width: 100%; 
+        text-align: center; 
+        padding-left: 0;
+    }
+} */ 
+ /* galbut kitas chatgpt variantas be konteinerio, tada gerai kitose rezoliucijose bet didzioje reikia atstumt su margin arba padding ir be gradiento kad nebutu persokimo */
 
   .header {
     background: linear-gradient(to right, white 44%, transparent 44%),
       url("nuotraukos/virselis.jpg");
       background-position: center, 780px;
       background-size: auto, 64%;
+
       min-height: 687px;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
   }
+
 
   /* @media only screen and (min-width:639px) and (max-width:820px) {
     .header {
@@ -170,7 +194,14 @@ HEADERIS
     }
 } */
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:1241px) and (max-width:1755px) {
+    .header {
+        background-position: center, 453px;
+        background-size: auto, 100%;
+    }
+}
+
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -180,7 +211,7 @@ HEADERIS
     }
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -211,7 +242,7 @@ HEADERIS
     display: none;
   }
 
-  @media only screen and (min-width:639px) and (max-width:820px) {
+  @media only screen and (min-width:639px) and (max-width:1240px) {
     .header .image {
         display: block;
         width: 100%;
@@ -220,7 +251,7 @@ HEADERIS
     }
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .header .image {
         display: block;
         width: 100%;
@@ -233,7 +264,7 @@ HEADERIS
     margin: 181px auto;
   }
 
-  @media only screen and (min-width:639px) and (max-width:820px) {
+  @media only screen and (min-width:639px) and (max-width:1240px) {
     .header .kaire-turinys {
         margin: 150px auto;
         width: 86%;
@@ -242,7 +273,7 @@ HEADERIS
     }
   }
 
-  @media only screen and (max-width:628px) {
+  @media only screen and (max-width:638px) {
     .header .kaire-turinys {
         margin: 45px auto 91px;
         width: 91%;
@@ -261,14 +292,14 @@ HEADERIS
     margin-bottom: 16px;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .header .kaire-turinys h1 {
     font-size: 72px;
     line-height: 79.2px;
     }
   }
 
-  @media only screen and (max-width:628px) {
+  @media only screen and (max-width:638px) {
     .header .kaire-turinys h1 {
         font-size: 45px;
         line-height: 49.5px;
@@ -287,7 +318,7 @@ HEADERIS
     display: block;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .header .kaire-turinys h1 span {
         display: inline;
     }
@@ -305,7 +336,7 @@ HEADERIS
     margin-bottom: 32px;
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .header .kaire-turinys h2 {
         font-size: 24px;
         line-height: 36px;
@@ -330,14 +361,14 @@ HEADERIS
     margin-left: 16px;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .header .nuorodos2 a {
         font-size: 18px;
         line-height: 21.78px;
     }
   }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .header .nuorodos2 a {
         display: block;
         font-size: 18px;
@@ -366,7 +397,7 @@ HEADERIS
     margin: 0;
 }
 
-@media only screen and (max-width:628px) {
+@media only screen and (max-width:638px) {
     .header .nuorodos2 .primary2 {
         margin-bottom: 16px;
     }
@@ -409,12 +440,22 @@ TURINYS
     margin-bottom: 40px;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .turinys h2 {
         margin-top: 78px;
         margin-bottom: 55px;
     }
   }
+
+@media only screen and (max-width:638px) {
+    .turinys h2 {
+    font-size: 36px;
+    line-height: 46.8px;
+
+    margin-top: 59px;
+    margin-bottom: 45px;
+    }
+}
 
 .turinys .automobiliai {
     display: flex;
@@ -424,11 +465,17 @@ TURINYS
     margin-bottom: 120.09px;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .turinys .automobiliai {
         margin-bottom: 85px;
     }
   }
+
+@media only screen and (max-width:638px) {
+    .turinys .automobiliai {
+        margin-bottom: 60px;
+    }
+}
 
 .turinys .automobilis {
     padding: 80px 30px 36px;
@@ -442,13 +489,20 @@ TURINYS
     background: rgba(255, 255, 255, 1);
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .turinys .automobilis {
         padding: 57px 30px;
         width: calc((100% - 24px) / 2);
         box-sizing: border-box;
     }
   }
+
+@media only screen and (max-width:638px) {
+    .turinys .automobilis {
+        padding: 45px 30px;
+        width: 100%;
+    }
+}
 
 .turinys .automobilis img {
     width: 100%;
@@ -465,11 +519,17 @@ TURINYS
     margin: 20px 0;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .turinys .automobilis h3 {
         margin: 24px 0;
     }
   }
+
+@media only screen and (max-width:638px) {
+    .turinys .automobilis h3 {
+        margin: 24px 0;
+    }
+}
 
 .turinys .automobilis p {
     padding: 8px 32px;
@@ -489,13 +549,21 @@ TURINYS
     margin-bottom: 20px;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .turinys .automobilis p {
         padding: 8px 0;
         background: none;
         margin-bottom: 24px;
     }
   }
+
+@media only screen and (max-width:638px) {
+    .turinys .automobilis p {
+        padding: 8px 0;
+        background: none;
+        margin-bottom: 24px;
+    }
+}
 
 .turinys .automobilis p span {
     font-family: "Poppins", serif;
@@ -524,7 +592,7 @@ TURINYS
     /* margin-left: 16px; */
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .turinys .automobilis a {
         font-size: 18px;
         line-height: 21.78px; 
@@ -535,6 +603,17 @@ TURINYS
     }
   }
 
+@media only screen and (max-width:638px) {
+    .turinys .automobilis a {  
+        font-size: 18px;
+        line-height: 21.78px;
+
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
 .turinys .automobilis .primary3 {
     color: rgba(255, 255, 255, 1);
     background: rgba(231, 133, 43, 1);
@@ -544,7 +623,7 @@ TURINYS
     /* margin: 0; */
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .turinys .automobilis .primary3 {
         margin-bottom: 16px; 
 
@@ -553,6 +632,16 @@ TURINYS
         text-align: center;
     }
   }
+
+ @media only screen and (max-width:638px) {
+    .turinys .automobilis .primary3 {
+        margin-bottom: 16px; 
+
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
 
 /* ===================================
 APATINĖ JUOSTELĖ
@@ -566,16 +655,29 @@ APATINĖ JUOSTELĖ
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+@media only screen and (max-width:638px) {
+    .apatine-juosta {
+        padding: 60px 0;
+    }
+}
+
 .apatine-juosta .juostos-eile {
     display: flex;
     gap: 125px;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .apatine-juosta .juostos-eile  {
         flex-wrap: wrap;
     }
   }
+
+@media only screen and (max-width:638px) {
+    .apatine-juosta .juostos-eile {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
 
 .apatine-juosta .juostos-eile p {
     font-family: "Montserrat", serif;
@@ -589,7 +691,7 @@ APATINĖ JUOSTELĖ
     padding: 10px 0;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .apatine-juosta .juostos-eile p {
         width: 71%;
     }
@@ -610,7 +712,7 @@ APATINĖ JUOSTELĖ
     line-height: 24px;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .apatine-juosta .juostos-eile ul {
         width: calc((100% - 125px) / 2);
     }
@@ -640,7 +742,7 @@ APATINĖ JUOSTELĖ
     box-sizing: border-box;
 }
 
-@media only screen and (min-width:639px) and (max-width:820px) {
+@media only screen and (min-width:639px) and (max-width:1240px) {
     .apatine-juosta .juostos-eile .kontaktai {
         width: calc((100% - 125px) / 2);
     }
