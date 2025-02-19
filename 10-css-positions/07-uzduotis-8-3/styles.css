@@ -1,0 +1,58 @@
+/* font-family: "Inter", serif; */
+
+body {
+    margin: 0;
+    background: rgba(226, 225, 225, 1);
+}
+
+.turinys {
+    margin: 91px auto 72px;
+
+    text-align: center;
+}
+
+.turinys p {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+
+    color: rgba(149, 147, 147, 1);
+
+    margin: 0;
+}
+
+.turinys h1 {
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 128px;
+
+    color: rgba(18, 18, 18, 1);
+
+    margin: 0 auto;
+    /* teko papildyti su auto, nes po width: fit-content neveike text-align: center */
+
+    width: fit-content; /* kad butu per savo teksto ploti ir neisiplestu */
+
+    position: relative;
+}
+
+.turinys h1 img {
+    position: absolute;
+    top: 65%;
+    right: -1.5%;
+}
+
+.turinys h2 {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+
+    color: rgba(55, 54, 54, 1);
+
+    margin: 59px 0 0;
+}
+
+
