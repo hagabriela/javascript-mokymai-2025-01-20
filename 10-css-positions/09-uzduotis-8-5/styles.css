@@ -1,0 +1,184 @@
+/* font-family: "Inter", serif; */
+
+body {
+    margin: 0;
+}
+
+/* ===================================
+NAVIGACIJA
+=================================== */
+
+.navigacija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    left: 104px;
+    right: 40px;
+    bottom: 34px;
+    /* cia per situos, nes jie nera 0 ir nereikia tada margin */
+}
+
+.navigacija a {
+    text-decoration: none;
+
+    border-radius: 12px;
+    
+    padding: 8px 16px;
+    display: inline-block;
+
+    border: 2px solid rgba(241, 121, 101, 1);
+
+    font-family: "Inter", serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -5%;
+
+    color: rgba(241, 121, 101, 1);
+}
+
+.navigacija ul {
+    background-color: rgba(245, 243, 243, 1);
+
+    margin: 0;
+    padding: 0;
+    
+    list-style-type: none;
+    
+    display: flex;
+    gap: 4px;
+
+    border-radius: 16px;
+    
+    padding: 8px; 
+}
+
+.navigacija .i-virsu a {
+    border-radius: none;
+    
+    padding: 0;
+
+    border: none;
+}
+
+/* ===================================
+SKAIDRĖ 1
+=================================== */
+
+#skaidre1 {
+    background: rgba(255, 255, 255, 1);
+
+    text-align: center; /* yra, nes ir be flex veikia */
+
+    height: 100vh;
+}
+
+#skaidre1 h1 {
+    margin: 172px auto 173px;
+
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 128px;
+    letter-spacing: 0.2px;
+}
+
+/* ===================================
+SKAIDRĖ 2
+=================================== */
+
+#skaidre2 {
+    background: rgba(81, 203, 101, 1);
+
+    /* text-align: center; nebereikia esant display flex, o be flex neveike gerai*/
+
+    display: flex;
+
+    height: 100vh;
+}
+
+#skaidre2 h1 {
+    margin: 172px auto 173px;
+
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 128px;
+    letter-spacing: 0.2px;
+}
+
+/* ===================================
+SKAIDRĖ 3
+=================================== */
+
+#skaidre3 {
+    background: rgba(129, 110, 245, 1);
+
+    /* text-align: center; */
+
+    display: flex;
+
+    height: 100vh;
+}
+
+#skaidre3 h1 {
+    margin: 172px auto 173px;
+    
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 128px;
+    letter-spacing: 0.2px;
+}
+
+/* ===================================
+SKAIDRĖ 4
+=================================== */
+
+#skaidre4 {
+    background: rgba(234, 123, 123, 1);
+
+    /* text-align: center; */
+
+    display: flex;
+
+    height: 100vh;
+}
+
+#skaidre4 h1 {
+    margin: 172px auto 173px;
+    
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 128px;
+    letter-spacing: 0.2px;
+}
+
+/* ===================================
+SKAIDRĖ 5
+=================================== */
+
+#skaidre5 {
+    background: rgba(217, 217, 217, 1);
+
+    /* text-align: center; */
+
+    display: flex;
+
+    height: 100vh;
+}
+
+#skaidre5 h1 {
+    margin: 172px auto 173px;
+    
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 128px;
+    letter-spacing: 0.2px;
+
+    color: rgba(228, 17, 17, 1);
+}
