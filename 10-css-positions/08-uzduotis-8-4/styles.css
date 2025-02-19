@@ -1,0 +1,104 @@
+/* font-family: "Inter", serif; */
+
+body {
+    background: rgba(19, 20, 23, 1);
+    margin: 0;
+}
+
+.turinys {
+    background: rgba(34, 34, 37, 0.7);
+    
+    border-radius: 12px;
+
+    margin: 106px auto;
+    padding: 65px 72px 66px;
+
+    width: 85%;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.turinys h1 {
+    font-family: "Inter", serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0.42px;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 0;
+}
+
+.turinys p {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 17px 0;
+}
+
+.turinys a {
+    border-radius: 12px;
+
+    padding: 8px 16px;
+    display: inline-block;
+
+    border: 2px solid rgba(241, 121, 101, 1);
+
+    font-family: "Inter", serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -5%;
+
+    color: rgba(241, 121, 101, 1);
+
+    transition: 0.2s all;
+}
+
+.turinys a:hover {
+    background: rgba(247, 144, 144, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.turinys .megafonas {
+    position: absolute;
+    /* top: -32%;
+    left: -8%; */
+
+    top: -105px;
+    left: -66px;
+    /* perdariau i px, kad taip nevaziuotu pasikeitus lango dydziui */
+}
+
+.turinys .elipse2 {
+    position: absolute;
+    /* right: -1%;
+    bottom: -10%; */
+
+    right: -3px;
+    bottom: -43px;
+}
+
+.turinys .elipse1 {
+    position: absolute;
+    /* right: -2%;
+    bottom: 12%; */
+
+    right: -12px;
+    bottom: 29px;
+}
+
+.turinys .zvaigzde {
+    position: absolute;
+    /* right: -3.5%;
+    bottom: -3%; */
+
+    right: -26.5px;
+    bottom: -21px;
+}
