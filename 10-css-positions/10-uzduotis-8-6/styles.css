@@ -26,8 +26,10 @@ body {
     /* Padding sutvarke man "aukscio" problema ir nebera tarpo tarp nuotraukos. Kai margin ant h1 neveike */
 
     position: sticky;
-    top: 373px;
-    /* Pakanka tik sito (buvo ir Figmoj), pagal nuotraukos auksti */
+    top: 0;
+    /* Kitu budu pakaktu tik sito top (buvo ir Figmoj), pagal nuotraukos auksti */
+    left: 0;
+    right: 0;
 }
 
 .antraste h1 {
