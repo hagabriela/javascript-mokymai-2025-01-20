@@ -1,0 +1,403 @@
+    /* font-family: "Raleway", serif;
+    font-weight: 700;
+
+    font-family: "Open Sans", serif;
+    font-weight: 400; */
+
+/* ===================================
+GENERAL STYLES
+=================================== */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", serif;
+    font-weight: 700;
+}
+
+.general-section {
+    padding: 100px 0;
+}
+
+.general-section .container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.general-section .title-part {
+    text-align: center;
+    margin-bottom: 71px;
+}
+
+.general-section .title-part h2 {
+    color: #222222;
+
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+.general-section .title-part .red-row {
+    background: #EB5757;
+
+    width: 31px;
+    height: 5px;
+
+    margin: 19px auto;
+}
+
+.general-section .title-part p {
+    font-size: 20px;
+
+    color: #222222;
+
+    margin: 0;
+}
+
+/* ===================================
+NAVIGATION
+=================================== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 47px 72px;
+    box-sizing: border-box;
+    /* prireike del aukscio, ne plocio */
+}
+
+nav a {
+    text-decoration: none;
+    color: #222222;
+}
+
+nav h1 {
+    font-size: 22px;
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    margin-left: 63px;
+}
+
+nav ul .active a,
+nav a:hover {
+    color: #EB5757;
+}
+
+/* ===================================
+HEADER
+=================================== */
+
+header {
+    height: calc(100vh - 120px);
+    background: url(images/header.jpg) center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+header h1 {
+    font-size: 80px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 0;
+}
+
+header p {
+    font-size: 40px;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 16px 0 43px;
+}
+
+header .buttons a {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    padding: 15px 66px;
+    display: inline-block;
+}
+
+header .buttons .primary-button {
+    color: white;
+    background: #EB5757;
+
+    margin-right: 21px;
+}
+
+header .buttons .secondary-button {
+    color: #EB5757;
+    background: white;
+}
+
+/* ===================================
+CITATION
+=================================== */
+
+.citation {
+    background: #EB5757;
+    padding: 39px 0;
+}
+
+.citation p {
+    margin: 0 auto;
+
+    font-size: 20px;
+    text-align: center;
+    
+    color: white;
+
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ===================================
+ARTISTS SECTION
+=================================== */
+
+.artists-section {
+    background: #F8F8F8;
+}
+
+.artists-section .content-part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artists-section .content-part .artist-block {
+    width: 25%;
+    box-sizing: border-box;
+
+    text-align: center;
+    padding: 28px 40px;
+}
+
+.artists-section .content-part .artist-block .image img {
+    width: 238px;
+    height: 238px;
+    object-fit: cover;
+
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.artists-section .content-part .artist-block h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+
+    color: #222222;
+
+    margin: 36px 0 38px;
+}
+
+.artists-section .content-part .artist-block p {
+    font-size: 16px;
+
+    color: #222222;
+
+    margin: 0;
+}
+
+/* ===================================
+GALLERY SECTION
+=================================== */
+
+.gallery-section {
+    background: #EB57571A;
+}
+
+.gallery-section .content-part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.gallery-section .content-part img {
+    width: 248px;
+    height: 248px;
+    object-fit: cover;
+}
+
+/* ===================================
+TICKETS SECTION
+=================================== */
+
+.tickets-section {
+    background: #F8F8F8;
+}
+
+.tickets-section .content-part {
+    display: flex;
+    /* justify-content: center; */
+    gap: 75px;
+}
+
+.tickets-section .content-part .ticket-block {
+    flex: 1;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+}
+
+.tickets-section .content-part .ticket-block .virsus {
+    padding: 32.47px 86px 29.33px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tickets-section .content-part .ticket-block .virsus h3 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #222222;
+
+    margin: 0;
+}
+
+.tickets-section .content-part .ticket-block .apacia {
+    padding: 31.42px 73px 38.95px;
+}
+
+.tickets-section .content-part .ticket-block .apacia p {
+    font-size: 16px;
+
+    color: #222222;
+
+    margin: 0;
+}
+
+.tickets-section .content-part .ticket-block .apacia h2{
+    font-size: 24px;
+    letter-spacing: 2px;
+
+    color: #222222;
+
+    margin: 29.33px 0 21.82px;
+}
+
+.tickets-section .content-part .ticket-block .apacia h2 span {
+    font-size: 26px;
+
+    color: #EB5757;
+}
+
+.tickets-section .content-part .ticket-block .apacia a {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    padding: 11.52px 63px;
+    display: inline-block;
+
+    background: #EB5757;
+    color: #FFFFFF;
+}
+
+/* ===================================
+PLACE SECTION
+=================================== */
+
+.place-section {
+    background: #EB57571A;
+}
+
+.place-section .content-part {
+    display: flex;
+    justify-content: center;
+}
+
+.place-section .content-part img {
+    width: 1175px;
+    height: 443px;
+    object-fit: cover;
+}
+
+/* ===================================
+RIBBON
+=================================== */
+
+.ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 152px;
+    padding: 65px 115px;
+    box-sizing: border-box;
+    /* prireike del aukscio, ne plocio */
+}
+
+.ribbon p {
+    font-size: 16px;
+
+    color: #222222;
+
+    margin: 0;
+}
+
+.ribbon a {
+    text-decoration: none;
+
+    color: #222222;
+}
+
+.ribbon ul {
+    padding: 0;
+    margin: 0;
+}
+
+.ribbon ul li {
+    list-style-type: none;
+    display: inline-block;
+
+    font-size: 14px;
+    text-transform: uppercase;
+
+    margin-left: 62px;
+}
+
+
+
