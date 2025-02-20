@@ -1,0 +1,152 @@
+/* font-family: "Montserrat", serif; */
+
+/* font-family: Segoe UI; */
+
+/* ===================================
+BENDRI STILIAI
+=================================== */
+
+body {
+    margin: 0;
+}
+
+body {
+    font-family: Segoe UI;
+
+    background: rgba(255, 252, 249, 1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1224px;
+    margin: 0 auto;
+}
+
+a {
+    color: rgba(31, 31, 31, 1);
+
+    display: inline-block;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration: none;
+}
+
+.primary {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(255, 105, 120, 1);
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+
+    border-radius: 14px;
+    
+    padding: 8px 32px;
+}
+
+/* ===================================
+NAVIGACIJA
+=================================== */
+
+.navigacija .container {
+    padding: 40px 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigacija .container ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    display: flex;
+    gap: 40px;
+}
+
+/* ===================================
+HEADER
+=================================== */
+
+.header .container {
+    padding: 54px 0 32px;
+}
+
+.header .container .blokas1 {
+    display: flex;
+    gap: 27px;
+
+    background: rgba(255, 238, 226, 1);
+
+    border-radius: 25px;
+
+    margin-bottom: 58px;
+}
+
+.header .container .blokas1 .foto1 img {
+    width: 702px;
+    height: 485px;
+    object-fit: cover;
+}
+
+
+.header .container .blokas1 .turinys1 {
+    padding: 120px 103px 120px 0;
+}
+
+.header .container .blokas1 .turinys1 h3,
+.header .container .blokas .turinys2 h3,
+.header .container .blokas .turinys3 h3 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38.4px;
+
+    color: rgba(31, 31, 31, 1);
+
+    margin: 0;
+}
+
+.header .container .blokas1 .turinys1 p,
+.header .container .blokas .turinys2 p,
+.header .container .blokas .turinys3 p {
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: rgba(31, 31, 31, 1);
+
+    margin: 16px 0;
+}
+
+.header .container .blokas {
+    display: flex;
+    gap: 48px;
+
+    margin-bottom: 32px;
+}
+
+.header .container .blokas .foto img {
+    width: 637px;
+    height: 404px;
+    object-fit: cover;
+}
+
+.header .container .blokas .turinys2 {
+    padding: 79px 0 79px 105px;
+}
+
+.header .container .blokas .turinys3 {
+    padding: 79px 103px 79px 0;
+}
+
+
+
+
