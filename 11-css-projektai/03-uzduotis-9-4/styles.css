@@ -1,0 +1,190 @@
+/* font-family: "Bebas Neue", serif;
+font-weight: 400; */
+
+/* font-family: "Open Sans", serif; */
+
+/* ===================================
+BENDRI STILIAI
+=================================== */
+
+body {
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue", serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* ===================================
+HEADER-NAVIGACIJA
+=================================== */
+
+.header {
+    background: url("images/header.jpg") center;
+    padding: 29px 0 62.21px;
+}
+
+.header .navigacija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navigacija img {
+    width: 87px;
+    height: 93px;
+}
+
+.header .navigacija ul {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    gap: 67.25px;
+}
+
+.header .navigacija ul li {
+    list-style-type: none;
+}
+
+.header .navigacija a {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19.07px;
+    /* text-align: right; */
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+.header .navigacija .kalbos {
+    position: relative;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.header .navigacija .kalbos img {
+    width: 7.3px;
+    height: 3.2px;
+/* top: 77.6px;
+left: 1479.11px; */
+}
+
+.header .navigacija .kalbos .dropdown {
+    display: block;
+
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+    padding: 9.66px 17.11px 5.4px 9.5px;
+    margin-top: 2.21px;
+}
+
+.header .navigacija .zenkliukai {
+    display: flex;
+    gap: 17.05px;
+
+    border-left: 0.87px solid rgba(255, 255, 255, 1);
+    padding-left: 29px;
+}
+
+.header .navigacija .zenkliukai img {
+    width: 30.04px;
+    height: 30.04px;
+}
+
+.header .turinys {
+    text-align: center;
+}
+
+.header .turinys h1 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 363px 0 0;
+}
+
+.header .turinys h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 0 0 25.63px;
+}
+
+.header .turinys a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21.79px;
+    /* text-align: center; */
+    text-decoration: none;
+
+    color: rgba(26, 25, 23, 1);
+    
+    border-radius: 4px;
+    padding: 19.35px 17.9px 18.71px 16.93px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11.04px;
+
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+
+    margin-bottom: 513.64px;
+}
+
+.header .turinys a span {
+    border-left: 0.87px solid rgba(26, 25, 23, 1);
+
+    padding-left: 14.22px;
+}
+
+.header .scroll-down-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.34px; 
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19.07px;
+    letter-spacing: 10%;
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, 1); 
+}
+
+.header .scroll-down-button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .scroll-down-button img {
+    width: 20.25px; 
+    height: auto; 
+}
+
+
+
+
+
+
+
