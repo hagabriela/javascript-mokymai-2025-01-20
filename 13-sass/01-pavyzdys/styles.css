@@ -2,11 +2,13 @@ body {
   margin: 0; }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: #222;
   padding: 10px 20px; }
+  @media only screen and (min-width: 600px) {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
   nav a {
     color: white;
     text-decoration: none; }
@@ -17,7 +19,11 @@ nav {
   nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px; }
+    gap: 20px;
+    padding-left: 0; }
+    @media only screen and (max-width: 600px) {
+      nav ul {
+        flex-wrap: wrap; } }
     nav ul li {
       font-size: 12px;
       letter-spacing: 2px;
@@ -54,6 +60,12 @@ header {
       background: #f8f8f8;
       padding: 20px;
       box-sizing: border-box; }
+      @media only screen and (max-width: 1000px) {
+        .paslaugos .paslaugu-sarasas .paslauga {
+          width: calc((100% - 20px) / 2); } }
+      @media only screen and (max-width: 600px) {
+        .paslaugos .paslaugu-sarasas .paslauga {
+          width: 100%; } }
       .paslaugos .paslaugu-sarasas .paslauga a {
         background: royalblue;
         color: white;
@@ -62,6 +74,6 @@ header {
         border-radius: 5px;
         text-decoration: none; }
         .paslaugos .paslaugu-sarasas .paslauga a:hover {
-          background: rgb(82, 123, 244); }
+          background: #527bf4; }
 
 /*# sourceMappingURL=styles.css.map */

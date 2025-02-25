@@ -13,11 +13,14 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: $spalvaTamsi;
     padding: 10px 20px;
+
+    @media only screen and (min-width: 600px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     a {
         color: white;
@@ -36,6 +39,12 @@ nav {
         list-style-type: none;
         display: flex;
         gap: 20px;
+        padding-left: 0;
+        // flex-wrap: wrap;
+
+        @media only screen and (max-width: 600px) {
+            flex-wrap: wrap;
+        }
 
         li {
             font-size: 12px;
@@ -89,6 +98,14 @@ header {
             background: #f8f8f8;
             padding: 20px;
             box-sizing: border-box;
+
+            @media only screen and (max-width:1000px) {
+                width: calc((100% - 20px) / 2);
+            }
+
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
 
             a {
                 background: $spalvaPirmine;
