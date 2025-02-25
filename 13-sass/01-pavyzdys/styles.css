@@ -1,0 +1,67 @@
+body {
+  margin: 0; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 10px 20px; }
+  nav a {
+    color: white;
+    text-decoration: none; }
+    nav a:hover {
+      color: royalblue; }
+  nav .brand {
+    text-transform: uppercase; }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; }
+    nav ul li {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+
+header {
+  background: royalblue;
+  padding: 100px 20px;
+  text-align: center; }
+  header h1 {
+    margin: 0; }
+  header p {
+    margin: 20px 0; }
+  header a {
+    color: white;
+    text-decoration: none;
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 5px; }
+    header a:hover {
+      background: #363636; }
+
+.paslaugos {
+  padding: 50px 20px; }
+  .paslaugos h2 {
+    margin: 0 0 20px;
+    text-align: center; }
+  .paslaugos .paslaugu-sarasas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; }
+    .paslaugos .paslaugu-sarasas .paslauga {
+      width: calc((100% - 2 * 20px) / 3);
+      background: #f8f8f8;
+      padding: 20px;
+      box-sizing: border-box; }
+      .paslaugos .paslaugu-sarasas .paslauga a {
+        background: royalblue;
+        color: white;
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 5px;
+        text-decoration: none; }
+        .paslaugos .paslaugu-sarasas .paslauga a:hover {
+          background: rgb(82, 123, 244); }
+
+/*# sourceMappingURL=styles.css.map */
