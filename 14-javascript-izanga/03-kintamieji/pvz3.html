@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Pirkote</h1>
+    <p><strong>Maistas:</strong> <span id="pavad"></span></p>
+    <p><strong>Kaina:</strong> <span id="kain"></span> €</p>
+    <p><strong>Kiekis:</strong> <span id="kiek"></span> vnt.</p>
+    <h3><strong>Galutinė kaina:</strong> <span id="galutine"></span> €</h3>
+    <p><strong>Ar apmokėta?</strong> <span id="apmokejimas"></span></p>
+
+    <script>
+        let maistas = 'Sušiai XL komplektas';
+        let kaina = 15;
+        let vienetai = 3;
+        let galutineKaina = kaina * vienetai;
+        let arApmoketa = true;
+
+        document.getElementById('pavad').innerText = maistas;
+        document.getElementById('kain').innerText = kaina;
+        document.getElementById('kiek').innerText = vienetai;
+        document.getElementById('galutine').innerText = galutineKaina;
+        document.getElementById('apmokejimas').innerText = arApmoketa  ? 'Taip' : 'Ne';
+    </script>
+</body>
+</html>
