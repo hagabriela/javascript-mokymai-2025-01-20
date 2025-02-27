@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="amzius">Įveskite amžių:</label>
+    <input type="number" id="amzius">
+    <button id="ivesti">Įvesti</button>
+
+    <p id="atsakymas"></p>
+
+    <script>
+        let amzius;
+
+        document.getElementById('atsakymas').innerText = 'Amžius: ' + amzius;
+
+        document.getElementById('ivesti').addEventListener('click' , () => {
+            // alert('sveikinu, paspaudei')
+            amzius = document.getElementById('amzius').valueAsNumber
+            // alert(amzius)
+            document.getElementById('atsakymas').innerText = 'Amžius: ' + amzius;
+        })
+    </script>
+
+
+</body>
+</html>
