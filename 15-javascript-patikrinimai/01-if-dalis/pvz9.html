@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .prekes {
+            display: flex;
+            gap: 25px;
+        }
+
+        .prekes .preke {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .prekes .preke img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- .prekes>.preke*3>img[src="https://placehold.co/300x200"]+h3{Prekė $}+(p>(strong{Kaina:})+{100})+button{Įsidėti į krepšelį} -->
+    <div class="prekes">
+        <div class="preke">
+            <img src="https://placehold.co/300x200" alt="">
+            <h3>Prekė 1</h3>
+            <p><strong>Kaina:</strong> 50 &euro;</p>
+            <button id="pirmaPreke">Įsidėti į krepšelį</button>
+        </div>
+        <div class="preke">
+            <img src="https://placehold.co/300x200" alt="">
+            <h3>Prekė 2</h3>
+            <p><strong>Kaina:</strong> 80 &euro;</p>
+            <button id="antraPreke">Įsidėti į krepšelį</button>
+        </div>
+        <div class="preke">
+            <img src="https://placehold.co/300x200" alt="">
+            <h3>Prekė 3</h3>
+            <p><strong>Kaina:</strong> 30 &euro;</p>
+            <button id="treciaPreke">Įsidėti į krepšelį</button>
+        </div>
+    </div>
+
+    <div class="atsakymai">
+        <h3>Bendra krepšelio kaina: <span id="kaina">0</span> &euro;</h3>
+        <h3>Krepšelio kiekis: <span id="kiekis">0</span> vnt.</h3>
+    </div>
+
+    <script>
+        let turimePirmosPrekes = 10;
+        let turimeAntrosPrekes = 5;
+        let turimeTreciosPrekes = 15;
+        
+        let krepselioKaina = 0;
+        let krepselioKiekis = 0;
+        
+        document.getElementById('pirmaPreke').addEventListener('click', () => {
+            // alert('Dedam pirmą prekę į krepšelį');
+
+            turimePirmosPrekes--; // įsidėjom į krepšelį, tai iš sandėlio vieną išimam
+            krepselioKiekis++; // padidinam krepšelio kiekį
+            krepselioKaina += 50  // padidinam krepšelio kainą
+
+            if (turimePirmosPrekes == 0) {
+                document.getElementById('pirmaPreke').disabled = true;
+            }
+
+            document.getElementById('kaina').innerText = krepselioKaina;
+            document.getElementById('kiekis').innerText = krepselioKiekis;
+
+            // console.log({ turimePirmosPrekes, krepselioKiekis, krepselioKaina });
+        })
+
+        document.getElementById('antraPreke').addEventListener('click', () => {
+            // alert('antra prekė')
+
+            turimeAntrosPrekes--; // įsidėjom į krepšelį, tai iš sandėlio vieną išimam
+            krepselioKiekis++; // padidinam krepšelio kiekį
+            krepselioKaina += 80  // padidinam krepšelio kainą
+
+            if (turimeAntrosPrekes == 0) {
+                document.getElementById('antraPreke').disabled = true;
+            }
+
+            document.getElementById('kaina').innerText = krepselioKaina;
+            document.getElementById('kiekis').innerText = krepselioKiekis;
+        })
+
+        document.getElementById('treciaPreke').addEventListener('click', () => {
+            // alert('trečia prekė')
+
+            turimeTreciosPrekes--; // įsidėjom į krepšelį, tai iš sandėlio vieną išimam
+            krepselioKiekis++; // padidinam krepšelio kiekį
+            krepselioKaina += 30  // padidinam krepšelio kainą
+
+            if (turimeTreciosPrekes == 0) {
+                document.getElementById('treciaPreke').disabled = true;
+            }
+
+            document.getElementById('kaina').innerText = krepselioKaina;
+            document.getElementById('kiekis').innerText = krepselioKiekis;
+        })
+
+    </script>
+
+</body>
+</html>
