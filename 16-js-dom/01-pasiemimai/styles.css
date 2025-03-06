@@ -10,3 +10,16 @@
 .preke img {
     width: 100%;
 }
+
+.gyvunai {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gyvunai .gyvunas {
+    width: calc((100% - 2 * 20px) / 3);
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid rgb(215, 215, 215);
+}
