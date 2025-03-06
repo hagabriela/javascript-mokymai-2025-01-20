@@ -1,0 +1,12 @@
+.preke {
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+    margin: 20px auto;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.preke img {
+    width: 100%;
+}
