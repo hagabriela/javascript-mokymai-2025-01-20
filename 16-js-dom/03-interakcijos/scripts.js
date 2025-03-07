@@ -135,9 +135,60 @@ sakinioAnalizeInputas.addEventListener('input' , () => {
         document.querySelector('.sakinio-analize .analize').innerHTML = ''
     }
 })
+// kai yra ar nera tarpo
 
 // zyma.innerHTML = 'pirmas'
 // zyma.innerHTML = 'antras' // antras
 // arba:
 // zyma.innerHTML = 'pirmas'
 // zyma.innerHTML += 'antras' // pirmasantras
+
+// ================================
+// kepykla zona
+// ================================
+
+  // parseInt(htmlzymainput.value)
+  // htmlzymainput.valueAsNumber
+
+document.querySelector('.kepykla .mygtukas button').addEventListener('click', () => {
+    // console.log('SKAIČIUOJAM')
+    let darbuotojuKiekis = parseInt(document.getElementById('kiekDarbuotoju').value)
+    let darbuotojasIskepaPerVal = document.getElementById('kiekDarbIskepa').valueAsNumber
+    let kepaloSavikaina = document.getElementById('kepaloSavikaina').valueAsNumber
+    let kepaloKaina = document.getElementById('kepaloKaina').valueAsNumber
+    let uzsakymuKiekis = document.getElementById('kiekUzsakymu').valueAsNumber
+
+    // console.dir(darbuotojuKiekis)
+    // console.log({darbuotojuKiekis, darbuotojasIskepaPerVal, kepaloSavikaina, kepaloKaina, uzsakymuKiekis});
+    
+    let atsakymai = document.querySelector('.kepykla .rezultatai')
+
+    // kiek kepalų per dieną spėsim iškepti?
+
+    let kepyklosPajegumai = 8 * darbuotojuKiekis * darbuotojasIskepaPerVal
+    // console.log(kepyklosPajegumai);
+
+    atsakymai.innerHTML = `<p>Kepykla per dieną spės iškepti <strong>${kepyklosPajegumai}</strong> kepalų.</p>`
+
+    // ar spės iškepti viską? kiek nespės jei nespės?
+
+    if (uzsakymuKiekis <= kepyklosPajegumai) {
+        // viską spėja
+        atsakymai.innerHTML += `<p>Kepykla <strong>spės</strong> įgyvendinti šios dienos užsakymus.</p>`
+        let savikainaBendra = kepaloSavikaina * uzsakymuKiekis
+        let kainaBendra = kepaloKaina * uzsakymuKiekis
+        let pelnas = kainaBendra - savikainaBendra
+        atsakymai.innerHTML += `<p><strong>Visų kepalų pelnas:</strong> ${pelnas} €</p>`
+        atsakymai.innerHTML += `<p><strong>Visų kepalų savikaina:</strong> ${savikainaBendra} €</p>`
+        atsakymai.innerHTML += `<p><strong>Visų kepalų pardavimo pajamos:</strong> ${kainaBendra} €</p>`
+    } else {
+        // ne viską spėja
+        atsakymai.innerHTML += `<p>Kepykla <strong>nespės</strong> įgyvendinti šios dienos užsakymus.</p>`
+        let savikainaBendra = kepaloSavikaina * kepyklosPajegumai
+        let kainaBendra = kepaloKaina * kepyklosPajegumai
+        let pelnas = kainaBendra - savikainaBendra
+        atsakymai.innerHTML += `<p><strong>Visų kepalų pelnas:</strong> ${pelnas} €</p>`
+        atsakymai.innerHTML += `<p><strong>Visų kepalų savikaina:</strong> ${savikainaBendra} €</p>`
+        atsakymai.innerHTML += `<p><strong>Visų kepalų pardavimo pajamos:</strong> ${kainaBendra} €</p>`
+    }
+})
