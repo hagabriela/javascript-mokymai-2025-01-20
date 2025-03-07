@@ -104,3 +104,40 @@ document.querySelector('.ivairus-sk-keitimai .grazinti-nuli').addEventListener('
     keiciamasSk = 0
     skKeitimaiAts.textContent =  keiciamasSk
 })
+
+// ================================
+// sakinio-analize zona
+// ================================
+
+let sakinioAnalizeInputas = document.querySelector('.sakinio-analize #tekstas')
+// sis let bus pasiekiamas visur
+
+sakinioAnalizeInputas.addEventListener('input' , () => {
+    // console.log('įvyko!');
+    // console.dir(sakinioAnalizeInputas)
+    // is narsykles suzinom, kad value reikia paimti, nes tekstas prie jo buvo
+    // console.log(sakinioAnalizeInputas.value);
+    let sakinys = sakinioAnalizeInputas.value
+    // tik cia sis let bus pasiekiamas
+
+    // document.querySelector('.sakinio-analize .analize').innerHTML = '<p>' + sakinys + '</p>'
+    // innterHTML galima rasyti zymas ir mato zymas
+
+    if (sakinys != '') {
+        document.querySelector('.sakinio-analize .analize').innerHTML
+        = `<p><strong>Įvestas tekstas:</strong> ${sakinys}</p>
+            <p><strong>Raidžių kiekis:</strong> ${sakinys.length}</p>
+            <p><strong>Žodžių kiekis:</strong> ${sakinys.split(' ').length}</p>`
+            // paskaiciuoja kiek raidziu - length. 
+            // split su length pagal tarpus paskaiciuoja kiek zodziu
+            // galime kiek norime HTML issivesti
+    } else {
+        document.querySelector('.sakinio-analize .analize').innerHTML = ''
+    }
+})
+
+// zyma.innerHTML = 'pirmas'
+// zyma.innerHTML = 'antras' // antras
+// arba:
+// zyma.innerHTML = 'pirmas'
+// zyma.innerHTML += 'antras' // pirmasantras
