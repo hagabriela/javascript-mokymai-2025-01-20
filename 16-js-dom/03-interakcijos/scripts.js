@@ -32,3 +32,31 @@ didintiPo10Mygtukas.addEventListener('click' , function() {
     didintiPo10Mygtukas.textContent = skaicius
     // didintiPo10Mygtukas.textContent = skaicius + 10
 })
+
+// ================================
+// didinti-mazinti zona
+// ================================
+
+let didintiMazintiAts = document.querySelector('.didinti-mazinti p')
+// console.log(didintiMazintiAts);
+// susikurem auksciau, nes idejus i vidu (eventListenerio) nematytu-nepaimtu
+
+let didintiMazintiSk = 0
+let didintiMazintiLimitas = 8
+
+
+document.querySelector('.didinti-mazinti .mazinti').addEventListener('click' , () => {
+    // console.log('mažinimo veiksmas');
+    if (didintiMazintiSk > 0 ){
+        didintiMazintiSk--
+        didintiMazintiAts.textContent = didintiMazintiSk
+    }
+})
+
+document.querySelector('.didinti-mazinti .didinti').addEventListener('click' , () => {
+    // console.log('didinimo veiksmas');
+    if (didintiMazintiSk < didintiMazintiLimitas) {
+        didintiMazintiSk++
+        didintiMazintiAts.textContent = didintiMazintiSk
+    }
+})

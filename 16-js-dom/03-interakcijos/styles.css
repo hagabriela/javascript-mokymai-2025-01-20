@@ -36,3 +36,19 @@ body {
 .didinti-po-10 button {
     padding: 40px 80px;
 }
+
+.didinti-mazinti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.didinti-mazinti p,
+.didinti-mazinti button {
+    font-size: 30px;
+}
+
+.didinti-mazinti button {
+    font-size: 10px 20px;
+}
