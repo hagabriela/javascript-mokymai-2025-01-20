@@ -28,3 +28,11 @@ body {
 .skaiciu-didinimas button {
     padding: 40px 80px;
 }
+
+.didinti-po-10 {
+    text-align: center;
+}
+
+.didinti-po-10 button {
+    padding: 40px 80px;
+}
