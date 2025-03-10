@@ -192,3 +192,36 @@ document.querySelector('.kepykla .mygtukas button').addEventListener('click', ()
         atsakymai.innerHTML += `<p><strong>Visų kepalų pardavimo pajamos:</strong> ${kainaBendra} €</p>`
     }
 })
+
+// ================================
+// fiksuoti-laika zona
+// ================================
+
+document.querySelector('.fiksuoti-laika button').addEventListener('click' , () => {
+    // console.log('pavyko')
+    let laikas = new Date().toLocaleString('lt')
+    // console.log(laikas);
+    // isveda laika su data, kuris yra tuo metu
+
+    // document.querySelector('.fiksuoti-laika .sarasas').innerHTML += `<p>....`
+    
+    let paragrafas = document.createElement('p')
+    paragrafas.textContent = laikas
+
+    let trynimoMygtukas = document.createElement('button')
+    trynimoMygtukas.textContent = 'X'
+    paragrafas.appendChild(trynimoMygtukas)
+    // data laikas x - gale, nes appendChild
+
+    trynimoMygtukas.addEventListener('click' , () => {
+        // console.log('yo!');
+        // console.log(trynimoMygtukas);
+        // console.log(trynimoMygtukas.parentElement);
+        trynimoMygtukas.parentElement.remove()
+    })
+
+    // document.querySelector('.fiksuoti-laika .sarasas').appendChild(paragrafas)
+    document.querySelector('.fiksuoti-laika .sarasas').prepend(paragrafas)
+    // prepend deda i virsu (prieki) naujausia laika, ko innerHTML nemoka, tik i apacia (gala) kaip ir appendChild
+})
+// event listener idetas i kita event listeneri. Su inner.HTML sunkiau butu

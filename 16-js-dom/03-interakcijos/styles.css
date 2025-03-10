@@ -84,3 +84,7 @@ body {
 .kepykla .duomenu-grupe input {
     flex: 1;
 }
+
+.fiksuoti-laika button {
+    font-size: 20px;
+}
