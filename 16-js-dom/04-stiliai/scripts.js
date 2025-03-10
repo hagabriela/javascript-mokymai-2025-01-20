@@ -34,4 +34,36 @@ document.querySelector('.perjungti button').addEventListener('click' , (event) =
 // ==================================
 
 let tkTekstas = document.querySelector('.teksto-keitimas .tekstas')
-console.log(tkTekstas);
+// console.log(tkTekstas);
+
+document.querySelector('.teksto-keitimas #dydis').addEventListener('input' , (event) => {
+    // console.log('kažkas'); 
+    // console.dir(event.target) // event.target duoda input kurį kątik keičiau
+    // console.log(event.target.valueAsNumber);
+    tkTekstas.style.fontSize = event.target.valueAsNumber + 'px'
+})
+
+document.querySelector('.teksto-keitimas .tekstas-juoda').addEventListener('click' , () => {
+    tkTekstas.style.color = 'black'
+    // tkTekstas.style.color = '#000'
+    // tkTekstas.style.color = '#000000'
+})
+
+document.querySelector('.teksto-keitimas .tekstas-balta').addEventListener('click' , () => {
+    tkTekstas.style.color = 'white'
+})
+
+document.querySelector('.teksto-keitimas .fonas-nera').addEventListener('click' , () => {
+    tkTekstas.style.background = 'none'
+    // svarbu cia, kad visur butu vienodai arba background arba backrgound-color
+})
+
+document.querySelector('.teksto-keitimas .fonas-juoda').addEventListener('click' , () => {
+    tkTekstas.style.background = 'black'
+})
+
+document.querySelector('.teksto-keitimas .fonas-balta').addEventListener('click' , () => {
+    tkTekstas.style.background = 'white'
+})
+
+
