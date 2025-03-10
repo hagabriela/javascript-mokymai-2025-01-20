@@ -28,3 +28,10 @@ document.querySelector('.perjungti button').addEventListener('click' , (event) =
 // mygtukas.addEventListener('click' , () => {
 //     console.log(mygtukas);
 // })
+
+// ==================================
+// teksto-keitimas blokas
+// ==================================
+
+let tkTekstas = document.querySelector('.teksto-keitimas .tekstas')
+console.log(tkTekstas);

@@ -36,3 +36,36 @@ body {
     margin-top: 20px;
     display: none;
 }
+
+.teksto-keitimas .nustatymai {
+    display: flex;
+    gap: 20px;
+}
+
+.teksto-keitimas .nustatymai .grupe {
+    border: 1px solid rgb(77, 77, 77);
+    padding: 20px 30px;
+    position: relative;
+}
+
+.teksto-keitimas .nustatymai .grupe label {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    transform: translateY(-50%);
+    background: rgb(40, 40, 40);
+    color: white;
+    padding: 2px 10px;
+}
+
+.teksto-keitimas .tekstas {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgb(77, 77, 77);
+    font-size: 12px;
+}
+
+.teksto-keitimas .tekstas p {
+    margin: 0;
+}
+
