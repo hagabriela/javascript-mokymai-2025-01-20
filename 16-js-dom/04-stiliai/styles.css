@@ -1,0 +1,38 @@
+/* body {
+    background-color: orange;
+} */
+
+body {
+    margin: 0;
+}
+
+.blokas {
+    padding: 80px 50px;
+}
+
+.blokas:nth-child(odd) {
+    background-color: rgb(241, 241, 241);
+}
+
+.blokas:nth-child(even) {
+    background-color: rgb(221, 221, 221);
+}
+
+.perjungti button {
+    padding: 10px 20px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+}
+
+.perjungti button:hover {
+    cursor: pointer;
+    background-color: rgb(47, 81, 185);
+}
+
+.perjungti .turinys {
+    background-color: white;
+    padding: 20px 40px;
+    margin-top: 20px;
+    display: none;
+}
