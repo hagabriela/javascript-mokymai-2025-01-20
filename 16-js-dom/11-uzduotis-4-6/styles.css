@@ -1,0 +1,33 @@
+/* body {
+    background-color: orange;
+} */
+
+.blokeliai {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.blokeliai .blokelis {
+    flex: 1;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(207, 207, 207);
+    transition: 0.2s all;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.blokeliai .blokelis:hover {
+    background: lightcyan;
+}
+
+.blokeliai .blokelis.active {
+    background: lightblue;
+}
+
+.blokeliai .blokelis:not(.active) p {
+    display: none;
+}
