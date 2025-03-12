@@ -1,0 +1,50 @@
+/* body {
+    background-color: orange;
+} */
+
+
+h1 {
+    font-size: 30px;
+}
+
+p, ul {
+    font-size: 16px;
+}
+
+table {
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table, table td {
+    border-collapse: collapse;
+}
+
+.neregiui {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+body.pritaikymas h1 {
+    font-size: 50px;
+}
+body.pritaikymas p {
+    font-size: 24px;
+}
+body.pritaikymas ul {
+    font-size: 24px;
+}
+body.pritaikymas table {
+    font-size: 24px;
+}
+body.pritaikymas table td {
+    padding: 10px;
+}
+body.pritaikymas .neregiui {
+    font-size: 24px;
+}
