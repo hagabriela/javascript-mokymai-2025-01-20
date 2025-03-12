@@ -1,0 +1,29 @@
+/* body {
+    background: orange;
+} */
+
+.teksto-analize .ivestis textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+}
+
+.teksto-analize .ivestis label, 
+.teksto-analize .ivestis textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.teksto-analize .ivestis .isvalyti.slepti {
+    display: none;
+}
+
+p.klaida {
+    background-color: rgb(255, 223, 223);
+    border: 2px solid red;
+    color: red;
+    padding: 10px;
+}
+
