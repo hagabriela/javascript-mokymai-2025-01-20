@@ -27,3 +27,31 @@ body {
     color: white;
 }
 /* siu dvieju klasiu dar nera, jos bus panaudotos / pridetos per JS */
+
+.modal-wrapper:not(.active) {
+    display: none;
+}
+
+.modal-wrapper .backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+}
+
+.modal-wrapper .modal {
+    background: white;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    /* reguliuoja sluoksnio auksti, kuo didesnis sk. - tuo arciau musu. Pvz.: kai yra fixed ant abieju */
+    padding: 20px 40px;
+}
