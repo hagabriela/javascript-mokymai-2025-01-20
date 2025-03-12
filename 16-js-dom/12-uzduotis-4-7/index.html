@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teksto formatavimas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="teksto-formatavimas">
+        <div class="nustatymai">
+            <div class="grupe">
+                <label for="dydis">Šrifto dydis:</label>
+                <input type="number" min="1" max="100" value="16" id="dydis">
+            </div>
+            <div class="grupe">
+                <label>Teksto stilius:</label>
+                <button data-tipas="paprastas" class="aktyvus">Paprastas</button>
+                <button data-tipas="pastorintas">Pastorintas</button>
+                <button data-tipas="pasviras">Pasviras</button>
+            </div>
+        </div>
+        <div class="tekstas">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolore exercitationem hic molestiae ab, amet expedita quae debitis numquam minus nobis pariatur qui a nostrum accusamus veritatis atque reprehenderit! Nulla.</p>
+        </div>
+    </div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

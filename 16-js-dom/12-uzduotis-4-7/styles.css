@@ -1,0 +1,34 @@
+/* body {
+    background: orange;
+} */
+
+
+.teksto-formatavimas .nustatymai {
+    display: flex;
+    gap: 10px;
+}
+
+.teksto-formatavimas .grupe {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.teksto-formatavimas .grupe button {
+    background-color: silver;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.2s all;
+}
+
+.teksto-formatavimas .grupe button.aktyvus {
+    background-color:lightblue;
+}
+
+.teksto-formatavimas .grupe button:hover {
+    background-color: rgb(193, 232, 245);
+}
+
+.teksto-keitimas .tekstas {
+    font-size: 16px;
+}
