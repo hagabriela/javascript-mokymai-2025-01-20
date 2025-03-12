@@ -1,0 +1,29 @@
+/* body {
+    background-color: orange;
+} */
+
+body {
+    margin: 0;
+}
+
+.blokas {
+    padding: 50px;
+}
+
+.junginejimai p {
+    margin: 20px 0 0;
+    padding: 20px 40px;
+    border: 1px solid black;
+}
+
+.ryskus {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.spalvinti {
+    background-color: cornflowerblue;
+    color: white;
+}
+/* siu dvieju klasiu dar nera, jos bus panaudotos / pridetos per JS */
