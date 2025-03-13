@@ -1,0 +1,41 @@
+/* body {
+    background-color: orange;
+} */
+
+h1 {
+    font-size: 30px;
+}
+
+p, ul, table, button {
+    font-size: 16px;
+}
+
+table {
+    border: 1px solid black;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table, table td {
+    border-collapse: collapse;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.isdidinti-antraste {
+    font-size: 50px;
+}
+
+.isdidinti {
+    font-size: 24px;
+}
+
+.isdidinti-table {
+    padding: 10px;
+    font-size: 24px;
+}
