@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptų porcijų skaičiuoklė</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="recipes-section general">
+        <div class="container">
+            <div class="title-part">
+                <h2>Pasirinkite receptą:</h2>
+            </div>
+            <div class="content-part">
+                <div class="recipe-block recipe1">
+                    <div class="image">
+                        <img src="images/vistiena.jpg" alt="vistienos-salotos">
+                    </div>
+                    <div class="text-part">
+                        <h3>Vištiena su salotom</h3>
+                        <p>Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut. Pellentesque montes.</p>
+                    </div>
+                    <div class="hitched">
+                        <img src="images/varniukas.png" alt="">
+                    </div>
+                </div>
+                <div class="recipe-block recipe2 active">
+                    <div class="image">
+                        <img src="images/tortas.jpg" alt="tortas-su-melynemis">
+                    </div>
+                    <div class="text-part">
+                        <h3>Tortas su mėlynėm</h3>
+                        <p>Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut. Pellentesque montes.</p>
+                    </div>
+                    <div class="hitched">
+                        <img src="images/varniukas.png" alt="">
+                    </div>
+                </div>
+                <div class="recipe-block recipe3">
+                    <div class="image">
+                        <img src="images/makaronai.jpg" alt="makaronai-su-mesa">
+                    </div>
+                    <div class="text-part">
+                        <h3>Makaronai su mėsa</h3>
+                        <p>Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut. Pellentesque montes.</p>
+                    </div>
+                    <div class="hitched">
+                        <img src="images/varniukas.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portion-section general">
+        <div class="container">
+            <div class="title-part">
+                <h2>Kiek porcijų gaminsite?</h2>
+            </div>
+            <div class="content-part">
+                <label for="porcijos"></label>
+                <input type="range" min="0" max="10" value="2" id="porcijos">
+            </div>
+        </div>
+    </div>
+
+    <div class="ingredients-section general">
+        <div class="container">
+            <div class="title-part">
+                <h2>Jums reikės šių ingredientų, tokiais kiekiais:</h2>
+            </div>
+            <div class="content-part">
+                <div class="ingredient-block-result"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* font-family: "Roboto", sans-serif;
+font-weight: 700; */
+
+/* font-family: "Open Sans", sans-serif;
+font-weight: 400; */
+
+/* ===================================
+GENERAL STYLES
+=================================== */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(239, 239, 239, 1);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+h2, h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.general {
+    width: 600px;
+    padding: 30px 0 26px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.general .container {
+    max-width: 483px;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.general .title-part {
+    margin-bottom: 16px;
+}
+
+.general .title-part h2 {
+    /* color: rgba(0, 0, 0, 1); */
+
+    font-size: 16px;
+    line-height: 100%;
+
+    margin: 0;
+}
+
+/* ===================================
+RECIPES SECTION
+=================================== */
+
+.recipes-section {
+    margin: 103px auto 0;
+}
+
+.recipes-section .content-part {
+    display: flex;
+    gap: 27px;
+}
+
+.recipes-section .content-part .recipe-block {
+    /* flex-grow: 1; */
+    width: 28%;
+    border: 1px solid rgba(230, 230, 230, 1);
+
+    position: relative;
+}
+
+.recipes-section .recipe-block:not(.active) .hitched {
+    display: none;
+}
+
+.recipes-section .content-part .recipe-block .image {
+   height: 80px;
+}
+
+.recipes-section .content-part .recipe-block .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipes-section .content-part .recipe-block .text-part {
+    padding: 13px 16px 21px 10px;
+}
+
+.recipes-section .content-part .recipe-block .text-part h3 {
+    font-size: 12px;
+    line-height: 100%;
+
+    /* color: rgba(0, 0, 0, 1); */
+
+    margin-bottom: 9px;
+    margin-top: 0
+}
+
+.recipes-section .content-part .recipe-block .text-part p {
+    font-size: 10px;
+    line-height: 100%;
+
+    /* color: rgba(0, 0, 0, 1); */
+
+    margin: 0;
+}
+
+.recipes-section .content-part .recipe-block .hitched {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+/* ===================================
+PORTION SECTION
+=================================== */
+
+.portion-section {
+    margin: 32px auto ;
+}
+
+.portion-section .content-part #porcijos {
+    margin: 18px 0 3px;
+    -webkit-appearance: none; /* Pašalina numatytąjį naršyklės stilių */
+    appearance: none;
+    /* width: 216px; */
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.portion-section .content-part #porcijos::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 7px;
+    height: 7px;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    /* cursor: pointer; */
+}
+
+.portion-section .content-part #porcijos::-moz-range-thumb {
+    width: 7px;
+    height: 7px;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+}
+
+/* ===================================
+INGREDIENTS SECTION
+=================================== */
+.ingredients-section {
+    margin: 32px auto 337px ;
+}
