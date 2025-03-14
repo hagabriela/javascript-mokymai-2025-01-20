@@ -1,0 +1,218 @@
+/* font-family: "Montserrat", sans-serif; */
+
+/* ===================================
+GENERAL STYLES
+=================================== */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+    /* padding: 244px 0 336px; */
+    padding: 244px 0 182px;
+
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba(51, 51, 51, 1);
+
+    margin: 0;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 244px 0 336px; */
+}
+
+/* ===================================
+TABS STYLES
+=================================== */
+
+.tabs {
+    border-bottom: 1px solid rgba(196, 196, 196, 1);
+}
+
+.tabs .tab {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(102, 102, 102, 1);
+
+    background: none;
+    border: none;
+}
+
+.tabs .tab1 {
+    padding: 9px 66px;
+}
+
+.tabs .tab2 {
+    padding: 9px 64px;
+}
+
+.tabs .tab3 {
+    padding: 9px 33px;
+}
+
+.tabs .tab.active {
+    background: linear-gradient(180deg, rgba(62, 148, 31, 0) 0%, rgba(62, 148, 31, 0.15) 100%);
+    border-bottom: 3px solid rgba(62, 148, 31, 1);
+    color: rgba(62, 148, 31, 1);
+}
+
+/* ===================================
+CONTENT STYLES
+=================================== */
+
+.tab-content:not(.active) {
+    display: none !important;
+}
+/* kitaip flex permuse */
+
+/* -----------------------------------
+TAB1 STYLES
+----------------------------------- */
+
+.content .tab1-content {
+    display: flex;
+    gap: 24px;
+
+    margin-top: 69px;
+    margin-bottom: 154px;
+}
+
+.content .tab1-content table {
+    /* width: 648px;
+    flex: 1; */
+    max-height: 288px;
+}
+
+.content .tab1-content table td {
+    border-bottom: 1px solid rgba(153, 153, 153, 1);
+    border-top: 1px solid rgba(153, 153, 153, 1);
+    
+    padding: 12px 40px;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(102, 102, 102, 1);
+    /* width: fit-content; */
+    /* tada width modifikuoti dar galima atitaikant */
+}
+
+.content .tab1-content table,
+.content .tab1-content table td {
+    border-collapse: collapse;
+}
+
+.content .tab1-content table .header-type {
+    border-top: 2px solid rgba(51, 51, 51, 1);
+    border-bottom: 2px solid rgba(51, 51, 51, 1);
+
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba(51, 51, 51, 1);
+}
+
+.content .tab1-content table .other-table-padding {
+    padding: 24px 40px;
+}
+
+.content .tab1-content .image {
+    height: 383px;
+}
+
+.content .tab1-content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* -----------------------------------
+TAB2 STYLES
+----------------------------------- */
+
+.content .tab2-content {
+    display: flex;
+    gap: 24px;
+
+    margin-top: 69px;
+    margin-bottom: 154px;
+}
+
+.content .tab2-content table {
+    /* width: 648px;
+    flex: 1; */
+    max-height: 240px;
+}
+
+.content .tab2-content table td {
+    border-bottom: 1px solid rgba(153, 153, 153, 1);
+    border-top: 1px solid rgba(153, 153, 153, 1);
+    
+    padding: 12px 40px;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(102, 102, 102, 1);
+    /* width: fit-content; */
+}
+
+.content .tab2-content table,
+.content .tab2-content table td {
+    border-collapse: collapse;
+}
+
+.content .tab2-content table .header-type {
+    border-top: 2px solid rgba(51, 51, 51, 1);
+    border-bottom: 2px solid rgba(51, 51, 51, 1);
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba(51, 51, 51, 1);
+
+    padding: 24px 40px;
+}
+
+.content .tab2-content .image {
+    height: 383px;
+}
+
+.content .tab2-content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* -----------------------------------
+TAB3 STYLES
+----------------------------------- */
+.content .tab3-content {
+    margin-top: 25px;
+}
+
+.content .tab3-content .floor {
+    margin-bottom: 32px;
+}
+
+.content .tab3-content .floor:last-of-type {
+    margin-bottom: 0;
+}
