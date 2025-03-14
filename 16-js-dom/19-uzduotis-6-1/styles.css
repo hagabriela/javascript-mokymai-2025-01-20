@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(199, 199, 199, 1);
+    padding: 61px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 628px;
+    margin: 0 auto;
+}
+
+.content .image-shown {
+    height: 803px;
+
+    position: relative;
+
+    margin-bottom: 24px;
+}
+
+.content .image-shown .spooted-images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content .image-shown .spooted-images:not(.active) {
+    display: none;
+}
+
+.content .image-shown .back-image {
+    position: absolute;
+    left: 28.12px;
+    bottom: 401px;
+}
+
+.content .image-shown .forward-image {
+    position: absolute;
+    right: 28.12px;
+    bottom: 401px;
+}
+
+.content .other-images {
+    display: flex;
+    gap: 17px;
+}
+
+.content .other-images img {
+    width: 112px;
+    height: 130px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* del borderio */
+}
+/* .content .other-images .other-image neveikia */
+
+.content .other-images img.active {
+    border: 5px solid rgba(244, 191, 3, 1);
+}
+/* .content .other-images other-image.active neveikia */
+
