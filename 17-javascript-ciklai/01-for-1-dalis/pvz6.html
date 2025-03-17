@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVZ 6</title>
+    <style>
+        .skaidre {
+            text-align: center;
+            padding: 50px;
+        }
+        .skaidre:nth-child(odd) {
+            background: rgb(226, 226, 226);
+        }
+        .skaidre:nth-child(even) {
+            background: rgb(249, 249, 249);
+        }
+    </style>
+</head>
+<body>
+    <div class="parametrai">
+        <label for="kiekSkaidriu">Kiek norite skaidrių?</label>
+        <input type="number" id="kiekSkaidriu">
+        <button>Atnaujinti</button>
+    </div>
+
+    <div class="skaidres"></div>
+
+    <script>
+        let skaidriuBlokas = document.querySelector('.skaidres')
+
+        document.querySelector('.parametrai button').addEventListener('click' , () => {
+            // alert('paspaudžiau')
+            let kiek = document.getElementById('kiekSkaidriu').valueAsNumber
+            // console.log(kiek);
+
+            skaidriuBlokas.innerHTML = ''
+            // isvalome, jei kazkas pries tai yra tame div
+
+            for (let kelintas = 1; kelintas <= kiek; kelintas++) {
+                skaidriuBlokas.innerHTML += '<div class="skaidre">' + kelintas + '</div>' 
+            }
+        })
+    </script>
+</body>
+</html>

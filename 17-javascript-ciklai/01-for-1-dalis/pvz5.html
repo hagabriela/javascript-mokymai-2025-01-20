@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVZ 5</title>
+</head>
+<body>
+    <div class="isvedimui"></div>
+    
+    <script>
+        let blokas = document.querySelector('.isvedimui')
+
+        for (let i = 1; i <= 10; i++) {
+            blokas.innerHTML += `<h3>Skaičius: ${i}</h3>
+            <p>Šis skaičius yra ${ i % 2 == 0 ? 'lyginis' : 'nelyginis' }</p>`
+        }
+    </script>
+</body>
+</html>
