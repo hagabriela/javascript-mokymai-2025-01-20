@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loterija {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="ivedimas">
+        <label for="vardas">Įveskite vardą:</label>
+        <input type="text" id="vardas">
+    </div>
+
+    <div class="visi-suvesti"></div>
+
+    <div class="loterija">
+        <button>Išrinkti laimingąjį/ąją</button>
+        <h3></h3>
+    </div>
+    
+    <script>
+        let vardai = []
+
+        let suvestiDuomenys = document.querySelector('.visi-suvesti')
+
+        document.getElementById('vardas').addEventListener('keyup' , (event) => {
+            // console.log(event.target.value);
+            // console.log(event); is cia pasiziurejom, kad code - Enter
+
+             // if (event.code != 'Enter') {
+            //     return // nutraukti tolimesnį kodą jei nebuvo enter paspaudimo
+            // }
+
+            if (event.code == 'Enter') {
+                // console.log(event.target.value);
+                vardai.push(event.target.value)
+
+                // galima nespausdinti viso masyvo, ir į html išvesti
+                // po vieną vardą, jo įvedimo metu:
+                // suvestiDuomenys.innerHTML += `<p>${event.target.value}</p>`
+                // galima pildyti gala, bet nesurikiuotume abeceles tvarka ir po to sudeti
+
+                event.target.value = '' // isvalo po sukurimo (svarbi seka), paspaudus Enter
+                
+                suvestiDuomenys.innerHTML = '' // isvalo div
+
+                for (let i = 0; i < vardai.length; i++) {
+                    suvestiDuomenys.innerHTML += `<p>${vardai[i]}</p>`
+                }
+
+                // Kai daugiau nei du vardai atsirastu loterijos <div>, kur yra mygtukas
+                if (vardai.length > 2) {
+                    document.querySelector('.loterija').style.display = 'block'
+                }
+            }
+        })
+
+        document.querySelector('.loterija button').addEventListener('click' , () => {
+            // console.log('renkame laimėtoją');
+            let laimetojoIndeksas = Math.floor(Math.random() * vardai.length)
+            let laimetojas = vardai[laimetojoIndeksas]
+            // console.log(laimetojas)
+            document.querySelector('.loterija h3').textContent = `LAIMĖTOJAS ${laimetojas}!!!`
+        })
+    </script>
+</body>
+</html>
