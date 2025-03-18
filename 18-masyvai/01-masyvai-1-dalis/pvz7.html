@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ivedimas">
+        <label for="">Įveskite pirkinį:</label>
+        <input type="text" id="pirkinys">
+        <button>Įveskite</button>
+    </div>
+
+    <div class="isvedimas"></div>
+    
+    <script>
+        let pirkiniai = []
+
+        document.querySelector('.ivedimas button').addEventListener('click' , () => {
+            let laukelis = document.getElementById('pirkinys')
+            pirkiniai.push(laukelis.value)
+            laukelis.value = '' // isvalome
+            document.querySelector('.isvedimas').innerHTML = pirkiniai.map(p => `<p>${p}</p>`).join('')
+        })
+    </script>
+</body>
+</html>
