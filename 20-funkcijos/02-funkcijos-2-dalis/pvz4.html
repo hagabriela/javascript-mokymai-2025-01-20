@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="blokas1"></div>
+    <div class="blokas2"></div>
+
+    
+    <script>
+        function generuotiSkaicius(blokoSelektorius, kiekSkaiciu) {
+            let blokas = document.querySelector(blokoSelektorius)
+            // įstatys kintamąjo reikšmę iš funkcijos kvietimo
+            // let blokas = document.querySelector('.blokas1')
+            // console.log(blokas);
+
+            blokas.innerHTML = `<h2>${kiekSkaiciu} sugeneruoti skaičiai</h2>`
+
+            for (let i = 0; i < kiekSkaiciu; i++) {
+                let skaicius = Math.floor(Math.random() * 100) + 1
+                blokas.innerHTML += `<p>${skaicius}</p>`
+            } 
+        }
+
+        generuotiSkaicius('.blokas1', 5)
+        generuotiSkaicius('.blokas2', 10)
+    </script>
+
+</body>
+</html>
