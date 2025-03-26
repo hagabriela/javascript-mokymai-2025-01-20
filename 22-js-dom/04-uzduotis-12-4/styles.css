@@ -1,0 +1,70 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.page-content {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.page-content h1 {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 20px 30px;
+    margin: 0;
+}
+
+.payments-wrapper .item-wrapper {
+    padding: 15px 30px;
+}
+
+.payments-wrapper .item-wrapper:not(:last-child) {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.payments-wrapper .item-wrapper p {
+    margin: 2px 0
+}
+
+.payments-wrapper .item-wrapper p.id,
+.payments-wrapper .item-wrapper p.when {
+    font-size: 12px;
+}
+
+.payments-wrapper .item-wrapper p.type {
+    font-size: 16px;
+}
+
+.payments-wrapper .item-wrapper p.amount {
+    font-size: 20px;
+}
+
+.payments-wrapper .item-wrapper p.income {
+    color: green;
+}
+
+.payments-wrapper .item-wrapper p.expense {
+    color: red;
+}
+
+.balance-wrapper {
+    padding: 20px 30px;
+    background-color: #ededed;
+}
+
+.balance-wrapper h3 {
+   margin: 0;
+}
+
+.balance-wrapper span.positive {
+    color: green;
+}
+
+.balance-wrapper span.negative {
+    color: red;
+}
+
+.balance-wrapper span.incomes-expenses {
+    font-size: 14px;
+}
