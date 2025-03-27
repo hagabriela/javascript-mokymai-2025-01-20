@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- nav>.container>(.brand>a[href="index.html"]{Portfolio})+(ul.links>li*3>a[href="#"]{Nuoroda}) -->
+    <nav>
+        <div class="container">
+            <div class="brand">
+                <a href="index.html">Portfolio</a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Nuoroda</a></li>
+                <li><a href="#">Nuoroda</a></li>
+                <li><a href="#">Nuoroda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- header>.container>.turinys>h1{Mano portfolio}+a[href="#"]{Žiūrėti projektus} -->
+    <header>
+        <div class="container">
+            <div class="turinys">
+                <h1>Mano portfolio</h1>
+                <a href="#" class="btn btn-juodas">Žiūrėti projektus</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- .naujausi-projektai>.container>h2{Naujausi projektai}+.projektai>.projektas*3>h3{Pavadinimas}+p{aprašymas}+(p>span{HTML}+span{CSS})+a[href="#"]{Žiūrėti projektą}.btn.btn-melynas -->
+    <div class="naujausi-projektai">
+        <div class="container">
+            <h2>Naujausi projektai</h2>
+            <div class="projektai">
+                <div class="projektas">
+                    <h3>Pavadinimas</h3>
+                    <p>aprašymas</p>
+                    <p>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </p>
+                    <a href="#" class="btn btn-melynas">Žiūrėti projektą</a>
+                </div>
+                <!-- <div class="projektas">
+                    <h3>Pavadinimas</h3>
+                    <p>aprašymas</p>
+                    <p>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </p>
+                    <a href="#" class="btn btn-melynas">Žiūrėti projektą</a>
+                </div> -->
+                <!-- <div class="projektas">
+                    <h3>Pavadinimas</h3>
+                    <p>aprašymas</p>
+                    <p>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </p>
+                    <a href="#" class="btn btn-melynas">Žiūrėti projektą</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+         // fetch('kur kreipiamės')
+        //     .then(konvertuojam gautą json į javascript objektus ir masyvus)
+        //     .then(dirbame su gauta informacija)
+        
+        fetch('http://localhost:7788/projects/latest/3')
+            .then(response => response.json()) // konvertuojame i js duomenys
+            .then(duomenys => {
+                console.log(duomenys) // iskonvertuotus duomenys naudojame
+
+                let blokas = document.querySelector('.naujausi-projektai .projektai')
+                blokas.innerHTML = '' //isvale div
+
+                for (const projektas of duomenys) {
+                    console.log(projektas);
+                    blokas.innerHTML +=`<div class="projektas">
+                    <h3>${projektas.name}</h3>
+                    <p>${projektas.description}</p>
+                    <p>
+                        ${projektas.technologies.map(x => '<span>' + x + '</span>').join('')}
+                    </p>
+                    <a href="${projektas.link}" class="btn btn-melynas">Žiūrėti projektą</a>
+                </div>`
+                }
+            }) 
+    </script>
+</body>
+</html>

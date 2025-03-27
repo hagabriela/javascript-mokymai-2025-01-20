@@ -1,0 +1,99 @@
+/* ====================================
+PAGRINDINIAI STILIAI
+==================================== */
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    /* border: 1px solid #222; */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.btn-juodas {
+    background-color: #222;
+    color: white;
+}
+
+.btn-melynas {
+    background-color: lightblue;
+    color: #222;
+}
+
+/* ====================================
+NAVIGACIJOS JUOSTA
+==================================== */
+
+nav {
+    background-color: #222;
+    padding: 30px;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    color: lightblue;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+nav a:hover {
+    color: lightseagreen;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+    list-style-type: none;
+}
+
+/* ====================================
+HEADER DALIS
+==================================== */
+
+header {
+    background-color: lightblue;
+    padding: 80px 30px;
+}
+
+/* ====================================
+NAUJAUSI PROJEKTAI
+==================================== */
+
+.naujausi-projektai {
+    padding: 30px;
+}
+
+.naujausi-projektai h2 {
+    text-align: center;
+}
+
+.naujausi-projektai .projektai {
+    display: flex;
+    gap: 16px;
+}
+
+.naujausi-projektai .projektai .projektas {
+    flex: 1;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+
