@@ -36,7 +36,8 @@
         <div class="container">
             <h2>Naujausi projektai</h2>
             <div class="projektai">
-                <div class="projektas">
+                <p>Projektai kraunasi...</p>
+                <!-- <div class="projektas">
                     <h3>Pavadinimas</h3>
                     <p>aprašymas</p>
                     <p>
@@ -44,7 +45,7 @@
                         <span>CSS</span>
                     </p>
                     <a href="#" class="btn btn-melynas">Žiūrėti projektą</a>
-                </div>
+                </div> -->
                 <!-- <div class="projektas">
                     <h3>Pavadinimas</h3>
                     <p>aprašymas</p>
@@ -79,18 +80,18 @@
         fetch('http://localhost:7788/projects/latest/3')
             .then(response => response.json()) // konvertuojame i js duomenys
             .then(duomenys => {
-                console.log(duomenys) // iskonvertuotus duomenys naudojame
+                // console.log(duomenys) // iskonvertuotus duomenys naudojame
 
                 let blokas = document.querySelector('.naujausi-projektai .projektai')
                 blokas.innerHTML = '' //isvale div
 
                 for (const projektas of duomenys) {
-                    console.log(projektas);
+                    // console.log(projektas);
                     blokas.innerHTML +=`<div class="projektas">
                     <h3>${projektas.name}</h3>
                     <p>${projektas.description}</p>
                     <p>
-                        ${projektas.technologies.map(x => '<span>' + x + '</span>').join('')}
+                        ${projektas.technologies.map(x => '<span class = "tag">' + x + '</span>').join(' ')}
                     </p>
                     <a href="${projektas.link}" class="btn btn-melynas">Žiūrėti projektą</a>
                 </div>`

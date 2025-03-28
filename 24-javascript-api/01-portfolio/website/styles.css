@@ -31,6 +31,15 @@ body {
     color: #222;
 }
 
+.tag {
+    background-color: #222;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
 /* ====================================
 NAVIGACIJOS JUOSTA
 ==================================== */
