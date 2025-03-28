@@ -68,6 +68,16 @@
         </div>
     </div>
 
+    <!-- .darbo-patirtis>.container>h2{Darbo patirtis}+.irasai>p{Darbo patirtis kraunasi...} -->
+    <div class="darbo-patirtis">
+        <div class="container">
+            <h2>Darbo patirtis</h2>
+            <div class="irasai">
+                <p>Darbo patirtis kraunasi...</p>
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -97,6 +107,28 @@
                 </div>`
                 }
             }) 
+
+            fetch('http://localhost:7788/work-experience/latest/2')
+                .then(response => response.json())
+                .then(darboPatirtis => {
+                    // console.log(darboPatirtis);
+
+                    let blokas = document.querySelector('.darbo-patirtis .irasai')
+                    blokas.innerHTML = ''
+
+                    for (const irasas of darboPatirtis) {
+                        blokas.innerHTML += `<div class = "irasas">
+                                <h3>${irasas.title}</h3>
+                                <p>${irasas.description}</p>
+                                <p>${irasas.location}</p>
+                                <p class = "date">${irasas.date}</p>
+                                <p>${irasas.company}</p>
+                                <p>
+                                    ${irasas.skills.map(x => '<span class = "tag">' + x + '</span>').join(' ')}
+                                </p>
+                            </div>`
+                    }
+                })
     </script>
 </body>
 </html>
