@@ -6,7 +6,7 @@
     <title>Porfolio / Projektai</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="projektu-puslapis">
     <nav>
         <div class="container">
             <div class="brand">
@@ -27,7 +27,57 @@
             </div>
         </div>
     </header>
+
+    <!-- .turinys>.container>.filtrai+.projektai>p{Kraunasi...} -->
+    <div class="turinys">
+        <div class="container">
+            <div class="filtrai"></div>
+            <div class="projektai">
+                <p>Kraunasi...</p>
+            </div>
+        </div>
+    </div>
+
     
-    <script></script>
+    <script>
+        // pasidaryti atskirą funkciją projektų spausdinimui
+
+        // ne per fetch kaip index.html, o per funkciją, kadangi
+        // ne kartą projektus spausdinsime iš skirtingų 
+        // lokacijų - tai, kad būtų lengviau
+        function spausdintiProjektus(projektai) {
+            console.log(projektai);
+            let blokas = document.querySelector('.turinys .projektai')
+            blokas.innerHTML = '' // čia neišsitrynė, nes funkcija spausdintiProjektus nebuvo iškviesta
+            // projektai ir gautiProjektai tai tie patys duomenys
+            for (const projektas of projektai) {
+                    // console.log(projektas);
+                    blokas.innerHTML +=`<div class="projektas">
+                    <h3>${projektas.name}</h3>
+                    <p>${projektas.description}</p>
+                    <p>
+                        ${projektas.technologies.map(x => '<span class = "tag">' + x + '</span>').join(' ')}
+                    </p>
+                    <a href="${projektas.link}" class="btn btn-melynas">Žiūrėti projektą</a>
+                </div>`
+            }
+        }
+
+        // užkrauti filtrams informaciją
+
+
+
+        // užkrauti visus projektus puslapiui užsikrovus
+        fetch('http://localhost:7788/projects')
+            .then(response => response.json())
+            // .then(gautiProjektai => console.log(gautiProjektai))
+            .then(gautiProjektai => spausdintiProjektus(gautiProjektai)) // kviečiame f-ją spausdintiProjektus
+
+
+        // reaguoti į paspaudimus ant filtrų mygtukų ir 
+        // užkrovinėti atitinkamus projektus
+
+
+    </script>
 </body>
 </html>

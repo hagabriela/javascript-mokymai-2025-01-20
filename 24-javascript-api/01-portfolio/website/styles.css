@@ -106,3 +106,29 @@ NAUJAUSI PROJEKTAI
     padding: 20px 30px;
 }
 
+/* ====================================
+FILTRAI ESANTYS PROJEKTŲ PUSLAPYJE
+==================================== */
+
+.projektu-puslapis .projektai {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 15px 0 30px;
+}
+
+.projektu-puslapis .projektai .projektas {
+    width: calc((100% - 16px) / 2);
+    box-sizing: border-box;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+
+
+
+
+/* ====================================
+PROJEKTAI ESANTYS PROJEKTŲ PUSLAPYJE
+==================================== */
+
