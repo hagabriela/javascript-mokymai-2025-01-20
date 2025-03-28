@@ -46,7 +46,7 @@
         // ne kartą projektus spausdinsime iš skirtingų 
         // lokacijų - tai, kad būtų lengviau
         function spausdintiProjektus(projektai) {
-            console.log(projektai);
+            // console.log(projektai);
             let blokas = document.querySelector('.turinys .projektai')
             blokas.innerHTML = '' // čia neišsitrynė, nes funkcija spausdintiProjektus nebuvo iškviesta
             // projektai ir gautiProjektai tai tie patys duomenys
@@ -63,21 +63,64 @@
             }
         }
 
+        // sukuriame šią f-ją, kad ją iškviesti
+        function filtruotiProjektus(event, technologija) {
+            // console.log(technologija);
+            // console.log({event, technologija});
+
+            // surandame aktuvų mygtuką (kad ir kuris tai turi) ir jo klasę pakeičiam į paprasto mygtuko klasę
+            document.querySelector('.filtrai button.btn-juodas').classList.replace('btn-juodas', 'btn-melynas')
+
+            // ant to mygtuko ant kurio ką tik paspaudėme, pakeisti įprastą klasę į aktyvią
+            event.target.classList.replace('btn-melynas', 'btn-juodas')
+
+            let kurKreiptis = 'http://localhost:7788/projects'
+
+            if (technologija !== 'all') {
+                kurKreiptis += '/technologies/' + technologija
+            }
+            // console.log(kurKreiptis);
+
+            fetch(kurKreiptis)
+                .then(response => response.json())
+                .then(gautiProjektai => spausdintiProjektus(gautiProjektai))
+        }
+
         // užkrauti filtrams informaciją
 
+        // čia atskira callback funkcija
+        fetch('http://localhost:7788/projects/technologies')
+            .then(response => response.json())
+            .then(technologijos => {
+                // console.log(technologijos);
 
+                let blokas = document.querySelector('.turinys .filtrai')
+                blokas.innerHTML = ''
+
+                blokas.innerHTML += `<button class = "btn btn-juodas" onclick="filtruotiProjektus(event, 'all')">
+                        Visi projektai
+                    </button>`
+
+                for (const technologija of technologijos) {
+                    // kai onclick, tai f-ja filtruotiProjektus jau turi būti sukurta
+                    blokas.innerHTML += `<button class = "btn btn-melynas" onclick="filtruotiProjektus(event, '${technologija}')">
+                            ${technologija}
+                        </button>`
+                    // reaguoti į paspaudimus ant filtrų mygtukų ir 
+                    // užkrovinėti atitinkamus projektus
+
+                    // let mygtukas = document.createElement('button')
+                    // mygtukas.classList.add('btn', 'btn-melynas')
+                    // mygtukas.addEventListener(....) - čia įsidėtų kodas ir nereiktų f-jos / vietoj onclick
+                    // blokas.appendChild(mygtukas)
+                }
+            })
 
         // užkrauti visus projektus puslapiui užsikrovus
         fetch('http://localhost:7788/projects')
             .then(response => response.json())
             // .then(gautiProjektai => console.log(gautiProjektai))
             .then(gautiProjektai => spausdintiProjektus(gautiProjektai)) // kviečiame f-ją spausdintiProjektus
-
-
-        // reaguoti į paspaudimus ant filtrų mygtukų ir 
-        // užkrovinėti atitinkamus projektus
-
-
     </script>
 </body>
 </html>

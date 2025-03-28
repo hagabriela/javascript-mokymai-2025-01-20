@@ -19,6 +19,8 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-juodas {
@@ -109,6 +111,14 @@ NAUJAUSI PROJEKTAI
 /* ====================================
 FILTRAI ESANTYS PROJEKTŲ PUSLAPYJE
 ==================================== */
+
+.projektu-puslapis .filtrai {
+    padding: 30px 0 15px;
+}
+
+.projektu-puslapis .filtrai button {
+    margin: 2px;
+}
 
 .projektu-puslapis .projektai {
     display: flex;

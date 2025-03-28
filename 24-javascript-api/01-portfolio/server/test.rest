@@ -18,6 +18,10 @@ GET http://localhost:7788/projects/technologies/react
 
 ###
 
+GET http://localhost:7788/projects/technologies/html
+
+###
+
 GET http://localhost:7788/work-experience
 
 ###
