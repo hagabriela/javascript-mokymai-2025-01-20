@@ -1,0 +1,11 @@
+.paslaugos-wrapper {
+    background-color: bisque;
+    color: black;
+}
+
+.paslaugos-wrapper .paslaugos-list {
+    display: flex;
+    gap: 10px;
+}
+
+
