@@ -1,0 +1,106 @@
+/* ====================================
+PAGRINDINIAI STILIAI
+==================================== */
+button {
+    padding: 10px 20px;
+    /* border: 1px solid #222; */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+
+    background-color: rgb(103, 143, 156);
+    color: white;
+}
+
+/* ====================================
+NAVIGACIJOS JUOSTA
+==================================== */
+
+nav {
+    background-color: #222;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h3 {
+    color: lightblue;
+}
+
+nav h3:hover {
+    color: lightseagreen;
+}
+
+nav a {
+    color: lightblue;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+nav a:hover {
+    color: lightseagreen;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+    list-style-type: none;
+}
+
+/* ====================================
+HEADER DALIS
+==================================== */
+
+header {
+    background-color: lightblue;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+/* ====================================
+PASLAUGOS BLOKAS
+==================================== */
+
+.paslaugos-wrapper {
+    padding: 30px;
+}
+
+.paslaugos-wrapper .paslaugos-list {
+    display: flex;
+    gap: 16px;
+}
+
+.paslaugos-wrapper .paslaugos-list .paslauga-blokas {
+    flex: 1;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+
+/* ====================================
+APIE MUS BLOKAS
+==================================== */
+
+.apie-mus {
+    padding: 30px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+}
+
+/* ====================================
+FOOTER JUOSTA
+==================================== */
+
+.footer-wrapper {
+    padding: 30px;
+    background-color: #222;
+    display: flex;
+    gap: 20px;
+    color: lightblue;
+}
