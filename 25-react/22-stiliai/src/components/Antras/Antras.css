@@ -1,0 +1,10 @@
+.antras {
+    background-color: orangered;
+    padding: 10px;
+}
+
+/* nueis į pirmą komponentą, nes klasė sutampa */
+/* pristaikys ir šito ir kito CSS failo stilius pirmam komponentui, nes klasė sutampa */
+.pirmas {
+    padding: 15px;
+}

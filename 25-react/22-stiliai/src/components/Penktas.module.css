@@ -1,0 +1,10 @@
+/* ! izoliuojamas stilius tik vienam komponentui ! */
+/* k itame komponente negali prisidėti šie stiliai, nors ir sutamps klasės*/
+.pirmas {
+    font-size: 30px;
+}
+
+.penktas {
+    background-color: #222;
+    color: white;
+}
