@@ -1,0 +1,80 @@
+Norint dirbti su duomenimis reikia pasirinkti atitinkamą duomenų bazę.
+Jos pasirinkimas vykdomas su "use" raktažodžiu ir toliau eina
+pačios duomenų bazės pavadinimas:
+
+use pardavimai_db
+use knygynas
+use neturiu
+use pardavimai_db
+
+------------------------------------------
+
+Duomenų bazėje galime paiešką atlikti norimoje kolekcijoje,
+tokiu atveju rašome db.kolekcija.find()
+
+db.pardavimai.find()
+
+------------------------------------------
+
+Galima ieškoti įrašų kurie atitinka nurodytas reikšmes
+prie atitinkamų raktų
+
+db.kolekcija.find({ raktas: ka_turi_atitikti })
+
+db.pardavimai.find({ buyerSatisfaction: 1 })
+db.pardavimai.find({ buyerCity: 'Trakai' })
+db.pardavimai.find({ shippingPrice: '9.99' })
+
+db.pardavimai.find({ buyerCity: 'Trakai', buyerSatisfaction: 1 })
+
+db.pardavimai.find({ type: 'parduotuvėje'})                        
+db.pardavimai.find({ buyerSatisfaction: 5 })                       
+db.pardavimai.find({ productsCount: 10 })                             
+db.pardavimai.find({ buyerCity: 'Kaunas', buyerSatisfaction: 3 }) 
+db.pardavimai.find({ buyerCity: 'Vilnius', buyerSatisfaction: 5, orderStatus: 'pristatytas' })
+
+------------------------------------------
+
+Kai norime ieško daugiau, mažiau ir pan, tada papildomai
+turim naudoti tam tikrus operatorius, pvz:
+lt - less than - mažiau nei
+gt - greater than - daugiau nei
+lte - less than or equal - mažiau arba lygu
+gte - greater than or equal - daugiau arba lygu
+
+Prie tikrinamo rakto pridedam sintaksės:
+db.kolekcija.find({ raktas: { $operatorius: reikšmė } })
+db.kolekcija.find({ skaicius: { $lt: 20 } })
+
+db.pardavimai.find({ productsCount: { $lt: 3 } })
+
+db.pardavimai.find({ productsCount: { $gt: 5 } })
+db.pardavimai.find({ buyerSatisfaction: { $gt: 3 } })
+db.pardavimai.find({ buyerSatisfaction: { $lte: 3 } })
+db.pardavimai.find({ id: { $lt: 8 } })
+db.pardavimai.find({ buyerSatisfaction: { $gte: 2, $lte: 4 } })
+db.pardavimai.find({ productsCount: { $gte: 6, $lte: 7 } }) ARBA db.pardavimai.find({ productsCount: { $gte: 6, $lt: 8 } })
+
+------------------------------------------
+
+db.pardavimai.findOne()
+
+db.pardavimai.find({ orderDate: { $gte: '2024-01-01'} }) ir su string
+
+------------------------------------------
+
+
+Galim ieškoti ir ar tekstas lygus frazei ar nelygus frazei.
+eq - equal - lygus
+ne - not equal - nelygus
+
+db.pardavimai.find({ type: 'parduotuvėje' })         <--------- yra parduotuvėje
+db.pardavimai.find({ type: { $eq: 'parduotuvėje'} }) <--------- yra parduotuvėje
+db.pardavimai.find({ type: { $ne: 'parduotuvėje'} }) <--------- nėra parduotuvėje
+
+db.pardavimai.find({ buyer: { $eq: 'Dalia A.'} })
+db.pardavimai.find({ buyerCity: { $ne: 'Vilnius'} })
+db.pardavimai.find({ shippingPrice: { $ne: '0.00'} })
+
+
+
