@@ -76,5 +76,168 @@ db.pardavimai.find({ buyer: { $eq: 'Dalia A.'} })
 db.pardavimai.find({ buyerCity: { $ne: 'Vilnius'} })
 db.pardavimai.find({ shippingPrice: { $ne: '0.00'} })
 
+------------------------------------------
+
+Įvairių kombinuotų sąlygų taikymas
+
+db.pardavimai.find({ orderStatus:'pristatytas', buyerSatisfaction: {$gte: 4} })
+db.pardavimai.find({ orderStatus: {$ne: 'pristatytas'}, buyerSatisfaction: {$gte: 3} })
+
+
+- surasti užsakymus kur id būtų žemiau nei 100, bei būtų pristatyti
+db.pardavimai.find({ id: {$lt: 100}, orderStatus: 'pristatytas' })
+
+- surasti užsakymus kur įvertinimas yra 10 balų ir produktų kiekis 7 ar daugiau
+db.pardavimai.find({ buyerSatisfaction: 10, productsCount: {$gte: 7} })
+
+- surasti užsakymus kur miestas būtų Klaipėda, bet nebūtų pristatyti
+db.pardavimai.find({ buyerCity: 'Klaipėda', orderStatus: {$ne: 'pristatytas'} })
+
+------------------------------------------
+
+Galima ieškoti įrašų kurie atitinka vieną iš nurodytų žodžių,
+arba kaip tik priešingai - kad nebūtų nei vienas iš nurodytų žodžių.
+
+Tam naudojami operatoriai:
+in - yra vienas iš
+nin - nėra vienas iš
+
+Per masyvą išvardinamos reikšmės.
+
+db.kolekcija.find({ raktas: { $in: [reiksme1, reiksme2, ...] } })
+
+db.pardavimai.find({ id: { $in: [ 7, 105, 999 ] } })
+bet jei yra visi, tai visus tokius ir duoda (kaip ir)
+
+Šitą pavyzduką galima įsivaizduoti kaip tarsi javascripte kiekvieną įrašą
+tikrintų taip:
+
+let id = 105
+if ([7, 105, 999].includes(id)) {
+    console.log('yra')
+}
+
+db.pardavimai.find({ shippingPrice: { $in: ['0.00', '2.99'] } })
+
+
+db.pardavimai.find({ shippingPrice: { $nin: ['0.00', '2.99', '4.99', '9.99']} })
+Visi šitie ne, neturi būti
+
+- surasti užsakymus kur produktų kiekis nėra 1 ar 10
+db.pardavimai.find({ productsCount: {$nin: [1, 10]} })
+
+- surasti užsakymus kur miestas yra Vilnius, Kaunas arba Klaipėda
+db.pardavimai.find({ buyerCity: {$in: ['Vilnius', 'Kaunas', 'Klaipėda']} })
+
+- surasti užsakymus kur pirko parduotuvėje ir yra pristatyti arba atšaukti
+db.pardavimai.find({ type: 'parduotuvėje', orderStatus: {$in: ['pristatytas', 'atšauktas']} })
+
+- surasti užsakymus kur užsakymo laikas yra lygiai 12:00 arba 13:00
+db.pardavimai.find({ orderTime: {$in: ['12:0', '13:0']} })
+
+- surasti užsakymus kurie pirkti internetu ir pristatymo kaina nėra 0.00 ir nėra 2.99
+db.pardavimai.find({ type: 'internetu', shippingPrice: {$nin: ['0.00', '2.99']} })
+
+------------------------------------------
+
+Kad išsiaiškinti, kokios reikšmės egzistuoja (vietoj Schema)
+Rasti unikalias reikšmes iš nurodyto rakto galima taip:
+
+db.pardavimai.distinct('shippingPrice')
+rezultatas: [ '0.00', '19.99', '2.99', '4.99', '9.99' ]
+
+------------------------------------------
+
+Galima ieškoti tekste ir pagal tam tikras žodžio ar frazių dalis, pritaikyti
+papildomus parametrus (kaip nekreipimas į didž./maž. raides ir pan), ir kt.,
+tam naudojamas Regex, kuris beje nėra MongoDB dalykas, o jis yra atskiras įrankis,
+kuris egzistuoja ir kitose aplinkose.
+
+Ieško nurodyto vardo, didžiosios mažosios raidės yra svarbu:
+db.pardavimai.find({ buyer: { $regex: 'Aurimas' } })
+db.pardavimai.find({ buyer: /Aurimas/ })
+
+Ieško, kad miesto pavadinimas prasidėtų didžiąja raide K:
+db.pardavimai.find({ buyerCity: {$regex: /^K/m  } }) 
+
+Ieško nurodyto vardo, didžiosios mažosios raidės nėra svarbu:
+db.pardavimai.find({ buyer: /aurimas/i })
+
+- rasti užsakymus kuriuos pirko Ona
+db.pardavimai.find({ buyer: { $regex: 'Ona' } })
+
+- rasti užsakymus kurie yra iš miesto, prasidedančio raide P
+db.pardavimai.find({ buyerCity: {$regex: /^P/m  } }) 
+
+- rasti užsakymus kurie įvykdyti 2020-05 mėnesį
+db.pardavimai.find({ orderDate: /2020-05/ })
+
+- rasti užsakymus kurių pristatymo būsenoje yra žodis "prist"
+db.pardavimai.find({ orderStatus: { $regex: 'prist' } })
+
+- rasti užsakymus kurie yra iš "drusk" miesto (ieškom pagal miesto pradžią)
+db.pardavimai.find({ buyerCity: { $regex: /^drusk/i } })
+
+- rasti užsakymus kurių pirkėjo pavardė prasideda raide A (gale pirkėjo 'A.')
+db.pardavimai.find({buyer: {$regex: /A.$/m}}) => gale pirkėjo pavardė A.
+
+------------------------------------------
+
+Galim filtruoti duomenis (atrenka tam tikrus dokumentus) ir galime rinktis
+iš nufiltruotų dokumentų kokius konkrečius raktus turi mums parodyti, o kurie
+turi būti paslėpti.
+
+.find({ką_filtruojam})
+.find({ką_filtruojam}, {kokius_atributus_rodome})
+
+jeigu rodyti viską, bet rinktis raktus:
+.find({}, {kokius_atributus_rodome})
+
+db.pardavimai.find({}, { buyer: 1, orderPrice:1, shippingPrice: 1 })
+
+
+db.pardavimai.find(
+{ buyerCity: 'Jonava'}, 
+{ buyerCity: 1, buyer: 1, shippingPrice:1, orderPrice:1, orderStatus: 1} 
+)
+
+db.pardavimai.find(
+{ buyerCity: 'Prienai', shippingPrice: '0.00'}, 
+{ _id: 0, buyerCity: 1, buyer: 1, shippingPrice:1, type: 1} 
+)
+
+- parodyti visus dokumentus, tačiau iš jų rodyti tik miestą ir pristatymo būseną
+db.pardavimai.find({}, { buyerCity: 1, orderStatus:1 })
+
+- parodyti visus dokumentus, tačiau iš jų rodyti tik id, pirkėją ir užsakymo kainą
+db.pardavimai.find({}, { id: 1, buyer: 1, orderPrice:1 })
+
+- atrinkti užsakymus kurie yra iš Kauno arba Vilniaus, iš šių užsakymų parodyti tik miestus, pirkėjus,
+  kainas, siuntimo kainas ir pristatymo būseną
+  db.pardavimai.find(
+  { buyerCity: { $in: ['Kaunas', 'Vilnius'] } },
+  { buyerCity: 1, buyer: 1, orderPrice: 1, shippingPrice: 1, orderStatus: 1 }
+)
+
+- atrinkti užsakymus kurie yra iš Biržų ir yra pristatyti, iš šių užsakymų parodyti miestą, pristatymo
+  būseną, siuntimo kainą, pirkimo tipą, užsakytų produktų kiekį
+  db.pardavimai.find(
+{ buyerCity: 'Biržai', orderStatus: 'pristatytas'}, 
+{ buyerCity: 1, orderStatus: 1, shippingPrice:1, type: 1, productsCount: 1 } 
+)
+
+- atrinkti užsakymus kuriuos užsakyta 7 ar daugiau produktų, bei dar nėra pristatyti, iš šių
+  užsakymų parodyti tik produktų kiekį, pristatymo būseną, užsakymo ir pristatymo kainas, miestą
+  db.pardavimai.find(
+  { productsCount: { $gte: 7 }, orderStatus: {$ne: 'pristatytas'} },
+  { productsCount: 1, orderStatus: 1, orderPrice: 1, shippingPrice: 1, buyerCity: 1 }
+)
+
+
+
+
+
+
+
 
 
