@@ -303,6 +303,17 @@ db.parduotuves.find({ savitarnosKasa: {$exists : false} })
 
 ------------------------------------------
 
+db.parduotuves.updateOne( 
+  {pavadinimas: 'Šilutės pagrind. parduotuvė' },
+  { $set: { pavadinimas: 'Šilutės pagrindinė parduotuvė', savitarnosKasa: true } }
+)
+db.parduotuves.find({ pavadinimas: 'Šilutės pagrindinė parduotuvė' })
+
+db.parduotuves.updateMany( 
+  { savitarnosKasa: {$exists: false} },
+  { $set: {savitarnosKasa: false} }
+)
+db.parduotuves.find()
 
 
 
