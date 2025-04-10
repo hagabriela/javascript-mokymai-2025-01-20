@@ -315,7 +315,27 @@ db.parduotuves.updateMany(
 )
 db.parduotuves.find()
 
+------------------------------------------
 
+Ištrina visą objektą - dokumentą, kuri randame kokiu norime būdu:
+
+db.parduotuves.deleteOne({ pavadinimas: 'Žirgyno pard.'})
+
+db.parduotuves.findOne()
+db.parduotuves.deleteOne({ _id: ObjectId('67f79f10af06a5bc40bc16db') })
+
+------------------------------------------
+
+Ištrinti nuo objekto pasirinktą eilutę - raktą su reikšme:
+
+db.parduotuves.findOne()
+
+db.parduotuves.updateOne(
+  { _id: ObjectId('67f7a109af06a5bc40bc16dc') },
+  { $unset: { telefonas: '' } }
+)
+
+db.parduotuves.find({ _id: ObjectId('67f7a109af06a5bc40bc16dc') })
 
 
 
