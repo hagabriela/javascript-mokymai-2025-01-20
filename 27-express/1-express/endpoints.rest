@@ -1,0 +1,29 @@
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/about
+
+###
+
+GET http://localhost:3000/contact
+
+###
+
+GET http://localhost:3000/posts
+
+###
+
+GET http://localhost:3000/posts/7
+
+###
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "toks ir anoks",
+    "author": "Kazkas"
+}
+
+# dar vienas testavimosi būdas ir lieka pririštas prie kodo
