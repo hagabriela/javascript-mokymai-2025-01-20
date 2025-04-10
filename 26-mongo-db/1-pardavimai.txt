@@ -233,6 +233,37 @@ db.pardavimai.find({}, { id: 1, buyer: 1, orderPrice:1 })
   { productsCount: 1, orderStatus: 1, orderPrice: 1, shippingPrice: 1, buyerCity: 1 }
 )
 
+------------------------------------------
+
+Papildomos galimybės su surandamais įrašais:
+- sort - rikiavimas
+- limit - apribojimas su kažkiek įrašų
+- skip - pirmų kelių įrašų praleidimas
+
+
+db.pardavimai.find().sort({ orderDate: -1 })
+
+eiliškumas nesvarbu (JS svarbu)
+db.pardavimai.find().sort({ orderDate: -1 }).limit(5)
+db.pardavimai.find().limit(5).sort({ orderDate: -1 })
+
+db.pardavimai.find({ buyerCity: 'Kaunas', buyerSatisfaction: 1}).sort({ productsCount: -1})
+
+- rasti visus užsakymus kurie turi 10 produktų, surikiuoti pagal datą didėjimo tvarka
+db.pardavimai.find({ productsCount: 10}).sort({ orderDate: 1})
+
+- rasti 5 seniausius užsakymus pagal datą
+db.pardavimai.find().sort({ orderDate: 1 }).limit(5)
+
+- rasti 5 naujausius ir pristatytus užsakymus iš Vilniaus
+db.pardavimai.find({ buyerCity: 'Vilnius', orderStatus: 'pristatytas' }).sort({ orderDate: -1 }).limit(5)
+
+- rasti visus užsakymus iš Jonavos, surikiuoti pagal pirkėjo vardą didėjimo tvarka
+db.pardavimai.find({ buyerCity: 'Jonava'}).sort({ buyer: 1 })
+
+------------------------------------------
+
+
 
 
 
