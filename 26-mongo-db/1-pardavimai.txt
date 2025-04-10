@@ -263,6 +263,49 @@ db.pardavimai.find({ buyerCity: 'Jonava'}).sort({ buyer: 1 })
 
 ------------------------------------------
 
+Norint įterpti naujus dokumentus į kolekciją, galim naudoti insertOne arba insertMany.
+
+insertOne - įterpia vieną dokumentus, todėl duodame objektą
+insertMany - įterpia daug dokumentų, todėl duodame masyvą su objektais
+
+db.parduotuves.insertOne({
+  pavadinimas: 'Šilutės pagrind. parduotuvė',
+  plotas: 200,
+	telefonas: '+37012345',
+	arDirba: true
+})
+
+db.parduotuves.insertOne({
+  pavadinimas: 'Kauno Dainavos parduotuvė',
+  plotas: 50,
+	telefonas: '+37097845436',
+	arDirba: false
+})
+
+db.parduotuves.find()
+
+db.parduotuves.find({ pavadinimas: 'Kauno Dainavos parduotuvė'})
+db.parduotuves.find({ _id: ObjectId('67f7a109af06a5bc40bc16dc') }) ---> unikali paieška
+
+
+db.parduotuves.insertMany([
+  { pavadinimas: 'Parko gatvės pard.', plotas: 30, telefonas: '+37012345', arDirba: true },
+  { pavadinimas: 'Kauno rajono pard.', plotas: 47, telefonas: '+370978', arDirba: true, savitarnosKasa: true},
+  { pavadinimas: 'Žirgyno pard.', plotas: 90, telefonas: '+370978', arDirba: false, savitarnosKasa: false}
+])
+
+db.parduotuves.find({ savitarnosKasa: true })
+db.parduotuves.find({ savitarnosKasa: false })
+
+exists patikrina ar raktas apskritai yra (true) / nėra(false)
+db.parduotuves.find({ savitarnosKasa: {$exists : true} })
+db.parduotuves.find({ savitarnosKasa: {$exists : false} })
+
+------------------------------------------
+
+
+
+
 
 
 
