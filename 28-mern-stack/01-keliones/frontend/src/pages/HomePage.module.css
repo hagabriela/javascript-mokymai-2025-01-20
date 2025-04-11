@@ -1,0 +1,21 @@
+.travelsList {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.travelBox {
+    width: calc((100% - 2 * 20px) / 3);
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+.travelBox h3 a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.travelBox h3 a:hover {
+    color: rgb(64, 119, 121);;
+}

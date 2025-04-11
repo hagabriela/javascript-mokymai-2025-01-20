@@ -1,0 +1,33 @@
+/* Šie stiliai tik šio komponento ribose */
+
+.nav {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: cadetblue;
+    padding: 20px 40px;
+}
+
+/* susigeneruoja taip iš NavLink žymos ir galima taip dėti */
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: rgb(214, 236, 255);
+}
+
+.links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px 40px;
+}

@@ -1,0 +1,37 @@
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/travels
+
+###
+
+GET http://localhost:3000/travels/67f8edba797cc99c0bfbaed5
+
+###
+
+PUT http://localhost:3000/travels/67f8edba797cc99c0bfbaed5
+Content-Type: application/json
+
+{
+    "title": "pakeistas pavadinimas",
+    "price": 1000
+}
+
+###
+
+POST http://localhost:3000/travels
+Content-Type: application/json
+
+{
+    "title": "Testas",
+    "description": "aprasymas",
+    "year": 2025,
+    "nights": 10,
+    "price": 2500
+}
+
+###
+
+DELETE http://localhost:3000/travels/67f8edcd797cc99c0bfbaed7
+
