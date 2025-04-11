@@ -1,0 +1,36 @@
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/darbuotojai
+
+###
+
+GET http://localhost:3000/darbuotojai/1
+
+###
+
+GET http://localhost:3000/darbuotojai/2
+
+###
+
+GET http://localhost:3000/darbuotojai/999
+
+###
+
+POST http://localhost:3000/darbuotojai
+Content-Type: application/json
+
+{
+    "vardas": "Petras Petrauskas",
+    "pareigos": "Programuotojas"
+}
+
+###
+
+DELETE http://localhost:3000/darbuotojai/1
+
+
+
+
+
