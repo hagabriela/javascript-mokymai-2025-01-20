@@ -1,0 +1,562 @@
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.configurator {
+    background: rgba(255, 255, 255, 1);
+ 
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    padding: 96px 96px 48px;
+}
+
+.configurator .configurationPage {
+    display: block;
+}
+
+.configurator .configurationPage:not(.active) {
+    display: none;
+}
+
+.configurator .firstRow {
+    display: flex;
+    gap: 32px;
+
+    margin-bottom: 16px;
+}
+
+.configurator .firstRow .image img {
+    width: 709px;
+    height: 398px;
+    object-fit: contain;
+}
+
+.configurator .firstRow .firstRowRight {
+    padding-top: 28px;
+}
+
+.configurator .firstRow .pack {
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 2px 3px 11.6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.configurator .firstRow .pack h3 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    margin: 0 0 8px 0;
+    padding: 8px 80px 16px 0;
+}
+
+.configurator .firstRow .pack .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.configurator .firstRow .pack .buttons button {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 8px;
+
+    padding: 16px;
+    width: 323px;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    border: 1px solid rgba(217, 217, 217, 1);
+
+    background: rgba(255, 255, 255, 1);
+
+    position: relative;
+}
+
+.configurator .firstRow .pack .buttons .btnActive {
+    background: rgba(24, 154, 248, 0.05);
+    border: 2px solid rgba(24, 154, 248, 1);
+}
+
+.configurator .firstRow .pack .buttons button p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(34, 34, 34, 1);
+
+    margin: 0;
+}
+
+/* .configurator .firstRow .pack .buttons button p:first-child {
+    margin-bottom: 8px;
+} */
+
+.configurator .firstRow .pack .buttons button p span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(153, 153, 153, 1);
+
+}
+
+.configurator .firstRow .pack .buttons button img {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    right: 16px;
+}
+
+.configurator .secondRow {
+    display: flex;
+    gap: 32px;
+
+    margin-bottom: 16px;
+}
+
+.configurator .secondRow .secondRowColors {
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 2px 3px 11.6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.configurator .secondRow .secondRowColors h3 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    margin: 0 0 8px 0;
+    padding: 8px 557px 16px 0;
+}
+
+.configurator .secondRow .secondRowColors .buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.configurator .secondRow .secondRowColors .buttons .buttonsLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.configurator .secondRow .secondRowColors .buttons .buttonsRight {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.configurator .secondRow .secondRowColors .buttons button {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+
+    padding: 16px;
+    width: 314.5px;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    border: 1px solid rgba(217, 217, 217, 1);
+
+    background: rgba(255, 255, 255, 1);
+
+    position: relative;
+}
+
+.configurator .secondRow .secondRowColors .buttons .btnActive {
+    background: rgba(24, 154, 248, 0.05);
+    border: 2px solid rgba(24, 154, 248, 1);
+}
+
+.configurator .secondRow .secondRowColors .buttons button .image {
+    height: 54px;
+}
+
+.configurator .secondRow .secondRowColors .buttons button .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.configurator .secondRow .secondRowColors .buttons button .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.configurator .secondRow .secondRowColors .buttons button .text p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(34, 34, 34, 1);
+
+    margin: 0;
+}
+
+.configurator .secondRow .secondRowColors .buttons button .text p span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(153, 153, 153, 1);
+}
+
+.configurator .secondRow .secondRowColors .buttons button .vectorImage {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.configurator .secondRow .secondRowEngine {
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 2px 3px 11.6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.configurator .secondRow .secondRowEngine h3 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    margin: 0 0 8px 0;
+    padding: 8px 226px 16px 0;
+}
+
+.configurator .secondRow .secondRowEngine .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.configurator .secondRow .secondRowEngine .buttons button {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 8px;
+
+    padding: 16px;
+    width: 323px;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    border: 1px solid rgba(217, 217, 217, 1);
+
+    background: rgba(255, 255, 255, 1);
+
+    position: relative;
+}
+
+.configurator .secondRow .secondRowEngine .buttons .btnActive {
+    background: rgba(24, 154, 248, 0.05);
+    border: 2px solid rgba(24, 154, 248, 1);
+}
+
+.configurator .secondRow .secondRowEngine .buttons button p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(34, 34, 34, 1);
+
+    margin: 0;
+}
+
+.configurator .secondRow .secondRowEngine .buttons button p span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(153, 153, 153, 1);
+}
+
+.configurator .secondRow .secondRowEngine .buttons button img {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    right: 16px;
+}
+
+.configurator .thirdRow {
+    display: flex;
+    gap: 32px;
+
+    margin-bottom: 36px;
+}
+
+.configurator .thirdRow .thirdRowSalon {
+    border-radius: 16px;
+    padding: 32px 32px 118px 32px;
+    box-shadow: 2px 3px 11.6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.configurator .thirdRow .thirdRowSalon h3 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    margin: 0 0 8px 0;
+    padding: 8px 221px 16px 0;
+}
+
+.configurator .thirdRow .thirdRowSalon .buttons {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    gap: 8px;
+}
+
+.configurator .thirdRow .thirdRowSalon .buttons button {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 8px;
+
+    padding: 16px;
+    width: 323px;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    border: 1px solid rgba(217, 217, 217, 1);
+
+    background: rgba(255, 255, 255, 1);
+
+    position: relative;
+}
+
+.configurator .thirdRow .thirdRowSalon .buttons .btnActive {
+    background: rgba(24, 154, 248, 0.05);
+    border: 2px solid rgba(24, 154, 248, 1);
+}
+
+.configurator .thirdRow .thirdRowSalon .buttons button p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(34, 34, 34, 1);
+
+    margin: 0;
+}
+
+.configurator .thirdRow .thirdRowSalon .buttons button p span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(153, 153, 153, 1);
+
+}
+
+.configurator .thirdRow .thirdRowSalon .buttons button img {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    right: 16px;
+}
+
+.configurator .thirdRow .thirdRowAdds {
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 2px 3px 11.6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.configurator .thirdRow .thirdRowAdds h3 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    margin: 0 0 8px 0;
+    padding: 8px 432px 16px 0;
+}
+
+.configurator .thirdRow .thirdRowAdds .buttons {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    gap: 8px;
+}
+
+.configurator .thirdRow .thirdRowAdds .buttons button {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 8px;
+
+    padding: 16px;
+    width: 645x;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    border: 1px solid rgba(217, 217, 217, 1);
+
+    background: rgba(255, 255, 255, 1);
+
+    position: relative;
+}
+
+.configurator .thirdRow .thirdRowAdds .buttons .btnActive {
+    background: rgba(24, 154, 248, 0.05);
+    border: 2px solid rgba(24, 154, 248, 1);
+}
+
+.configurator .thirdRow .thirdRowAdds .buttons button p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(34, 34, 34, 1);
+
+    margin: 0;
+}
+
+.configurator .thirdRow .thirdRowAdds .buttons button p span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(153, 153, 153, 1);
+}
+
+.configurator .thirdRow .thirdRowAdds .buttons button img {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    right: 16px;
+}
+
+.configurator .greyRow {
+    border: 2px solid rgba(237, 237, 237, 1);
+}
+
+.configurator .priceRow {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 36px;
+}
+
+.configurator .priceRow p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+    
+    color: rgba(34, 34, 34, 1);
+
+    margin: 13px 0 13px;
+}
+
+.configurator .priceRow p span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.configurator .priceRow button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    
+    padding: 16px 32px;
+
+    background: rgba(43, 156, 238, 1);
+    color: rgba(255, 255, 255, 1);
+
+    border: none;
+}
+
+.configurator .changedWindow {
+    /* padding: 230px 328px 182px 328px; */
+    padding: 134px 0 182px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+.configurator .changedWindow.active {
+    display: block;
+
+    padding: 134px 0 182px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.configurator .changedWindow h3 {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    color: rgba(0, 0, 0, 1);
+
+    margin: 25px 0 16px;
+}
+
+.configurator .changedWindow p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+
+    margin: 0;
+}
+
+.configurator .changedWindow button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    
+    padding: 16px 32px;
+    margin-top: 16px;
+
+    background: rgba(43, 156, 238, 1);
+    color: rgba(255, 255, 255, 1);
+
+    border: none;
+}

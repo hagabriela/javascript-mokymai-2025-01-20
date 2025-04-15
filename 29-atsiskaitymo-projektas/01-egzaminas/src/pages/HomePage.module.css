@@ -1,0 +1,197 @@
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===================================
+HEADER
+=================================== */
+
+.header {
+    background-image: url("./images/blue-car.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 181px 0;
+}
+
+.header h1 {
+    font-weight: 600;
+    font-size: 82px;
+    line-height: 90.2px;
+
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    color: white;
+}
+
+.header h1 span {
+    display: block;
+}
+
+.header h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+
+    color: rgba(24, 154, 248, 1);
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.header .links a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.94px;
+    text-decoration: none;
+
+    background: white;
+    color: rgba(0, 0, 0, 1);
+
+    border-radius: 4px;
+   
+    padding: 16px 32px;
+    display: inline-block;
+
+    margin-left: 16px;
+}
+
+.header .links .primary {
+    color: rgba(255, 255, 255, 1);
+
+    border: none;
+
+    background: rgba(24, 154, 248, 1);
+
+    margin: 0;
+}
+
+/* ===================================
+PARAGRAPH
+=================================== */
+
+.paragraph {
+    background: rgba(24, 154, 248, 1);
+    padding: 30px 0;
+
+}
+
+.paragraph p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-align: justify;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 0;
+}
+
+/* ===================================
+CONTENT BLOCK
+=================================== */
+
+.contentBlock h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52.8px;
+
+    margin-top: 122px;
+    margin-bottom: 40px;
+}
+
+.contentBlock .autos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    margin-bottom: 120.09px;
+}
+
+.contentBlock .autos .auto {
+    padding: 80px 30px 36px;
+    width: calc((100% - 2 * 24px) / 3);
+    box-sizing: border-box;
+
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.15);
+    
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 1);
+}
+
+.contentBlock .autos .auto img {
+    width: 100%;
+    height: 232px;
+    object-fit: contain;
+}
+
+.contentBlock .autos .auto h3 {
+    font-weight: 600;
+    font-size: 31.25px;
+    line-height: 40px;
+
+    margin: 20px 0;
+}
+
+.contentBlock .autos .auto p {
+    padding: 8px 32px;
+
+    border-radius: 8px;
+
+    background: rgba(24, 154, 248, 0.13);
+
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: rgba(69, 37, 8, 1);
+    
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contentBlock .autos .auto p span {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: rgba(91, 49, 11, 1);
+}
+
+.contentBlock .autos .auto a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.36px;
+    text-decoration: none;
+
+    color: rgba(0, 0, 0, 1);
+    
+    padding: 16px 48px;
+    display: inline-block;
+
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 1);
+
+    margin-left: 8px;
+}
+
+.contentBlock .autos .auto .primary2 {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(24, 154, 248, 1);
+
+    border: none;
+
+    margin-left: 0;
+    /* margin: 0; */
+}

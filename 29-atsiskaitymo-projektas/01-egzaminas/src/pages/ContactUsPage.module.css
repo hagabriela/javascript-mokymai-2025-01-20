@@ -1,0 +1,115 @@
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contactUs .flexWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 1);
+
+    padding: 181px 0;
+}
+
+.contactUs .flexWrapper .textSide {
+    text-align: center;
+
+    padding: 20px 40px;
+}
+
+.contactUs .flexWrapper .textSide h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+
+    color: rgba(0, 0, 0, 1);
+    
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contactUs .flexWrapper .textSide p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba(24, 154, 248, 1);
+
+    margin: 10px 0;
+    padding: 0;
+}
+
+.contactUs .flexWrapper .textSide p:last-child {
+    margin-bottom: 0;
+}
+
+.contactUs .flexWrapper .formSide {
+    padding: 20px 40px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.contactUs .flexWrapper .formSide .emailTelRow {
+    display: flex;
+    gap: 20px;
+}
+
+.contactUs .flexWrapper .formSide form p input,
+.contactUs .flexWrapper .formSide form p textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    color: #333;
+    outline: none;
+
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.contactUs .flexWrapper .formSide form p .errorMessage {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+
+    margin-top: 4px;
+    
+    color: rgba(255, 0, 0, 0.699);
+
+    display: none;
+}
+
+.contactUs .flexWrapper .formSide form p .show {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+
+    margin-top: 4px;
+    
+    color: rgba(255, 0, 0, 0.699);
+
+    display: block;
+}
+
+.contactUs .flexWrapper .formSide form button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    
+    padding: 16px 32px;
+
+    background: rgba(43, 156, 238, 1);
+    color: rgba(255, 255, 255, 1);
+
+    border: none;
+}
+
+
