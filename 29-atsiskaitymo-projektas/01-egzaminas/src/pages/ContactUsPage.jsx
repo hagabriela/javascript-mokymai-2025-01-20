@@ -29,7 +29,8 @@ const ContactUsPage = () => {
         return !newErrors.name && !newErrors.email
     }
 
-    // Kai vartotojas pradeda rašyti, klaida „išnyksta“. Tai leidžia iškart paslėpti klaidą kai laukas redaguojamas.
+    // Kai vartotojas pradeda rašyti, klaida „išnyksta“. 
+    // Tai leidžia iškart paslėpti klaidą kai laukas redaguojamas.
     const handleChange = (field) => {
         setErrors((prev) => ({ ...prev, [field]: false }))
     }
@@ -42,7 +43,9 @@ const ContactUsPage = () => {
         setTelNumber(telNumberRef.current.value)
         setMessage(messageRef.current.value)
 
-        // Neleidžia formos iškart išsiųsti. Pirma atliekama validacija. Tik tada, kai viskas gerai – leidžia tęsti (pvz. siųsti į serverį).
+        // Neleidžia formos iškart išsiųsti. 
+        // Pirma atliekama validacija. 
+        // Tik tada, kai viskas gerai – leidžia tęsti (pvz. siųsti į serverį).
         if (!validate()) {
             return
         }

@@ -9,6 +9,8 @@ const MainLayout = () => {
                 <div className={styles.navRow}>
                     <NavLink to="/">Automobilių <br /> <span>pardavimas</span></NavLink>
                     <ul className={styles.links1}>
+                        {/* className={({ isActive }) => isActive ? styles.activeLink : ""} */}
+                        {/* className={({ isActive }) => isActive && styles.activeLink} */}
                         <li><NavLink to="/" className={({ isActive }) => isActive ? styles.activeLink : undefined}>Pradžia</NavLink></li>
                         <li><NavLink to="/pirkti" className={({ isActive }) => isActive ? styles.activeLink : undefined}>Pirkti automobilį</NavLink></li>
                         <li><NavLink to="/susisiekti" className={({ isActive }) => isActive ? styles.activeLink : undefined}>Susisiekti</NavLink></li>

@@ -2,8 +2,6 @@ import { useState, useEffect } from "react"
 
 import styles from "./ConfigurationPage.module.css"
 
-// import car from "./images/auto.png"
-
 import carBlack from "./images/blackCar.jpg"
 import carGrey from "./images/greyCar.jpg"
 import carWhite from "./images/whiteCar.jpg"
@@ -41,9 +39,10 @@ const ConfigurationPage = () => {
     Melyna: carBlue
   };
 
+  // false reiškia, kad naudotojas dar nieko nesubmitino, tad rodomas konfiguratorius
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const [totalPrice, setTotalPrice] = useState(18000);
+  const [totalPrice, setTotalPrice] = useState(18500);
 
   const prices = {
     packs: {
@@ -75,6 +74,7 @@ const ConfigurationPage = () => {
     },
   };
 
+  // Kaina persiskaičiuoja, kai pasikeičia pasirinkimai
   useEffect(() => {
     const calculateTotalPrice = () => {
       const total =
@@ -91,6 +91,17 @@ const ConfigurationPage = () => {
   }, [selectedPack, selectedColor, selectedEngine, selectedSalon, selectedAdds]);
 
 
+  // Valdyti papildomų priedų pasirinkimus, 
+  // t.y. pasirinkti arba atšaukti priedo pasirinkimą. 
+
+  // prev.includes(add) – patikrina, ar priedas (add) jau yra pasirinktas 
+  // (ar jis jau yra selectedAdds masyve).
+
+  // Jei priedas jau pasirinktas (includes grąžina true), 
+  // tada jis pašalinamas iš masyvo su filter() metodu.
+
+  // Jei priedas dar nepasirinktas (includes grąžina false), 
+  // tada jis pridedamas prie masyvo su ...prev, add, naudojant spread operatorių.
   const addHandler = (add) => {
     setSelectedAdds((prev) => {
       if (prev.includes(add)) {
@@ -110,7 +121,6 @@ const ConfigurationPage = () => {
           <div className={styles.firstRow}>
 
             <div className={styles.image}>
-              {/* <img src={car} alt="car" /> */}
               <img src={carImages[selectedColor]} alt="Car" />
             </div>
 
