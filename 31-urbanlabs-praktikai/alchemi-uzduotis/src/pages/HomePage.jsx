@@ -3,7 +3,10 @@ import './HomePage.css'
 import underline from './images/underline.png'
 import seller1 from './images/seller1.png'
 import seller2 from './images/seller2.png'
-import searchVector from './images/search.png'
+import searchVector from './images/search.svg'
+import backButton from './images/back.png'
+import microphoneButton from './images/microphone.png'
+import logo from './images/logo.png'
 
 const HomePage = () => {
   return (
@@ -40,6 +43,40 @@ const HomePage = () => {
             </div>
           </div>
           <button>AI powered search <img src={searchVector} alt="search" /></button>
+        </div>
+      </div>
+
+      <div id='modalas' class='modal'>
+        <div class='modal-content'>
+
+          <div className='modal-upperPart'>
+            <img src={backButton} alt='back' />
+            <span id='closeModal' class='close'>&times;</span>
+          </div>
+
+          <div className='modal-textPart'>
+            <h3>Hello, what are you looking for today?</h3>
+            <div className='buttons'>
+              <button>Product</button>
+              <button>Information</button>
+              <button>Support</button>
+              <button>Brand assets</button>
+              <button>Consultation</button>
+              <button>Dresses for summer</button>
+            </div>
+          </div>
+
+          <div className='modal-downPart'>
+            <textarea name='' id=''>  </textarea>
+            <img src={microphoneButton} alt='microphone' />
+          </div>
+
+          <div className='modal-logoPart'>
+            <img src={logo} alt='logo' />
+          </div>
+
+
+
         </div>
       </div>
 
