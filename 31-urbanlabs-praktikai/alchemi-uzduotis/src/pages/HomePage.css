@@ -9,9 +9,28 @@
 
   /* font-family: "Inter", sans-serif;
   font-weight: <weight>; */
+  /* vietoj Satoshi */
 
   /* font-family: "Sedgwick Ave", cursive;
   font-weight: 400; */
+
+/* ===================================
+GENERAL
+=================================== */
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    /* margin: 0 */
+
+    box-sizing: border-box;
+}
+
+.fullscreen {
+    border-radius: 1px;
+}
+
 
 /* ===================================
 NAVIGATION
@@ -22,30 +41,23 @@ nav {
 
     box-sizing: border-box;
 
-    border: 1px solid rgba(225, 225, 225, 1);
-
-    /* border-radius: 1px; */
-
-    /* border-top-left-radius: 1px;
-    border-top-right-radius: 1px; */
-
-    /* BORDER!!! */
-
     background: rgba(254, 254, 254, 1);
+}
 
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 
-nav a {
+nav .container a {
     font-family: "Anybody", sans-serif;
     font-weight: 400;
     font-size: 17.53px;
     line-height: 110.00000000000001%;
     letter-spacing: 3%;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 
     text-decoration: none;
 
@@ -55,7 +67,7 @@ nav a {
 }
 
 
-nav ul {
+nav .container ul {
     display: flex;
     gap: 40px;
 
@@ -66,13 +78,13 @@ nav ul {
 }
 
 
-nav ul li a {
+nav .container ul li a {
     font-family: "Anybody", sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
     letter-spacing: 3%;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 
     text-decoration: none;
 
@@ -80,7 +92,7 @@ nav ul li a {
 
 }
 
-nav ul li a:hover {
+nav .container ul li a:hover {
     color: rgba(55, 55, 55, 0.527);
 }
 
@@ -89,8 +101,6 @@ HEADER
 =================================== */
 
 header {
-    background-image: url('./images/header.png');
-
     background: 
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
         url('./images/header.png') no-repeat center center;
@@ -98,24 +108,24 @@ header {
     background-size: cover;
 
     padding: 120px 0 114px 44px;
+    box-sizing: border-box;
 }
 
-header h1 {
+header .container h1 {
     font-family: "Anybody", sans-serif;
     font-weight: 400;
     font-size: 68.87px;
     line-height: 130%;
     letter-spacing: 3%;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 
     color: rgba(254, 254, 254, 1);
 
     margin-top: 0;
     margin-bottom: 108px;
-    /* PATIKRINTI MARGIN BOTOM DAR */
 }
 
-header h1 span {
+header .container h1 span {
     font-family: "Sedgwick Ave", cursive;
     font-weight: 400;
     font-size: 68.87px;
@@ -126,14 +136,14 @@ header h1 span {
     position: relative;
 }
 
-header h1 span img {
+header .container h1 span img {
     position: absolute;
 
     left: 0;
     top: 74px;
 }
 
-header button {
+header .container button {
     font-family: "Karla", sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -163,11 +173,7 @@ CONTENT
 }
 
 .content .container {
-    max-width: 1408px;
-    width: 100%;
-    margin: 0;
-
-    box-sizing: border-box;
+    position: relative;
 }
 
 .content .container h2 {
@@ -176,7 +182,7 @@ CONTENT
     font-size: 32px;
     line-height: 120%;
     letter-spacing: 3%;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 
     margin-top: 0;
     margin-bottom: 32px;
@@ -185,9 +191,8 @@ CONTENT
 .content .container .bestsellers {
     display: flex;
     gap: 12px;
-    width: 1408px;
 
-    position: relative;
+    /* position: relative; */
 }
 
 .content .container .bestsellers .bestseller {
@@ -205,7 +210,7 @@ CONTENT
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
 
     border-radius: 30px;
     border: none;
@@ -222,8 +227,8 @@ CONTENT
     gap: 8px;
 
     position: absolute;
-    top: 847px;
-    left: 618.5px;
+    top: 50%;
+    left: 41%;
 }
 
 .content .container button img {
@@ -234,6 +239,7 @@ CONTENT
 /* ===================================
 MODAL
 =================================== */
+
 .modal {
     /* display: none; */
     position: fixed;
@@ -245,8 +251,19 @@ MODAL
     background: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    background: rgba(2, 9, 46, 1);
+.modal .modal-content {
+    /* background: linear-gradient(
+        180deg,             
+        rgba(2, 9, 46, 1) 0%,   
+        rgba(22, 50, 205, 1) 100% 
+    ); */
+
+    background: linear-gradient(
+    180deg,
+   rgb(2, 9, 46, 1) 0%,   /* labai tamsiai mėlyna viršuje */
+   rgb(19, 42, 174) 50%,  /* viduryje sodresnė mėlyna */
+   rgb(230, 247, 255) 100%  /* apačioje labai šviesi žydra */
+);
     margin: 56px auto 64px;
     padding: 20px 24px;
     border: 1px solid rgba(252, 252, 252, 1);
@@ -256,6 +273,162 @@ MODAL
     box-sizing: border-box;
     /* height: 780px; */
 }
+
+.modal .modal-content .modal-upperPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal .modal-content .modal-upperPart img {
+    width: 24px;
+    height: 24px;
+}
+
+.modal .modal-content .modal-textPart {
+    margin: 168.08px auto;
+    text-align: center;
+    max-width: 480px;
+    /* height: 234px; */
+}
+
+.modal .modal-content .modal-textPart h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 120%;
+
+    color: rgba(252, 252, 252, 1);
+
+    margin: 0 auto 48px;
+
+    max-width: 262px;
+}
+
+.modal .modal-content .modal-textPart .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.modal .modal-content .modal-textPart .buttons button {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    box-sizing: border-box;
+
+    white-space: nowrap;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(252, 252, 252, 1);
+   
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.modal .modal-content .modal-textPart .buttons button:hover {
+    border: 1px solid rgba(217, 217, 217, 1);
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.modal .modal-content .modal-textPart .buttons button:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal .modal-content .modal-textPart .buttons button:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 
+    0px 0px 0px 6px rgba(54, 84, 255, 1),
+    0px 0px 0px 2px rgba(255, 255, 255, 1);
+}
+
+.modal .modal-content .modal-textPart .buttons .firstRow-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px; 
+}
+
+.modal .modal-content .modal-textPart .buttons .secondRow-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px; 
+} 
+
+.modal .modal-content .modal-downPart {
+    text-align: center;
+}
+
+.modal .modal-content .modal-downPart .textarea-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.modal .modal-content .modal-downPart .textarea-wrapper textarea {
+    width: 480px;
+    min-height: 120px;
+    max-height: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(252, 252, 252, 1);
+    padding: 16px 60px 16px 16px;
+    box-sizing: border-box;
+
+    background: rgba(222, 227, 255, 1);
+    color: rgba(68, 78, 133, 1);
+
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    resize: none;
+}
+
+.modal .modal-content .modal-downPart .textarea-wrapper textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.modal .modal-content .modal-downPart .textarea-wrapper textarea:focus,
+.modal .modal-content .modal-downPart .textarea-wrapper textarea:active {
+    border: 2px solid rgba(252, 252, 252, 1);
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.6);
+    outline: none;
+
+    /* background: 
+    linear-gradient(0deg, var(--text-default, #0A1444), var(--text-default, #0A1444)),
+    linear-gradient(180deg, #DEE3FF 27.44%, rgba(255, 255, 255, 0) 44.1%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; */
+}
+
+.modal .modal-content .modal-downPart .textarea-wrapper img {
+    width: 32px;
+    height: 32px;
+    
+    position: absolute;
+    right: 16px;
+    bottom: 16px; 
+    cursor: pointer;
+}
+
+/* .modal .modal-content .modal-logoPart {
+    width: 64px;
+    height: 25.848621368408203px;
+} */
+
+
+
+
+
+
+
+
 
 
 

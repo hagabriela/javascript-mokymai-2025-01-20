@@ -4,25 +4,46 @@ import underline from './images/underline.png'
 import seller1 from './images/seller1.png'
 import seller2 from './images/seller2.png'
 import searchVector from './images/search.svg'
-import backButton from './images/back.png'
+import backButton from './images/back.svg'
+import closeButton from './images/close.svg'
 import microphoneButton from './images/microphone.png'
 import logo from './images/logo.png'
 
+import { useState, useRef } from 'react'
+
 const HomePage = () => {
+  const [text, setText] = useState('');
+  const textareaRef = useRef(null);
+
+   const handleChange = (event) => {
+    setText(event.target.value);
+
+    const ta = textareaRef.current;
+    if (ta) {
+      ta.style.height = 'auto'; 
+      ta.style.height = Math.min(ta.scrollHeight, 200) + 'px';
+    }
+  };
+
   return (
-    <>
+    <div className='fullscreen'>
+
       <nav>
-        <a href="#">eshop <br />logo</a>
-        <ul>
-          <li><a href="#">PRODUCTS</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
+        <div className='container'>
+          <a href="#">eshop <br />logo</a>
+          <ul>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
       </nav>
 
       <header>
-        <h1>Biggest <span>discounts <img src={underline} alt="underline" /></span> <br /> this season</h1>
-        <button>View sale</button>
+        <div className='container'>
+          <h1>Biggest <span>discounts <img src={underline} alt="underline" /></span> <br /> this season</h1>
+          <button>View sale</button>
+        </div>
       </header>
 
       <div className='content'>
@@ -51,24 +72,31 @@ const HomePage = () => {
 
           <div className='modal-upperPart'>
             <img src={backButton} alt='back' />
-            <span id='closeModal' class='close'>&times;</span>
+            <img src={closeButton} alt='close' />
           </div>
 
           <div className='modal-textPart'>
             <h3>Hello, what are you looking for today?</h3>
             <div className='buttons'>
-              <button>Product</button>
-              <button>Information</button>
-              <button>Support</button>
-              <button>Brand assets</button>
-              <button>Consultation</button>
-              <button>Dresses for summer</button>
+              <div className='firstRow-buttons'>
+                <button>Product</button>
+                <button>Information</button>
+                <button>Support</button>
+                <button>Brand assets</button>
+              </div>
+              <div className='secondRow-buttons'>
+                <button>Consultation</button>
+                <button>Dresses for summer</button>
+              </div>
             </div>
           </div>
 
           <div className='modal-downPart'>
-            <textarea name='' id=''>  </textarea>
-            <img src={microphoneButton} alt='microphone' />
+            <div className='textarea-wrapper'>
+              <textarea name='' id='' ref={textareaRef} value={text} onChange={handleChange} placeholder='Ask anything... '/>  
+              {/* <textarea cols={20} rows={1} maxLength={2000} aria-invalid="false" placeholder="Žinutė" name="message" id="message" ref={messageRef}></textarea> */}
+              <img src={microphoneButton} alt='microphone' />
+            </div>
           </div>
 
           <div className='modal-logoPart'>
@@ -80,7 +108,7 @@ const HomePage = () => {
         </div>
       </div>
 
-    </>
+    </div>
   )
 }
 
