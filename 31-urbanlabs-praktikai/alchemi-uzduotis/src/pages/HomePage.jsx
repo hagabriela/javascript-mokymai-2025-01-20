@@ -13,16 +13,43 @@ import { useState, useRef } from 'react'
 
 const HomePage = () => {
   const [text, setText] = useState('');
-  const textareaRef = useRef(null);
+  // const textareaRef = useRef(null);
+  const editableRef = useRef(null)
 
-   const handleChange = (event) => {
-    setText(event.target.value);
+  const [isOpen, setIsOpen] = useState(false);
+  const [navIsOpen, setNavIsOpen] = useState(false);
 
-    const ta = textareaRef.current;
-    if (ta) {
-      ta.style.height = 'auto'; 
-      ta.style.height = Math.min(ta.scrollHeight, 200) + 'px';
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  // const handleChange = (event) => {
+  //   setText(event.target.value);
+
+  //   const ta = textareaRef.current;
+  //   if (ta) {
+  //     ta.style.height = 'auto';
+  //     ta.style.height = Math.min(ta.scrollHeight, 200) + 'px';
+  //   }
+  // };
+
+  const handleInput = (event) => {
+    setText(event.target.innerText)
+
+    const el = editableRef.current
+    if (el) {
+      el.style.height = 'auto'
+      el.style.height = Math.min(el.scrollHeight, 200) + 'px'
     }
+  }
+
+  const handleModalClick = (event) => {
+    if (event.target.id === "modal") {
+      closeModal();
+    }
+  };
+
+  const toggleMenu = () => {
+    setNavIsOpen(!navIsOpen);
   };
 
   return (
@@ -31,7 +58,14 @@ const HomePage = () => {
       <nav>
         <div className='container'>
           <a href="#">eshop <br />logo</a>
-          <ul>
+
+          <div className='burger' onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <ul className={navIsOpen ? "nav-links open" : "nav-links"}>
             <li><a href="#">PRODUCTS</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">FAQ</a></li>
@@ -63,50 +97,66 @@ const HomePage = () => {
               <img src={seller2} alt="seller" />
             </div>
           </div>
-          <button>AI powered search <img src={searchVector} alt="search" /></button>
+          <button onClick={openModal}>AI powered search <img src={searchVector} alt="search" /></button>
         </div>
       </div>
 
-      <div id='modalas' class='modal'>
-        <div class='modal-content'>
+      {isOpen && (
 
-          <div className='modal-upperPart'>
-            <img src={backButton} alt='back' />
-            <img src={closeButton} alt='close' />
-          </div>
+        <div id='modal' class='modal' onClick={handleModalClick}>
+          <div class='modal-content'>
 
-          <div className='modal-textPart'>
-            <h3>Hello, what are you looking for today?</h3>
-            <div className='buttons'>
-              <div className='firstRow-buttons'>
-                <button>Product</button>
-                <button>Information</button>
-                <button>Support</button>
-                <button>Brand assets</button>
-              </div>
-              <div className='secondRow-buttons'>
-                <button>Consultation</button>
-                <button>Dresses for summer</button>
+            <div className='modal-upperPart'>
+              <img src={backButton} alt='back' />
+              <img onClick={closeModal} src={closeButton} alt='close' />
+            </div>
+
+            <div className='modal-textPart'>
+              <h3>Hello, what are you looking for today?</h3>
+              <div className='buttons'>
+                <div className='firstRow-buttons'>
+                  <button>Product</button>
+                  <button>Information</button>
+                  <button>Support</button>
+                  <button>Brand assets</button>
+                </div>
+                <div className='secondRow-buttons'>
+                  <button>Consultation</button>
+                  <button>Dresses for summer</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className='modal-downPart'>
+            {/* <div className='modal-downPart'>
             <div className='textarea-wrapper'>
               <textarea name='' id='' ref={textareaRef} value={text} onChange={handleChange} placeholder='Ask anything... '/>  
-              {/* <textarea cols={20} rows={1} maxLength={2000} aria-invalid="false" placeholder="Žinutė" name="message" id="message" ref={messageRef}></textarea> */}
               <img src={microphoneButton} alt='microphone' />
             </div>
+          </div> */}
+
+            <div className='modal-downPart'>
+              <div className='textarea-wrapper'>
+                <div
+                  className={`editable ${text ? '' : 'placeholder'}`}
+                  contentEditable
+                  ref={editableRef}
+                  onInput={handleInput}
+                  data-placeholder='Ask anything...'
+                ></div>
+                <img src={microphoneButton} alt='microphone' />
+              </div>
+            </div>
+
+            <div className='modal-logoPart'>
+              <img src={logo} alt='logo' />
+            </div>
+
+
+
           </div>
-
-          <div className='modal-logoPart'>
-            <img src={logo} alt='logo' />
-          </div>
-
-
-
         </div>
-      </div>
+
+      )}
 
     </div>
   )
