@@ -8,6 +8,7 @@ import backButton from './images/back.svg'
 import closeButton from './images/close.svg'
 import microphoneButton from './images/microphone.png'
 import logo from './images/logo.png'
+import logoMobile from './images/logoMob.svg'
 
 import { useState, useRef } from 'react'
 
@@ -15,6 +16,7 @@ const HomePage = () => {
   const [text, setText] = useState('');
   // const textareaRef = useRef(null);
   const editableRef = useRef(null)
+  const wrapperRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -33,12 +35,24 @@ const HomePage = () => {
   // };
 
   const handleInput = (event) => {
-    setText(event.target.innerText)
-
     const el = editableRef.current
-    if (el) {
-      el.style.height = 'auto'
-      el.style.height = Math.min(el.scrollHeight, 200) + 'px'
+    const wrapper = wrapperRef.current
+
+    if (!el || !wrapper) return;
+    
+    setText(el.innerText)
+
+    const style = window.getComputedStyle(el);
+    const maxHeight = parseInt(style.maxHeight, 10);
+    
+    el.style.height = 'auto'
+    const newHeight = Math.min(el.scrollHeight, maxHeight);
+    el.style.height = `${newHeight}px`;
+    
+    if (el.scrollHeight > maxHeight) {
+    wrapper.classList.add('hasOverflow');
+    } else {
+    wrapper.classList.remove('hasOverflow');
     }
   }
 
@@ -60,9 +74,9 @@ const HomePage = () => {
           <a href="#">eshop <br />logo</a>
 
           <div className='burger' onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className='firstBurger'></span>
+            <span className='secondBurger'></span>
+            <span className='thirdBurger'></span>
           </div>
 
           <ul className={navIsOpen ? "nav-links open" : "nav-links"}>
@@ -85,16 +99,16 @@ const HomePage = () => {
           <h2>BEST SELLERS</h2>
           <div className='bestsellers'>
             <div className='bestseller'>
-              <img src={seller1} alt="seller" />
+              <img src={seller1} alt='seller' />
             </div>
             <div className='bestseller'>
-              <img src={seller1} alt="seller" />
+              <img src={seller1} alt='seller' />
             </div>
             <div className='bestseller'>
-              <img src={seller1} alt="seller" />
+              <img src={seller1} alt='seller' />
             </div>
             <div className='bestseller'>
-              <img src={seller2} alt="seller" />
+              <img src={seller2} alt='seller' />
             </div>
           </div>
           <button onClick={openModal}>AI powered search <img src={searchVector} alt="search" /></button>
@@ -107,8 +121,9 @@ const HomePage = () => {
           <div class='modal-content'>
 
             <div className='modal-upperPart'>
-              <img src={backButton} alt='back' />
-              <img onClick={closeModal} src={closeButton} alt='close' />
+              <img src={backButton} alt='back' className='imgDefault' />
+              <img src={logoMobile} alt='whitelogo' className='imgMobile' />
+              <img onClick={closeModal} src={closeButton} alt='close' className='imgClose' />
             </div>
 
             <div className='modal-textPart'>
@@ -135,7 +150,7 @@ const HomePage = () => {
           </div> */}
 
             <div className='modal-downPart'>
-              <div className='textarea-wrapper'>
+              <div ref={wrapperRef} className='textarea-wrapper' >
                 <div
                   className={`editable ${text ? '' : 'placeholder'}`}
                   contentEditable
